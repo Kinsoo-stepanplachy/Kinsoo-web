@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /ochrana-osobnich-udaju.html
+
+Sitemap: https://www.kinsoo.cz/sitemap.xml

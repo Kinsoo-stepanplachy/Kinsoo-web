@@ -129,8 +129,12 @@ a{color:inherit;text-decoration:none;transition:color .2s}
   backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
   border-bottom:1px solid var(--line);
 }
-.nav-logo{display:flex;align-items:center;gap:8px}
-.nav-logo img{height:22px}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo img{height:28px;transition:opacity .3s}
+.nav-logo .logo-white{position:absolute}
+.nav-logo .logo-color{position:absolute;opacity:0}
+.nav.is-scrolled .nav-logo .logo-white{opacity:0}
+.nav.is-scrolled .nav-logo .logo-color{opacity:1}
 .nav-logo span{font-family:var(--font-d);font-size:17px;font-weight:700;letter-spacing:-.02em}
 .nav-links{display:flex;align-items:center;gap:32px}
 .nav-links a{
@@ -726,9 +730,10 @@ a{color:inherit;text-decoration:none;transition:color .2s}
 
 <!-- ================ NAV ================ -->
 <nav class="nav is-top" id="nav">
-  <div class="nav-logo">
-    <img src="assets/Kinsoo_logo.svg" alt="Kinsoo" />
-    <span>Kinsoo</span>
+  <div class="nav-logo" style="position:relative;min-width:38px;min-height:28px">
+    <img class="logo-white" src="assets/kinsoo-icon-white.png" alt="Kinsoo" />
+    <img class="logo-color" src="assets/kinsoo-icon.png" alt="Kinsoo" />
+    <span style="margin-left:36px">Kinsoo</span>
   </div>
   <div class="nav-links">
     <a href="#sluzby">Služby</a>
@@ -1350,7 +1355,7 @@ a{color:inherit;text-decoration:none;transition:color .2s}
 <footer class="footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <img src="assets/Kinsoo_logo.svg" alt="Kinsoo" />
+      <img src="assets/kinsoo-icon-white.png" alt="Kinsoo" style="height:24px" />
       <span class="footer-meta">Kinsoo s.r.o. &middot; IČO: 249 83 900 &middot; Plzeň</span>
     </div>
     <div class="footer-links">

@@ -514,6 +514,39 @@ a{color:inherit;text-decoration:none;transition:color .2s}
 .production-dark .btn-outline{border-color:rgba(255,255,255,.2);color:#fff}
 .production-dark .btn-outline:hover{border-color:var(--brand-soft);color:var(--brand-soft)}
 
+/* --- Listing packages inside dark wrapper --- */
+.production-dark .packages-grid{gap:14px}
+.production-dark .pkg{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08)}
+.production-dark .pkg:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16);box-shadow:0 32px 60px -36px rgba(168,49,62,.28)}
+.production-dark .pkg-name{color:#fff;font-size:22px}
+.production-dark .pkg-price{color:#fff;font-size:28px}
+.production-dark .pkg-period{color:rgba(255,255,255,.4)}
+.production-dark .pkg header{border-bottom-color:rgba(255,255,255,.08)}
+.production-dark .check-list li{color:rgba(255,255,255,.65)}
+.production-dark .check-list li::before{background:rgba(255,255,255,.06)}
+.production-dark .check-list li::after{border-color:var(--brand-soft)}
+.production-dark .check-list li.off{color:rgba(255,255,255,.2)}
+.production-dark .check-list li.off::before{background:transparent}
+.production-dark .check-list li.off::after{content:'×';border:none;transform:none;width:auto;height:auto;left:6px;top:2px;font-size:12px;color:rgba(255,255,255,.2);font-weight:700}
+.production-dark .check-list li.hl{color:var(--brand-soft)}
+.production-dark .pkg-featured{background:rgba(255,255,255,.06)}
+.production-dark .pkg-featured::before{background:var(--gradient-brand)}
+.production-dark .pkg-save{font-size:12px;color:#4caf50;font-weight:600;margin-top:6px;display:flex;align-items:center;gap:4px}
+.production-dark .pkg-save svg{width:12px;height:12px}
+.production-dark .pkg-discount{font-size:10px;color:rgba(255,255,255,.3);margin-top:auto;padding-top:12px}
+.production-dark .pkg-tag{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:4px;display:block}
+.production-dark .custom-list{list-style:none;padding:0;margin:0 0 26px;flex:1}
+.production-dark .custom-list li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:13px;color:rgba(255,255,255,.55)}
+.production-dark .custom-list li:last-child{border-bottom:none}
+.production-dark .custom-list li span{color:var(--brand-soft);font-weight:600;font-size:13px;white-space:nowrap}
+
+/* Property type selector */
+.prop-selector{display:flex;align-items:center;gap:10px;margin-bottom:28px}
+.prop-selector span{font-size:13px;color:rgba(255,255,255,.4)}
+.prop-btn{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:7px 16px;font-size:13px;color:rgba(255,255,255,.5);cursor:pointer;transition:all .2s;font-family:var(--font-body)}
+.prop-btn:hover{background:rgba(255,255,255,.1);color:rgba(255,255,255,.8)}
+.prop-btn.is-active{background:rgba(168,49,62,.2);border-color:var(--brand-soft);color:var(--brand-soft)}
+
 /* --- Pricing divider between listing and brand --- */
 .pricing-divider{
   height:1px;margin:64px 0;position:relative;
@@ -961,63 +994,114 @@ a{color:inherit;text-decoration:none;transition:color .2s}
     <h2 class="stitle reveal"><span class="gw">Ceník</span></h2>
     <p class="pricing-sub reveal">Jednorázová produkce, když potřebujete video. Brand Partner, když chcete budovat značku, která vydělává sama.</p>
 
-    <!-- ── PRODUCTION TABLE (dark) ── -->
+    <!-- ── LISTING PACKAGES (dark) ── -->
     <div class="production-dark reveal">
       <div class="niche-section" style="margin-bottom:0">
         <div class="niche-section-head">
           <span class="panel-tag">Jednorázově · Per listing</span>
           <h3 class="panel-title">Produkce nemovitostí</h3>
-          <p class="panel-desc">Profesionální vizuály pro vaši nemovitost. Od videa po 3D prohlídku. Objednejte dnes, mějte hotovo do týdne.</p>
+          <p class="panel-desc">Vyberte balíček pro vaši nemovitost. Čím vyšší level, tím víc ušetříte.</p>
         </div>
-        <div class="pricing-table-services">
-          <div class="pricing-table-row pricing-table-head">
-            <span class="col-service">Služba</span>
-            <span class="col-spec">Specifikace</span>
-            <span class="col-price">Cena</span>
-          </div>
-          <div class="pricing-table-row">
-            <span class="col-service">Video ukázka sReality</span>
-            <span class="col-spec">Prezentační video nemovitosti pro realitní portály</span>
-            <span class="col-price">4 900 Kč</span>
-          </div>
-          <div class="pricing-table-row">
-            <span class="col-service">Video ukázka reels / sociální sítě</span>
-            <span class="col-spec">Krátké video optimalizované pro Instagram, TikTok</span>
-            <span class="col-price">4 900 Kč</span>
-          </div>
-          <div class="pricing-table-row">
-            <span class="col-service">Foto — byty do 2+1</span>
-            <span class="col-spec">Profesionální fotodokumentace</span>
-            <span class="col-price">2 500 Kč</span>
-          </div>
-          <div class="pricing-table-row">
-            <span class="col-service">Foto — byty do 4+1</span>
-            <span class="col-spec">Profesionální fotodokumentace</span>
-            <span class="col-price">3 500 Kč</span>
-          </div>
-          <div class="pricing-table-row">
-            <span class="col-service">Foto — domy</span>
-            <span class="col-spec">Profesionální fotodokumentace</span>
-            <span class="col-price">4 500 Kč</span>
-          </div>
-          <div class="pricing-table-row">
-            <span class="col-service">Půdorys</span>
-            <span class="col-spec">2D plán dispozice</span>
-            <span class="col-price">990 Kč</span>
-          </div>
-          <div class="pricing-table-row">
-            <span class="col-service">3D prohlídka</span>
-            <span class="col-spec">Virtuální Matterport prohlídka</span>
-            <span class="col-price">3 500 Kč / patro</span>
-          </div>
-          <div class="pricing-table-row">
-            <span class="col-service">VR 3D prohlídka</span>
-            <span class="col-spec">Virtuální realita — imersivní prohlídka</span>
-            <span class="col-price"><a href="#kontakt" style="color:var(--brand-soft);border-bottom:1px solid currentColor">Cena na vyžádání</a></span>
-          </div>
+
+        <!-- Property type selector -->
+        <div class="prop-selector">
+          <span>Typ nemovitosti:</span>
+          <button class="prop-btn is-active" data-prop="small" type="button">Byty do 2+1</button>
+          <button class="prop-btn" data-prop="medium" type="button">Byty do 4+1</button>
+          <button class="prop-btn" data-prop="house" type="button">Domy</button>
         </div>
-        <p class="pricing-table-note">Doprava na místo nemovitosti se řeší individuálně dle vzdálenosti.</p>
-        <a href="#kontakt" class="btn btn-outline">Objednat produkci <span class="arrow">→</span></a>
+
+        <!-- 4 Package cards -->
+        <div class="packages-grid">
+          <!-- LEVEL 1 — Listing Start -->
+          <article class="pkg">
+            <header>
+              <span class="pkg-tag">Level 1</span>
+              <span class="pkg-name">Listing Start</span>
+              <div class="pkg-price"><span data-price="1">11 290</span>&nbsp;Kč</div>
+              <div class="pkg-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg> Ušetříte <span data-save="1">2 000 Kč</span></div>
+            </header>
+            <ul class="check-list">
+              <li>1× video pro sReality</li>
+              <li>1× Signature Kinsoo reels</li>
+              <li>Profesionální fotografie</li>
+              <li>2D půdorys</li>
+              <li>Drone natáčení + foto</li>
+              <li class="off">Landing page</li>
+              <li class="off">Meta Ad setup</li>
+              <li class="off">3D prohlídka</li>
+            </ul>
+            <span class="pkg-discount">Sleva 15 % oproti jednotlivým cenám</span>
+            <a href="#kontakt" class="btn btn-outline btn-block">Objednat <span class="arrow">→</span></a>
+          </article>
+
+          <!-- LEVEL 2 — Listing Pro (featured) -->
+          <article class="pkg pkg-featured">
+            <span class="pkg-badge">★ Doporučujeme</span>
+            <header>
+              <span class="pkg-tag">Level 2</span>
+              <span class="pkg-name">Listing Pro</span>
+              <div class="pkg-price"><span data-price="2">16 990</span>&nbsp;Kč</div>
+              <div class="pkg-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg> Ušetříte <span data-save="2">4 200 Kč</span></div>
+            </header>
+            <ul class="check-list">
+              <li>1× video pro sReality</li>
+              <li>1× Signature Kinsoo reels</li>
+              <li>Profesionální fotografie</li>
+              <li>2D půdorys</li>
+              <li>Drone natáčení + foto</li>
+              <li class="hl">Landing page nemovitosti</li>
+              <li class="hl">Meta Ad setup + kampaň</li>
+              <li class="off">3D prohlídka</li>
+            </ul>
+            <span class="pkg-discount">Sleva 20 % oproti jednotlivým cenám</span>
+            <a href="#kontakt" class="btn btn-brand btn-block">Objednat <span class="arrow">→</span></a>
+          </article>
+
+          <!-- LEVEL 3 — Listing Premium -->
+          <article class="pkg">
+            <header>
+              <span class="pkg-tag">Level 3</span>
+              <span class="pkg-name">Listing Premium</span>
+              <div class="pkg-price"><span data-price="3">19 790</span>&nbsp;Kč</div>
+              <div class="pkg-save"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg> Ušetříte <span data-save="3">4 900 Kč</span></div>
+            </header>
+            <ul class="check-list">
+              <li>1× video pro sReality</li>
+              <li>1× Signature Kinsoo reels</li>
+              <li>Profesionální fotografie</li>
+              <li>2D půdorys</li>
+              <li>Drone natáčení + foto</li>
+              <li>Landing page nemovitosti</li>
+              <li>Meta Ad setup + kampaň</li>
+              <li class="hl">3D Matterport prohlídka</li>
+            </ul>
+            <span class="pkg-discount">Sleva 20 % oproti jednotlivým cenám</span>
+            <a href="#kontakt" class="btn btn-outline btn-block">Objednat <span class="arrow">→</span></a>
+          </article>
+
+          <!-- LEVEL 4 — Custom -->
+          <article class="pkg">
+            <header>
+              <span class="pkg-tag">Level 4</span>
+              <span class="pkg-name">Custom</span>
+              <div class="pkg-price" style="font-size:22px">Cena dle výběru</div>
+            </header>
+            <ul class="custom-list">
+              <li>Video sReality <span>4 900 Kč</span></li>
+              <li>Signature Kinsoo reels <span>4 900 Kč</span></li>
+              <li>Fotografie <span data-foto-price>2 500 Kč</span></li>
+              <li>Půdorys <span>990 Kč</span></li>
+              <li>3D prohlídka <span>3 500 Kč/p.</span></li>
+              <li>Landing page + Ads <span>7 900 Kč</span></li>
+              <li>VR 3D prohlídka <span><a href="#kontakt" style="color:var(--brand-soft)">Na vyžádání</a></span></li>
+            </ul>
+            <span class="pkg-discount">Jednotlivé ceny bez slevy</span>
+            <a href="#kontakt" class="btn btn-outline btn-block">Poptat <span class="arrow">→</span></a>
+          </article>
+        </div>
+
+        <p class="pricing-table-note" style="margin-top:22px">Ceny jsou bez DPH. Ad spend (rozpočet na reklamu) hradí klient zvlášť. 3D prohlídka je za 1 patro — každé další +2 625 Kč.<br>Doprava: Plzeň a okolí do 20 km zdarma. Nad 20 km: 5,90 Kč/km.</p>
       </div>
     </div>
 
@@ -1507,6 +1591,38 @@ a{color:inherit;text-decoration:none;transition:color .2s}
           next.focus();
           switchSeg(next.dataset.segment);
         }
+      });
+    });
+  }
+
+  /* ---- Listing packages — property type price switching ---- */
+  const propBtns=document.querySelectorAll('.prop-btn[data-prop]');
+  if(propBtns.length){
+    const propData={
+      small:{disc:[11290,16990,19790],save:[2000,4200,4900],foto:'2 500 Kč'},
+      medium:{disc:[12190,17790,20590],save:[2100,4400,5100],foto:'3 500 Kč'},
+      house:{disc:[12990,18590,21390],save:[2300,4600,5300],foto:'4 500 Kč'},
+    };
+    const fmt=n=>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,' ');
+    const updatePrices=(key)=>{
+      const d=propData[key];
+      if(!d)return;
+      d.disc.forEach((v,i)=>{
+        const el=document.querySelector('[data-price="'+(i+1)+'"]');
+        if(el)el.textContent=fmt(v);
+      });
+      d.save.forEach((v,i)=>{
+        const el=document.querySelector('[data-save="'+(i+1)+'"]');
+        if(el)el.textContent=fmt(v)+' Kč';
+      });
+      const fotoEl=document.querySelector('[data-foto-price]');
+      if(fotoEl)fotoEl.textContent=d.foto;
+    };
+    propBtns.forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        propBtns.forEach(b=>b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        updatePrices(btn.dataset.prop);
       });
     });
   }

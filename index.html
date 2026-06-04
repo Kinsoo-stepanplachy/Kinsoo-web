@@ -369,6 +369,56 @@ a{color:inherit;text-decoration:none;transition:color .2s}
 }
 .cs-m-lbl{font-size:11px;color:var(--ink-4)}
 
+/* ================ RECENZE ================ */
+.reviews{padding:96px 0;background:var(--bg)}
+.reviews .label{color:var(--brand-deep)}
+.reviews .stitle{color:var(--ink)}
+.reviews-sub{font-size:clamp(15px,1.6vw,18px);color:var(--ink-3);max-width:600px;line-height:1.6;margin:0 0 48px}
+.rv-row{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.rv-card{
+  position:relative;aspect-ratio:3/4;border-radius:var(--r-lg);overflow:hidden;cursor:pointer;
+  border:0;padding:0;background:#0D0D0D;font-family:inherit;text-align:left;display:block;
+  transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s;
+}
+.rv-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,13,13,.88) 0%,rgba(13,13,13,.34) 40%,rgba(13,13,13,0) 64%)}
+.rv-card:hover{transform:translateY(-6px);box-shadow:0 26px 52px rgba(20,17,13,.22)}
+.rv-card:hover>img{transform:scale(1.06)}
+.rv-card-body{position:absolute;left:0;right:0;bottom:0;padding:20px 18px;color:#fff;z-index:2}
+.rv-card-stars{display:block;color:#fff;font-size:11px;letter-spacing:2px;margin-bottom:8px;opacity:.95}
+.rv-card-name{display:block;font-family:var(--font-d);font-size:17px;font-weight:700;line-height:1.12}
+.rv-card-meta{display:block;font-size:11.5px;opacity:.72;margin-top:3px}
+.rv-card-cta{margin-top:13px;display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;opacity:0;transform:translateY(7px);transition:opacity .4s,transform .4s}
+.rv-card-cta span{transition:transform .35s}
+.rv-card:hover .rv-card-cta,.rv-card:focus-visible .rv-card-cta{opacity:1;transform:none}
+.rv-card:hover .rv-card-cta span{transform:translateX(4px)}
+/* Apple-style modal */
+.rv-modal{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.rv-modal.open{opacity:1;visibility:visible}
+.rv-modal-bg{position:absolute;inset:0;background:rgba(13,13,13,.5);backdrop-filter:blur(16px) saturate(120%);-webkit-backdrop-filter:blur(16px) saturate(120%)}
+.rv-modal-card{position:relative;z-index:2;width:min(860px,100%);max-height:88vh;background:var(--bg-alt);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:300px 1fr;box-shadow:0 40px 110px rgba(0,0,0,.45);transform:scale(.92) translateY(8px);opacity:0;transition:transform .55s cubic-bezier(.2,.8,.2,1),opacity .4s}
+.rv-modal.open .rv-modal-card{transform:none;opacity:1}
+.rv-modal-photo{position:relative;background:#0D0D0D;min-height:100%}
+.rv-modal-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rv-modal-content{padding:52px 48px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow-y:auto}
+.rv-modal-qm{position:absolute;top:30px;right:40px;font-family:var(--font-d);font-size:120px;line-height:.7;color:var(--brand-tint);pointer-events:none;user-select:none}
+.rv-modal-stars{color:var(--brand);font-size:18px;letter-spacing:3px;margin-bottom:20px;position:relative}
+.rv-modal-text{font-family:var(--font-d);font-size:clamp(20px,2.3vw,27px);font-weight:600;line-height:1.42;letter-spacing:-.01em;color:var(--ink);margin:0 0 26px;position:relative}
+.rv-modal-name{font-family:var(--font-d);font-size:17px;font-weight:700;color:var(--ink)}
+.rv-modal-meta{font-size:13px;color:var(--ink-4);margin-top:3px}
+.rv-modal-close{position:absolute;top:16px;right:16px;z-index:3;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);cursor:pointer;font-size:22px;line-height:1;color:var(--ink);display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s}
+.rv-modal-close:hover{background:#fff;transform:rotate(90deg)}
+body.rv-lock{overflow:hidden}
+@media(max-width:980px){
+  .rv-row{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:minmax(180px,42%);overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -28px;padding:4px 28px 14px}
+  .rv-card{scroll-snap-align:start}
+  .rv-modal-card{grid-template-columns:1fr;max-height:90vh;overflow-y:auto}
+  .rv-modal-photo{height:230px;min-height:230px}
+  .rv-modal-content{padding:34px 28px}
+  .rv-modal-qm{font-size:84px;top:18px;right:24px}
+}
+@media(max-width:560px){.rv-row{grid-auto-columns:minmax(170px,64%)}}
+
 /* ================ CENÍK — full interactive pricing ================ */
 /* --- muted-label --- */
 .label.muted-label{color:var(--ink-4)}
@@ -820,6 +870,7 @@ a{color:inherit;text-decoration:none;transition:color .2s}
   <div class="nav-links">
     <a href="#sluzby">Služby</a>
     <a href="#vysledky">Výsledky</a>
+    <a href="#recenze">Recenze</a>
     <a href="#cenik">Ceník</a>
     <a href="#tym">Tým</a>
     <a href="#kontakt" class="nav-cta">Chci spolupracovat <span class="arrow">&rarr;</span></a>
@@ -833,6 +884,7 @@ a{color:inherit;text-decoration:none;transition:color .2s}
 <div class="mobile-menu" id="mobileMenu">
   <a href="#sluzby" class="mm-link">Služby</a>
   <a href="#vysledky" class="mm-link">Výsledky</a>
+  <a href="#recenze" class="mm-link">Recenze</a>
   <a href="#cenik" class="mm-link">Ceník</a>
   <a href="#tym" class="mm-link">Tým</a>
   <a href="#kontakt" class="mm-link">Kontakt</a>
@@ -841,8 +893,8 @@ a{color:inherit;text-decoration:none;transition:color .2s}
 <!-- ================ HERO ================ -->
 <section class="hero" id="top">
   <div class="hero-video-bg">
-    <video class="hero-video" autoplay muted loop playsinline preload="metadata">
-      <source src="assets/WEB%201.st%20video.mp4" type="video/mp4">
+    <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
+      <source src="assets/hero-video.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
   </div>
@@ -981,10 +1033,110 @@ a{color:inherit;text-decoration:none;transition:color .2s}
           <div><div class="cs-m-val">2.5&times;</div><div class="cs-m-lbl">vyšší obrat</div></div>
           <div><div class="cs-m-val">6</div><div class="cs-m-lbl">měsíců</div></div>
         </div>
-        <a href="2026-05-15-case-study-honza-kral.html" class="btn btn-primary">Přečíst celou case study <span class="arrow">&rarr;</span></a>
+        <a href="case-study-honza-kral.html" class="btn btn-primary">Přečíst celou case study <span class="arrow">&rarr;</span></a>
       </div>
     </div>
   </div>
+</section>
+
+<!-- ================ RECENZE ================ -->
+<section class="reviews" id="recenze">
+  <div class="container">
+    <div class="label reveal">Recenze</div>
+    <h2 class="stitle reveal">Co o nás říkají <span class="gw">klienti</span></h2>
+    <p class="reviews-sub reveal">Reálné zkušenosti klientů, se kterými spolupracujeme. Klikni na klienta a&nbsp;přečti si celou jeho recenzi.</p>
+
+    <div class="rv-row reveal">
+      <button type="button" class="rv-card" data-k="honza">
+        <img src="assets/card-honza.jpg" alt="Honza Král" loading="lazy">
+        <span class="rv-card-body">
+          <span class="rv-card-stars">★★★★★</span>
+          <span class="rv-card-name">Honza Král</span>
+          <span class="rv-card-meta">Kinsoo klient od&nbsp;listopadu&nbsp;2025</span>
+          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
+        </span>
+      </button>
+      <button type="button" class="rv-card" data-k="famil">
+        <img src="assets/card-famil.jpg" alt="Famil Amirov" loading="lazy">
+        <span class="rv-card-body">
+          <span class="rv-card-stars">★★★★★</span>
+          <span class="rv-card-name">Famil Amirov</span>
+          <span class="rv-card-meta">Kinsoo klient od&nbsp;září&nbsp;2025</span>
+          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
+        </span>
+      </button>
+      <button type="button" class="rv-card" data-k="adam">
+        <img src="assets/card-adam.jpg" alt="Adam Bárta" loading="lazy">
+        <span class="rv-card-body">
+          <span class="rv-card-stars">★★★★★</span>
+          <span class="rv-card-name">Adam Bárta</span>
+          <span class="rv-card-meta">Kinsoo klient od&nbsp;ledna&nbsp;2026</span>
+          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
+        </span>
+      </button>
+      <button type="button" class="rv-card" data-k="dominik">
+        <img src="assets/card-dominik.jpg" alt="Dominik Polcar" loading="lazy">
+        <span class="rv-card-body">
+          <span class="rv-card-stars">★★★★★</span>
+          <span class="rv-card-name">Dominik Polcar</span>
+          <span class="rv-card-meta">Kinsoo klient od&nbsp;března&nbsp;2026</span>
+          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
+        </span>
+      </button>
+      <button type="button" class="rv-card" data-k="tomas">
+        <img src="assets/card-tomas.jpg" alt="Tomáš Vaněk" loading="lazy">
+        <span class="rv-card-body">
+          <span class="rv-card-stars">★★★★★</span>
+          <span class="rv-card-name">Tomáš Vaněk</span>
+          <span class="rv-card-meta">Kinsoo klient od&nbsp;dubna&nbsp;2026</span>
+          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Apple-style modal -->
+  <div class="rv-modal" id="rvModal" aria-hidden="true">
+    <div class="rv-modal-bg" data-close></div>
+    <div class="rv-modal-card" role="dialog" aria-modal="true">
+      <button type="button" class="rv-modal-close" data-close aria-label="Zavřít">&times;</button>
+      <div class="rv-modal-photo"><img id="rvmImg" src="" alt=""></div>
+      <div class="rv-modal-content">
+        <div class="rv-modal-qm">„</div>
+        <div class="rv-modal-stars">★★★★★</div>
+        <p class="rv-modal-text" id="rvmText"></p>
+        <div>
+          <div class="rv-modal-name" id="rvmName"></div>
+          <div class="rv-modal-meta" id="rvmMeta"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var data={
+      honza:{t:"Pozitivně mě překvapilo, jak rychle se to rozjelo. Poprvé mi z Instagramu přišla reálná poptávka — a pak další.",n:"Honza Král",m:"Kinsoo klient od listopadu 2025",i:"assets/card-honza.jpg"},
+      famil:{t:"Se Štěpánem a jeho týmem jsem spokojený. Vše stříhají včas, sami přicházejí s nápady a člověk u nich má pořád přehled o tom, na čem se pracuje a v jaké je to fázi. Spolupráci doporučuju.",n:"Famil Amirov",m:"Kinsoo klient od září 2025",i:"assets/card-famil.jpg"},
+      adam:{t:"Na klucích z Kinsoo se mi líbí, že se na kameře cítím příjemně a vždycky ze mě dostanou to nejlepší. Výstupy jsou kvalitní a promyšlené — je vidět, že vědí, co dělají, a funguje jim to.",n:"Adam Bárta",m:"Kinsoo klient od ledna 2026",i:"assets/card-adam.jpg"},
+      dominik:{t:"Spolupráce s Kinsoo mi pomohla v mnoha ohledech. Budujeme brand, který nemá v regionu obdoby, a celé si to extrémně užívám. Měl jsem strach z kamery i mikrofonu, ale kluci mi vytvořili skvělé prostředí — už od prvního natáčení jsem věděl, že to byla dobrá volba.",n:"Dominik Polcar",m:"Kinsoo klient od března 2026",i:"assets/card-dominik.jpg"},
+      tomas:{t:"S Kinsoo spolupracuji na tvorbě realitních videí a mohu je jednoznačně doporučit. Oceňuji profesionální přístup, rychlou komunikaci a spolehlivost. Mají cit pro detail a výsledná videa jsou na vysoké úrovni.",n:"Tomáš Vaněk",m:"Kinsoo klient od dubna 2026",i:"assets/card-tomas.jpg"}
+    };
+    var modal=document.getElementById('rvModal');
+    var cards=document.querySelectorAll('.rv-card');
+    function openM(k){var d=data[k];if(!d)return;
+      document.getElementById('rvmText').textContent='„'+d.t+'"';
+      document.getElementById('rvmName').textContent=d.n;
+      document.getElementById('rvmMeta').textContent=d.m;
+      var img=document.getElementById('rvmImg');img.src=d.i;img.alt=d.n;
+      modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('rv-lock');
+    }
+    function closeM(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('rv-lock');}
+    cards.forEach(function(c){c.addEventListener('click',function(){openM(c.getAttribute('data-k'));});});
+    modal.querySelectorAll('[data-close]').forEach(function(el){el.addEventListener('click',closeM);});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))closeM();});
+  })();
+  </script>
 </section>
 
 <!-- ================ CENÍK ================ -->

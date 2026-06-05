@@ -3,22 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kinsoo — Video &amp; brand agentura pro realitní makléře a&nbsp;kanceláře</title>
-  <meta name="description" content="Pomáháme realitním makléřům a kancelářím prodávat více nemovitostí. Listing videa, osobní brand, správa sítí. Nemovitosti v hodnotě 640 mil. Kč. 7,9 mil. organický dosah měsíčně." />
+  <title>Kinsoo — Video pro realitní makléře a&nbsp;kanceláře</title>
+  <meta name="description" content="Video pro realitní makléře a kanceláře: listing videa nemovitostí, osobní brand a správa sociálních sítí. Více poptávek a prodejů. Natáčíme z Plzně po celé ČR." />
+  <meta name="keywords" content="video pro realitní makléře, videoprezentace nemovitostí, listing video, natáčení nemovitostí, realitní video Plzeň, osobní brand realitní makléř, marketing pro realitní kanceláře" />
+  <meta name="author" content="Kinsoo s.r.o." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="geo.region" content="CZ-32" />
+  <meta name="geo.placename" content="Plzeň" />
+  <meta name="theme-color" content="#A8313E" />
   <link rel="canonical" href="https://www.kinsoo.cz/" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.kinsoo.cz/" />
-  <meta property="og:title" content="Kinsoo — Video &amp; brand agentura pro realitní makléře" />
-  <meta property="og:description" content="Pomáháme makléřům prodávat více nemovitostí. 640 mil. Kč v natočených nemovitostech." />
-  <meta property="og:image" content="https://www.kinsoo.cz/assets/og-image.png" />
+  <meta property="og:title" content="Kinsoo — Video pro realitní makléře a kanceláře" />
+  <meta property="og:description" content="Listing videa nemovitostí, osobní brand a správa sítí pro realitní makléře. Více poptávek a prodejů. Natáčíme z Plzně po celé ČR." />
+  <meta property="og:image" content="https://www.kinsoo.cz/assets/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Kinsoo — video a brand agentura pro realitní makléře" />
   <meta property="og:locale" content="cs_CZ" />
   <meta property="og:site_name" content="Kinsoo" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Kinsoo — Video & brand agentura pro realitní makléře" />
-  <meta name="twitter:description" content="Pomáháme makléřům prodávat více nemovitostí. 640 mil. Kč v natočených nemovitostech." />
-  <meta name="twitter:image" content="https://www.kinsoo.cz/assets/og-image.png" />
+  <meta name="twitter:title" content="Kinsoo — Video pro realitní makléře a kanceláře" />
+  <meta name="twitter:description" content="Listing videa nemovitostí, osobní brand a správa sítí pro realitní makléře. Více poptávek a prodejů." />
+  <meta name="twitter:image" content="https://www.kinsoo.cz/assets/og-cover.png" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="preload" as="image" href="assets/hero-poster.jpg" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter+Tight:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -419,6 +430,25 @@ body.rv-lock{overflow:hidden}
 }
 @media(max-width:560px){.rv-row{grid-auto-columns:minmax(170px,64%)}}
 
+/* ================ FAQ ================ */
+.faq{padding:96px 0;background:var(--bg-alt)}
+.faq .label{color:var(--brand-deep)}
+.faq .stitle{color:var(--ink)}
+.faq-sub{font-size:clamp(15px,1.6vw,18px);color:var(--ink-3);max-width:560px;line-height:1.6;margin:0 0 8px}
+.faq-list{max-width:840px;margin:44px auto 0;display:flex;flex-direction:column;gap:12px}
+.faq-item{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:border-color var(--t-fast),box-shadow var(--t-fast)}
+.faq-item.open{border-color:var(--brand-soft);box-shadow:0 10px 30px rgba(20,17,13,.06)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 26px;background:none;border:0;cursor:pointer;font-family:var(--font-d);font-size:clamp(16px,1.9vw,19px);font-weight:700;color:var(--ink);text-align:left;line-height:1.3}
+.faq-ic{flex-shrink:0;width:24px;height:24px;position:relative}
+.faq-ic::before,.faq-ic::after{content:'';position:absolute;background:var(--brand);border-radius:2px;transition:transform var(--t-med),opacity var(--t-med)}
+.faq-ic::before{top:11px;left:3px;right:3px;height:2px}
+.faq-ic::after{left:11px;top:3px;bottom:3px;width:2px}
+.faq-item.open .faq-ic::after{transform:scaleY(0);opacity:0}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows var(--t-med)}
+.faq-item.open .faq-a{grid-template-rows:1fr}
+.faq-a-wrap{overflow:hidden}
+.faq-a p{margin:0;padding:0 26px 24px;color:var(--ink-3);font-size:15.5px;line-height:1.62;max-width:720px}
+
 /* ================ CENÍK — full interactive pricing ================ */
 /* --- muted-label --- */
 .label.muted-label{color:var(--ink-4)}
@@ -817,44 +847,113 @@ body.rv-lock{overflow:hidden}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Kinsoo",
-    "url": "https://www.kinsoo.cz",
-    "logo": "https://www.kinsoo.cz/assets/kinsoo-icon.png",
-    "description": "Video & brand agentura pro realitní makléře a kanceláře. Listing videa, osobní brand, správa sítí.",
-    "foundingDate": "2023",
-    "founder": {
-      "@type": "Person",
-      "name": "Štěpán Plachý"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Praha",
-      "addressCountry": "CZ"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "email": "stepanplachy@kinsoo.cz",
-      "contactType": "customer service",
-      "availableLanguage": ["Czech", "English"]
-    },
-    "sameAs": [],
-    "areaServed": {
-      "@type": "Country",
-      "name": "CZ"
-    },
-    "serviceType": ["Video produkce", "Brand strategie", "Správa sociálních sítí", "Listing videa"],
-    "knowsAbout": ["Real estate marketing", "Video production", "Social media management"]
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.kinsoo.cz/#organization",
+        "name": "Kinsoo s.r.o.",
+        "alternateName": "Kinsoo",
+        "url": "https://www.kinsoo.cz/",
+        "logo": "https://www.kinsoo.cz/assets/kinsoo-icon.png",
+        "image": "https://www.kinsoo.cz/assets/og-cover.png",
+        "description": "Video & brand agentura pro realitní makléře a kanceláře. Listing videa nemovitostí, osobní brand a správa sociálních sítí.",
+        "foundingDate": "2023",
+        "founder": { "@type": "Person", "name": "Štěpán Plachý" },
+        "vatID": "CZ24983900",
+        "taxID": "24983900",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Plzeň",
+          "addressRegion": "Plzeňský kraj",
+          "addressCountry": "CZ"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "stepanplachy@kinsoo.cz",
+          "contactType": "customer service",
+          "availableLanguage": ["Czech", "English"]
+        }
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.kinsoo.cz/#business",
+        "name": "Kinsoo — video a brand agentura pro reality",
+        "url": "https://www.kinsoo.cz/",
+        "image": "https://www.kinsoo.cz/assets/og-cover.png",
+        "parentOrganization": { "@id": "https://www.kinsoo.cz/#organization" },
+        "priceRange": "$$",
+        "email": "stepanplachy@kinsoo.cz",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Plzeň",
+          "addressRegion": "Plzeňský kraj",
+          "addressCountry": "CZ"
+        },
+        "areaServed": { "@type": "Country", "name": "Česká republika" },
+        "knowsAbout": ["Videoprezentace nemovitostí", "Realitní video", "Osobní brand realitního makléře", "Správa sociálních sítí", "Marketing pro realitní kanceláře"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Služby Kinsoo",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Listing video nemovitosti", "description": "Profesionální video nemovitosti — natáčení, drone, foto, půdorys, 3D prohlídka. Jednorázově." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Partner", "description": "Kompletní brand management pro realitní makléře — strategie, content plán, natáčení a správa sociálních sítí." } }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "reviewCount": "5"
+        },
+        "review": [
+          { "@type": "Review", "author": { "@type": "Person", "name": "Honza Král" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Pozitivně mě překvapilo, jak rychle se to rozjelo. Poprvé mi z Instagramu přišla reálná poptávka — a pak další." },
+          { "@type": "Review", "author": { "@type": "Person", "name": "Famil Amirov" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Se Štěpánem a jeho týmem jsem spokojený. Vše stříhají včas, sami přicházejí s nápady a člověk u nich má pořád přehled o tom, na čem se pracuje a v jaké je to fázi. Spolupráci doporučuju." },
+          { "@type": "Review", "author": { "@type": "Person", "name": "Adam Bárta" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Na klucích z Kinsoo se mi líbí, že se na kameře cítím příjemně a vždycky ze mě dostanou to nejlepší. Výstupy jsou kvalitní a promyšlené — je vidět, že vědí, co dělají, a funguje jim to." },
+          { "@type": "Review", "author": { "@type": "Person", "name": "Dominik Polcar" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Spolupráce s Kinsoo mi pomohla v mnoha ohledech. Budujeme brand, který nemá v regionu obdoby, a celé si to extrémně užívám. Měl jsem strach z kamery i mikrofonu, ale kluci mi vytvořili skvělé prostředí — už od prvního natáčení jsem věděl, že to byla dobrá volba." },
+          { "@type": "Review", "author": { "@type": "Person", "name": "Tomáš Vaněk" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "S Kinsoo spolupracuji na tvorbě realitních videí a mohu je jednoznačně doporučit. Oceňuji profesionální přístup, rychlou komunikaci a spolehlivost. Mají cit pro detail a výsledná videa jsou na vysoké úrovni." }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.kinsoo.cz/#website",
+        "name": "Kinsoo",
+        "url": "https://www.kinsoo.cz/",
+        "description": "Video & brand agentura pro realitní makléře a kanceláře",
+        "publisher": { "@id": "https://www.kinsoo.cz/#organization" },
+        "inLanguage": "cs"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://www.kinsoo.cz/" }
+        ]
+      },
+      {
+        "@type": "VideoObject",
+        "name": "Kinsoo — ukázka realitní video tvorby",
+        "description": "Ukázka video tvorby Kinsoo pro realitní makléře a kanceláře.",
+        "thumbnailUrl": "https://www.kinsoo.cz/assets/hero-poster.jpg",
+        "contentUrl": "https://www.kinsoo.cz/assets/hero-video.mp4",
+        "uploadDate": "2026-06-05",
+        "publisher": { "@id": "https://www.kinsoo.cz/#organization" }
+      }
+    ]
   }
   </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Kinsoo",
-    "url": "https://www.kinsoo.cz",
-    "description": "Video & brand agentura pro realitní makléře a kanceláře",
-    "inLanguage": "cs"
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Kolik stojí video nemovitosti?", "acceptedAnswer": { "@type": "Answer", "text": "Jednorázové listing video začíná na 11 290 Kč (balíček Listing Start), samostatné video pro sReality od 4 900 Kč. Ceny jsou bez DPH a liší se podle typu nemovitosti a rozsahu balíčku." } },
+      { "@type": "Question", "name": "Jak dlouho trvá natáčení a kdy dostanu hotové video?", "acceptedAnswer": { "@type": "Answer", "text": "Natáčení bytu zabere přibližně hodinu, u větších nemovitostí déle. Hotové video dodáváme do 5 pracovních dnů." } },
+      { "@type": "Question", "name": "Točíte i mimo Plzeň?", "acceptedAnswer": { "@type": "Answer", "text": "Ano. Sídlíme v Plzni — doprava do 20 km zdarma, nad 20 km účtujeme 5,90 Kč/km. Po domluvě natáčíme po celé ČR." } },
+      { "@type": "Question", "name": "Co je Brand Partner?", "acceptedAnswer": { "@type": "Answer", "text": "Kompletní brand management: strategie a positioning, měsíční content plán, natáčení, střih a správa sociálních sítí. Jeden tým, jeden retainer, měřitelné výsledky." } },
+      { "@type": "Question", "name": "Pro koho jsou vaše služby?", "acceptedAnswer": { "@type": "Answer", "text": "Pro realitní makléře a realitní kanceláře, které chtějí víc poptávek a prodejů díky videu a silnému osobnímu brandu." } },
+      { "@type": "Question", "name": "Co všechno listing video obsahuje?", "acceptedAnswer": { "@type": "Answer", "text": "Podle balíčku: video pro sReality, Platinum reels pro sociální sítě, profesionální fotografie, 2D půdorys, drone záběry, landing page nemovitosti, Meta Ad setup a 3D prohlídku." } },
+      { "@type": "Question", "name": "Musím se umět chovat před kamerou?", "acceptedAnswer": { "@type": "Answer", "text": "Ne. Většina klientů má z kamery zpočátku obavy — vytvoříme uvolněné prostředí a vždy z vás dostaneme to nejlepší." } },
+      { "@type": "Question", "name": "Za jak dlouho uvidím výsledky?", "acceptedAnswer": { "@type": "Answer", "text": "U budování brandu obvykle přicházejí první poptávky ze sociálních sítí kolem 3. měsíce. Naši klienti se dostali až na 10–20 poptávek měsíčně." } }
+    ]
   }
   </script>
 </head>
@@ -873,6 +972,7 @@ body.rv-lock{overflow:hidden}
     <a href="#recenze">Recenze</a>
     <a href="#cenik">Ceník</a>
     <a href="#tym">Tým</a>
+    <a href="#faq">FAQ</a>
     <a href="#kontakt" class="nav-cta">Chci spolupracovat <span class="arrow">&rarr;</span></a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -887,6 +987,7 @@ body.rv-lock{overflow:hidden}
   <a href="#recenze" class="mm-link">Recenze</a>
   <a href="#cenik" class="mm-link">Ceník</a>
   <a href="#tym" class="mm-link">Tým</a>
+  <a href="#faq" class="mm-link">FAQ</a>
   <a href="#kontakt" class="mm-link">Kontakt</a>
 </div>
 
@@ -1585,6 +1686,69 @@ body.rv-lock{overflow:hidden}
       </div>
     </div>
   </div>
+</section>
+
+<!-- ================ FAQ ================ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="label reveal">FAQ</div>
+    <h2 class="stitle reveal">Časté <span class="gw">otázky</span></h2>
+    <p class="faq-sub reveal">Na co se makléři a kanceláře ptají nejčastěji.</p>
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false"><span>Kolik stojí video nemovitosti?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-wrap"><p>Jednorázové listing video začíná na 11 290 Kč (balíček Listing Start), samostatné video pro sReality od 4 900 Kč. Ceny jsou bez DPH a liší se podle typu nemovitosti a rozsahu balíčku.</p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false"><span>Jak dlouho trvá natáčení a kdy dostanu hotové video?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-wrap"><p>Natáčení bytu zabere přibližně hodinu, u větších nemovitostí déle. Hotové video dodáváme do 5 pracovních dnů.</p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false"><span>Točíte i mimo Plzeň?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-wrap"><p>Ano. Sídlíme v Plzni — doprava do 20 km zdarma, nad 20 km účtujeme 5,90 Kč/km. Po domluvě natáčíme po celé ČR.</p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false"><span>Co je Brand Partner?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-wrap"><p>Kompletní brand management: strategie a positioning, měsíční content plán, natáčení, střih a správa sociálních sítí. Jeden tým, jeden retainer, měřitelné výsledky.</p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false"><span>Pro koho jsou vaše služby?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-wrap"><p>Pro realitní makléře a realitní kanceláře, které chtějí víc poptávek a prodejů díky videu a silnému osobnímu brandu.</p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false"><span>Co všechno listing video obsahuje?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-wrap"><p>Podle balíčku: video pro sReality, Platinum reels pro sociální sítě, profesionální fotografie, 2D půdorys, drone záběry, landing page nemovitosti, Meta Ad setup a 3D prohlídku.</p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false"><span>Musím se umět chovat před kamerou?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-wrap"><p>Ne. Většina klientů má z kamery zpočátku obavy — vytvoříme uvolněné prostředí a vždy z vás dostaneme to nejlepší.</p></div></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false"><span>Za jak dlouho uvidím výsledky?</span><span class="faq-ic" aria-hidden="true"></span></button>
+        <div class="faq-a"><div class="faq-a-wrap"><p>U budování brandu obvykle přicházejí první poptávky ze sociálních sítí kolem 3. měsíce. Naši klienti se dostali až na 10–20 poptávek měsíčně.</p></div></div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+  (function(){
+    document.querySelectorAll('.faq-q').forEach(function(b){
+      b.addEventListener('click',function(){
+        var item=b.parentElement, isOpen=item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded','false');});
+        if(!isOpen){item.classList.add('open');b.setAttribute('aria-expanded','true');}
+      });
+    });
+  })();
+  </script>
 </section>
 
 <!-- ================ KONTAKT — dotazník ================ -->

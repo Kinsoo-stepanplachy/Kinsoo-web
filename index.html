@@ -386,8 +386,12 @@ a{color:inherit;text-decoration:none;transition:color .2s}
 .reviews .label{color:var(--brand-deep)}
 .reviews .stitle{color:var(--ink)}
 .reviews-sub{font-size:clamp(15px,1.6vw,18px);color:var(--ink-3);max-width:600px;line-height:1.6;margin:0 0 48px}
-.rv-row{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.rv-marquee{position:relative;overflow:hidden;margin:0 -28px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.rv-track{display:flex;width:max-content;padding:8px 0 16px;will-change:transform;animation:rv-scroll 90s linear infinite}
+.rv-marquee:hover .rv-track{animation-play-state:paused}
+@keyframes rv-scroll{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 .rv-card{
+  flex:0 0 248px;margin-right:18px;
   position:relative;aspect-ratio:3/4;border-radius:var(--r-lg);overflow:hidden;cursor:pointer;
   border:0;padding:0;background:#0D0D0D;font-family:inherit;text-align:left;display:block;
   transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s;
@@ -422,14 +426,14 @@ a{color:inherit;text-decoration:none;transition:color .2s}
 .rv-modal-close:hover{background:#fff;transform:rotate(90deg)}
 body.rv-lock{overflow:hidden}
 @media(max-width:980px){
-  .rv-row{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:minmax(180px,42%);overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -28px;padding:4px 28px 14px}
-  .rv-card{scroll-snap-align:start}
+  .rv-card{flex-basis:220px}
   .rv-modal-card{grid-template-columns:1fr;max-height:90vh;overflow-y:auto}
   .rv-modal-photo{height:230px;min-height:230px}
   .rv-modal-content{padding:34px 28px}
   .rv-modal-qm{font-size:84px;top:18px;right:24px}
 }
-@media(max-width:560px){.rv-row{grid-auto-columns:minmax(170px,64%)}}
+@media(max-width:560px){.rv-card{flex-basis:196px}}
+@media(prefers-reduced-motion:reduce){.rv-track{animation:none}.rv-marquee{overflow-x:auto}}
 
 /* ================ FAQ ================ */
 .faq{padding:96px 0;background:var(--bg-alt)}
@@ -906,14 +910,15 @@ body.rv-lock{overflow:hidden}
           "@type": "AggregateRating",
           "ratingValue": "5",
           "bestRating": "5",
-          "reviewCount": "5"
+          "reviewCount": "6"
         },
         "review": [
           { "@type": "Review", "author": { "@type": "Person", "name": "Honza Král" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Pozitivně mě překvapilo, jak rychle se to rozjelo. Poprvé mi z Instagramu přišla reálná poptávka — a pak další." },
           { "@type": "Review", "author": { "@type": "Person", "name": "Famil Amirov" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Se Štěpánem a jeho týmem jsem spokojený. Vše stříhají včas, sami přicházejí s nápady a člověk u nich má pořád přehled o tom, na čem se pracuje a v jaké je to fázi. Spolupráci doporučuju." },
           { "@type": "Review", "author": { "@type": "Person", "name": "Adam Bárta" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Na klucích z Kinsoo se mi líbí, že se na kameře cítím příjemně a vždycky ze mě dostanou to nejlepší. Výstupy jsou kvalitní a promyšlené — je vidět, že vědí, co dělají, a funguje jim to." },
           { "@type": "Review", "author": { "@type": "Person", "name": "Dominik Polcar" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Spolupráce s Kinsoo mi pomohla v mnoha ohledech. Budujeme brand, který nemá v regionu obdoby, a celé si to extrémně užívám. Měl jsem strach z kamery i mikrofonu, ale kluci mi vytvořili skvělé prostředí — už od prvního natáčení jsem věděl, že to byla dobrá volba." },
-          { "@type": "Review", "author": { "@type": "Person", "name": "Tomáš Vaněk" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "S Kinsoo spolupracuji na tvorbě realitních videí a mohu je jednoznačně doporučit. Oceňuji profesionální přístup, rychlou komunikaci a spolehlivost. Mají cit pro detail a výsledná videa jsou na vysoké úrovni." }
+          { "@type": "Review", "author": { "@type": "Person", "name": "Tomáš Vaněk" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "S Kinsoo spolupracuji na tvorbě realitních videí a mohu je jednoznačně doporučit. Oceňuji profesionální přístup, rychlou komunikaci a spolehlivost. Mají cit pro detail a výsledná videa jsou na vysoké úrovni." },
+          { "@type": "Review", "author": { "@type": "Person", "name": "František Drs" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Spolupráce s kolegy z Kinsoo je pro nás zkušené makléře jako svěží vítr ve světě realit. Oceňujeme moderní a individuální přístup — Kinsoo přináší špičkovou prezentaci a komunikaci odpovídající nejvyspělejším světovým trhům. Nová energie, kterou jsme rádi součástí." }
         ]
       },
       {
@@ -948,14 +953,14 @@ body.rv-lock{overflow:hidden}
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      { "@type": "Question", "name": "Kolik stojí video nemovitosti?", "acceptedAnswer": { "@type": "Answer", "text": "Jednorázové listing video začíná na 11 290 Kč (balíček Listing Start), samostatné video pro sReality od 4 900 Kč. Ceny jsou bez DPH a liší se podle typu nemovitosti a rozsahu balíčku." } },
-      { "@type": "Question", "name": "Jak dlouho trvá natáčení a kdy dostanu hotové video?", "acceptedAnswer": { "@type": "Answer", "text": "Natáčení bytu zabere přibližně hodinu, u větších nemovitostí déle. Hotové video dodáváme do 5 pracovních dnů." } },
+      { "@type": "Question", "name": "Kolik stojí video nemovitosti?", "acceptedAnswer": { "@type": "Answer", "text": "Jednorázové listing video začíná na 11 290 Kč (balíček Listing Start), samostatné video pro sReality od 4 900 Kč. Cena se liší podle typu nemovitosti a rozsahu balíčku." } },
+      { "@type": "Question", "name": "Jak dlouho trvá natáčení a kdy dostanu hotové video?", "acceptedAnswer": { "@type": "Answer", "text": "Natáčení trvá 1,5–6 hodin podle toho, co spolu točíme. Kompletní nemovitost máme většinou do 1,5 hodiny, organické natáčení (6 videí) zabere 2–3 hodiny. Hotové video dodáváme do 5 pracovních dnů." } },
       { "@type": "Question", "name": "Točíte i mimo Plzeň?", "acceptedAnswer": { "@type": "Answer", "text": "Ano. Sídlíme v Plzni — doprava do 20 km zdarma, nad 20 km účtujeme 5,90 Kč/km. Po domluvě natáčíme po celé ČR." } },
-      { "@type": "Question", "name": "Co je Brand Partner?", "acceptedAnswer": { "@type": "Answer", "text": "Kompletní brand management: strategie a positioning, měsíční content plán, natáčení, střih a správa sociálních sítí. Jeden tým, jeden retainer, měřitelné výsledky." } },
+      { "@type": "Question", "name": "Co je Brand Partner?", "acceptedAnswer": { "@type": "Answer", "text": "Kompletní brand management: strategie a positioning, měsíční content plán, natáčení, střih a správa sociálních sítí. Jeden tým, jeden retainer, měřitelné výsledky. Zjednodušeně: vytvoříme spolu brand a značku, kterou lidi opravdu budou znát." } },
       { "@type": "Question", "name": "Pro koho jsou vaše služby?", "acceptedAnswer": { "@type": "Answer", "text": "Pro realitní makléře a realitní kanceláře, které chtějí víc poptávek a prodejů díky videu a silnému osobnímu brandu." } },
       { "@type": "Question", "name": "Co všechno listing video obsahuje?", "acceptedAnswer": { "@type": "Answer", "text": "Podle balíčku: video pro sReality, Platinum reels pro sociální sítě, profesionální fotografie, 2D půdorys, drone záběry, landing page nemovitosti, Meta Ad setup a 3D prohlídku." } },
       { "@type": "Question", "name": "Musím se umět chovat před kamerou?", "acceptedAnswer": { "@type": "Answer", "text": "Ne. Většina klientů má z kamery zpočátku obavy — vytvoříme uvolněné prostředí a vždy z vás dostaneme to nejlepší." } },
-      { "@type": "Question", "name": "Za jak dlouho uvidím výsledky?", "acceptedAnswer": { "@type": "Answer", "text": "U budování brandu obvykle přicházejí první poptávky ze sociálních sítí kolem 3. měsíce. Naši klienti se dostali až na 10–20 poptávek měsíčně." } }
+      { "@type": "Question", "name": "Za jak dlouho uvidím výsledky?", "acceptedAnswer": { "@type": "Answer", "text": "U budování brandu obvykle přicházejí první poptávky ze sociálních sítí kolem 2. měsíce. Naši klienti se dostali až na 10–20 poptávek měsíčně." } }
     ]
   }
   </script>
@@ -971,7 +976,6 @@ body.rv-lock{overflow:hidden}
   </div>
   <div class="nav-links">
     <a href="#sluzby">Služby</a>
-    <a href="#vysledky">Výsledky</a>
     <a href="#recenze">Recenze</a>
     <a href="#cenik">Ceník</a>
     <a href="#tym">Tým</a>
@@ -986,7 +990,6 @@ body.rv-lock{overflow:hidden}
 <!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#sluzby" class="mm-link">Služby</a>
-  <a href="#vysledky" class="mm-link">Výsledky</a>
   <a href="#recenze" class="mm-link">Recenze</a>
   <a href="#cenik" class="mm-link">Ceník</a>
   <a href="#tym" class="mm-link">Tým</a>
@@ -1009,7 +1012,7 @@ body.rv-lock{overflow:hidden}
       <p class="hero-sub">Listing videa, osobní brand na sítích a kompletní správa obsahu. Ať vás klienti najdou dřív, než zavolají konkurenci.</p>
       <div class="hero-actions">
         <a href="#kontakt" class="btn btn-primary">Chci spolupracovat <span class="arrow">&rarr;</span></a>
-        <a href="#vysledky" class="btn btn-outline" style="border-color:rgba(255,255,255,.2);color:#fff">Výsledky klientů <span class="arrow">&rarr;</span></a>
+        <a href="#recenze" class="btn btn-outline" style="border-color:rgba(255,255,255,.2);color:#fff">Recenze klientů <span class="arrow">&rarr;</span></a>
       </div>
     </div>
   </div>
@@ -1082,67 +1085,6 @@ body.rv-lock{overflow:hidden}
   </div>
 </section>
 
-<!-- ================ VÝSLEDKY ================ -->
-<section class="results" id="vysledky">
-  <div class="container">
-    <div class="label reveal">Výsledky</div>
-    <h2 class="stitle reveal">Čísla mluví <span class="gw">za nás</span></h2>
-    <p class="results-sub reveal">Spojením správné strategie a&nbsp;špičkových výstupů dosahujeme těchto výsledků.</p>
-
-    <div class="results-grid">
-      <!-- Honza Král — highlight -->
-      <div class="res-hl reveal">
-        <div class="res-hl-top">
-          <div class="res-hl-avatar"><span>HK</span></div>
-          <div>
-            <div class="res-hl-name">Honza Král</div>
-            <div class="res-hl-role">Realitní makléř · @kralvrealitach</div>
-          </div>
-        </div>
-        <div class="res-hl-tag">Brand Partner · 6 měsíců</div>
-        <div class="res-hl-metric"><span class="gw">2,5&times;</span></div>
-        <p class="res-hl-desc">vyšší obraty od začátku spolupráce. Z nuly sledujících na pravidelné poptávky z Instagramu.</p>
-      </div>
-
-      <!-- Dominik Polcar — highlight -->
-      <div class="res-hl reveal">
-        <div class="res-hl-top">
-          <div class="res-hl-avatar"><span>DP</span></div>
-          <div>
-            <div class="res-hl-name">Dominik Polcar</div>
-            <div class="res-hl-role">Realitní makléř · @dominik.v.realitach</div>
-          </div>
-        </div>
-        <div class="res-hl-tag">Brand Partner · 3 měsíce</div>
-        <div class="res-hl-metric"><span class="gw">100K+</span></div>
-        <p class="res-hl-desc">zhlédnutí za první týden. Konečně prodaná nemovitost, kterou do té doby nemohl prodat.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================ CASE STUDY BANNER ================ -->
-<section class="cs-banner">
-  <div class="container">
-    <div class="cs-inner reveal">
-      <div class="cs-photo">
-        <img src="assets/honza fotka.jpg" alt="Honza Král" loading="lazy" />
-      </div>
-      <div class="cs-content">
-        <div class="label">Case Study</div>
-        <h3 class="cs-title">Jak si Honza skoro ztrojnásobil příjmy</h3>
-        <p class="cs-desc">Kompletní příběh 6 měsíců spolupráce. Od nuly sledujících po pravidelné poptávky a zakázky za miliony.</p>
-        <div class="cs-metrics">
-          <div><div class="cs-m-val">10+</div><div class="cs-m-lbl">poptávek měsíčně</div></div>
-          <div><div class="cs-m-val">2.5&times;</div><div class="cs-m-lbl">vyšší obrat</div></div>
-          <div><div class="cs-m-val">6</div><div class="cs-m-lbl">měsíců</div></div>
-        </div>
-        <a href="case-study-honza-kral.html" class="btn btn-primary">Přečíst celou case study <span class="arrow">&rarr;</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ================ RECENZE ================ -->
 <section class="reviews" id="recenze">
   <div class="container">
@@ -1150,7 +1092,8 @@ body.rv-lock{overflow:hidden}
     <h2 class="stitle reveal">Co o nás říkají <span class="gw">klienti</span></h2>
     <p class="reviews-sub reveal">Reálné zkušenosti klientů, se kterými spolupracujeme. Klikni na klienta a&nbsp;přečti si celou jeho recenzi.</p>
 
-    <div class="rv-row reveal">
+    <div class="rv-marquee reveal">
+      <div class="rv-track" id="rvTrack">
       <button type="button" class="rv-card" data-k="honza">
         <img src="assets/card-honza.jpg" alt="Honza Král" loading="lazy">
         <span class="rv-card-body">
@@ -1196,6 +1139,16 @@ body.rv-lock{overflow:hidden}
           <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
         </span>
       </button>
+      <button type="button" class="rv-card" data-k="drs">
+        <img src="assets/card-drs.jpg" alt="František Drs" loading="lazy">
+        <span class="rv-card-body">
+          <span class="rv-card-stars">★★★★★</span>
+          <span class="rv-card-name">František Drs</span>
+          <span class="rv-card-meta">Kinsoo klient od&nbsp;prosince&nbsp;2025</span>
+          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
+        </span>
+      </button>
+      </div>
     </div>
   </div>
 
@@ -1224,9 +1177,12 @@ body.rv-lock{overflow:hidden}
       famil:{t:"Se Štěpánem a jeho týmem jsem spokojený. Vše stříhají včas, sami přicházejí s nápady a člověk u nich má pořád přehled o tom, na čem se pracuje a v jaké je to fázi. Spolupráci doporučuju.",n:"Famil Amirov",m:"Kinsoo klient od září 2025",i:"assets/card-famil.jpg"},
       adam:{t:"Na klucích z Kinsoo se mi líbí, že se na kameře cítím příjemně a vždycky ze mě dostanou to nejlepší. Výstupy jsou kvalitní a promyšlené — je vidět, že vědí, co dělají, a funguje jim to.",n:"Adam Bárta",m:"Kinsoo klient od ledna 2026",i:"assets/card-adam.jpg"},
       dominik:{t:"Spolupráce s Kinsoo mi pomohla v mnoha ohledech. Budujeme brand, který nemá v regionu obdoby, a celé si to extrémně užívám. Měl jsem strach z kamery i mikrofonu, ale kluci mi vytvořili skvělé prostředí — už od prvního natáčení jsem věděl, že to byla dobrá volba.",n:"Dominik Polcar",m:"Kinsoo klient od března 2026",i:"assets/card-dominik.jpg"},
-      tomas:{t:"S Kinsoo spolupracuji na tvorbě realitních videí a mohu je jednoznačně doporučit. Oceňuji profesionální přístup, rychlou komunikaci a spolehlivost. Mají cit pro detail a výsledná videa jsou na vysoké úrovni.",n:"Tomáš Vaněk",m:"Kinsoo klient od dubna 2026",i:"assets/card-tomas.jpg"}
+      tomas:{t:"S Kinsoo spolupracuji na tvorbě realitních videí a mohu je jednoznačně doporučit. Oceňuji profesionální přístup, rychlou komunikaci a spolehlivost. Mají cit pro detail a výsledná videa jsou na vysoké úrovni.",n:"Tomáš Vaněk",m:"Kinsoo klient od dubna 2026",i:"assets/card-tomas.jpg"},
+      drs:{t:"Spolupráce s kolegy z Kinsoo je pro nás zkušené makléře jako pokropení živou vodou. Snažíme se o moderní, výrazně individuální přístup a v Kinsoo máme partnera, který tyto představy splňuje — přináší špičkovou prezentaci a komunikaci odpovídající nejvyspělejším světovým trhům. Kinsoo pro nás představuje novou energii a svěží vítr ve světě realit. Jsme rádi, že jsme součástí progresu této mladé inovativní skupiny.",n:"František Drs",m:"Kinsoo klient od prosince 2025",i:"assets/card-drs.jpg"}
     };
     var modal=document.getElementById('rvModal');
+    var track=document.getElementById('rvTrack');
+    if(track){Array.prototype.slice.call(track.children).forEach(function(c){var cl=c.cloneNode(true);cl.setAttribute('aria-hidden','true');cl.tabIndex=-1;track.appendChild(cl);});}
     var cards=document.querySelectorAll('.rv-card');
     function openM(k){var d=data[k];if(!d)return;
       document.getElementById('rvmText').textContent='„'+d.t+'"';
@@ -1241,6 +1197,28 @@ body.rv-lock{overflow:hidden}
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))closeM();});
   })();
   </script>
+</section>
+
+<!-- ================ CASE STUDY BANNER ================ -->
+<section class="cs-banner">
+  <div class="container">
+    <div class="cs-inner reveal">
+      <div class="cs-photo">
+        <img src="assets/honza fotka.jpg" alt="Honza Král" loading="lazy" />
+      </div>
+      <div class="cs-content">
+        <div class="label">Case Study</div>
+        <h3 class="cs-title">Jak si Honza skoro ztrojnásobil příjmy</h3>
+        <p class="cs-desc">Kompletní příběh 6 měsíců spolupráce. Od nuly sledujících po pravidelné poptávky a zakázky za miliony.</p>
+        <div class="cs-metrics">
+          <div><div class="cs-m-val">10+</div><div class="cs-m-lbl">poptávek měsíčně</div></div>
+          <div><div class="cs-m-val">2.5&times;</div><div class="cs-m-lbl">vyšší obrat</div></div>
+          <div><div class="cs-m-val">6</div><div class="cs-m-lbl">měsíců</div></div>
+        </div>
+        <a href="case-study-honza-kral.html" class="btn btn-primary">Přečíst celou case study <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ================ CENÍK ================ -->
@@ -1357,7 +1335,7 @@ body.rv-lock{overflow:hidden}
           </article>
         </div>
 
-        <p class="pricing-table-note" style="margin-top:22px">Ceny jsou bez DPH. Ad spend (rozpočet na reklamu) hradí klient zvlášť. 3D prohlídka je za 1 patro — každé další +2 625 Kč.<br>Doprava: Plzeň a okolí do 20 km zdarma. Nad 20 km: 5,90 Kč/km.</p>
+        <p class="pricing-table-note" style="margin-top:22px">Ad spend (rozpočet na reklamu) hradí klient zvlášť. 3D prohlídka je za 1 patro — každé další +2 625 Kč.<br>Doprava: Plzeň a okolí do 20 km zdarma. Nad 20 km: 5,90 Kč/km.</p>
       </div>
     </div>
 
@@ -1573,19 +1551,19 @@ body.rv-lock{overflow:hidden}
         <article class="addon">
           <h4>SEO Starter</h4>
           <div class="addon-price">od 4 900 Kč<span>/měs</span></div>
-          <p class="addon-meta">★ Od měsíce 2</p>
+          <p class="addon-meta">★ Od 1. měsíce</p>
           <p class="addon-extra">+ SEO audit 7 900 Kč jednorázově</p>
         </article>
         <article class="addon">
           <h4>Meta PPC správa</h4>
           <div class="addon-price">od 4 900 Kč<span>/měs</span></div>
-          <p class="addon-meta">★ Od měsíce 2–3</p>
+          <p class="addon-meta">★ Od 1.–2. měsíce</p>
           <p class="addon-extra">+ setup fee 4 900 Kč jednorázově</p>
         </article>
         <article class="addon">
           <h4>Email Starter</h4>
           <div class="addon-price">od 2 900 Kč<span>/měs</span></div>
-          <p class="addon-meta">Volitelné, měsíc 3+</p>
+          <p class="addon-meta">Volitelné, od 1.–2. měsíce</p>
           <p class="addon-extra">&nbsp;</p>
         </article>
       </div>
@@ -1598,7 +1576,7 @@ body.rv-lock{overflow:hidden}
       <a href="#kontakt">Kontaktovat sales →</a>
     </p>
 
-    <p class="packages-note reveal">Ceny jsou v Kč bez DPH. Kinsoo zatím není plátcem DPH.</p>
+    <p class="packages-note reveal">Ceny jsou uvedené v Kč.</p>
   </div>
 </section>
 
@@ -1701,12 +1679,12 @@ body.rv-lock{overflow:hidden}
 
       <div class="faq-item">
         <button class="faq-q" type="button" aria-expanded="false"><span>Kolik stojí video nemovitosti?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Jednorázové listing video začíná na 11 290 Kč (balíček Listing Start), samostatné video pro sReality od 4 900 Kč. Ceny jsou bez DPH a liší se podle typu nemovitosti a rozsahu balíčku.</p></div></div>
+        <div class="faq-a"><div class="faq-a-wrap"><p>Jednorázové listing video začíná na 11 290 Kč (balíček Listing Start), samostatné video pro sReality od 4 900 Kč. Cena se liší podle typu nemovitosti a rozsahu balíčku.</p></div></div>
       </div>
 
       <div class="faq-item">
         <button class="faq-q" type="button" aria-expanded="false"><span>Jak dlouho trvá natáčení a kdy dostanu hotové video?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Natáčení bytu zabere přibližně hodinu, u větších nemovitostí déle. Hotové video dodáváme do 5 pracovních dnů.</p></div></div>
+        <div class="faq-a"><div class="faq-a-wrap"><p>Natáčení trvá 1,5–6 hodin podle toho, co spolu točíme. Kompletní nemovitost máme většinou do 1,5 hodiny, organické natáčení (6 videí) zabere 2–3 hodiny. Hotové video dodáváme do 5 pracovních dnů.</p></div></div>
       </div>
 
       <div class="faq-item">
@@ -1716,7 +1694,7 @@ body.rv-lock{overflow:hidden}
 
       <div class="faq-item">
         <button class="faq-q" type="button" aria-expanded="false"><span>Co je Brand Partner?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Kompletní brand management: strategie a positioning, měsíční content plán, natáčení, střih a správa sociálních sítí. Jeden tým, jeden retainer, měřitelné výsledky.</p></div></div>
+        <div class="faq-a"><div class="faq-a-wrap"><p>Kompletní brand management: strategie a positioning, měsíční content plán, natáčení, střih a správa sociálních sítí. Jeden tým, jeden retainer, měřitelné výsledky. Zjednodušeně: vytvoříme spolu brand a značku, kterou lidi opravdu budou znát.</p></div></div>
       </div>
 
       <div class="faq-item">
@@ -1736,7 +1714,7 @@ body.rv-lock{overflow:hidden}
 
       <div class="faq-item">
         <button class="faq-q" type="button" aria-expanded="false"><span>Za jak dlouho uvidím výsledky?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>U budování brandu obvykle přicházejí první poptávky ze sociálních sítí kolem 3. měsíce. Naši klienti se dostali až na 10–20 poptávek měsíčně.</p></div></div>
+        <div class="faq-a"><div class="faq-a-wrap"><p>U budování brandu obvykle přicházejí první poptávky ze sociálních sítí kolem 2. měsíce. Naši klienti se dostali až na 10–20 poptávek měsíčně.</p></div></div>
       </div>
 
     </div>

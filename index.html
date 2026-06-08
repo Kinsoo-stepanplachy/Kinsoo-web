@@ -713,7 +713,8 @@ body.rv-lock{overflow:hidden}
   font-size:clamp(15px,1.6vw,18px);color:var(--ink-3);
   max-width:520px;line-height:1.6;margin:0 0 56px;
 }
-.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+@media(max-width:900px){.process-steps{grid-template-columns:repeat(2,1fr)}}
 .step{position:relative;padding:32px 24px;background:var(--bg-alt);border:1px solid var(--line);border-radius:var(--r-lg)}
 .step-num{
   font-family:var(--font-d);font-size:48px;font-weight:800;
@@ -1197,10 +1198,12 @@ body.rv-lock{overflow:hidden}
     var cards=document.querySelectorAll('.rv-card');
     function half(){return track?track.scrollWidth/2:0;}
     function wrap(){if(!marq)return;var h=half();if(h<=0)return;if(marq.scrollLeft>=h)marq.scrollLeft-=h;else if(marq.scrollLeft<0)marq.scrollLeft+=h;}
-    var hovering=false,dragging=false;
-    setInterval(function(){if(marq&&!hovering&&!dragging){marq.scrollLeft+=0.5;wrap();}},16);
+    var hovering=false,dragging=false,arrowAnim=false,last=0;
+    function loop(ts){var dt=ts-(last||ts);last=ts;if(dt>100)dt=16;if(marq&&!hovering&&!dragging&&!arrowAnim){marq.scrollLeft+=dt*0.045;wrap();}requestAnimationFrame(loop);}
+    requestAnimationFrame(loop);
     if(marq){marq.addEventListener('mouseenter',function(){hovering=true;});marq.addEventListener('mouseleave',function(){hovering=false;});}
-    function step(dir){if(!marq)return;marq.scrollBy({left:dir*266,behavior:'smooth'});setTimeout(wrap,700);}
+    function page(){return marq?Math.max(marq.clientWidth-40,300):300;}
+    function step(dir){if(!marq)return;arrowAnim=true;marq.scrollBy({left:dir*page(),behavior:'smooth'});setTimeout(function(){wrap();arrowAnim=false;},700);}
     var pv=document.getElementById('rvPrev'),nx=document.getElementById('rvNext');
     if(pv)pv.addEventListener('click',function(){step(-1);});
     if(nx)nx.addEventListener('click',function(){step(1);});
@@ -1617,22 +1620,22 @@ body.rv-lock{overflow:hidden}
 
     <div class="team-grid">
       <div class="tm reveal">
-        <div class="tm-tooltip">Řídí celou agenturu — strategie, sales, rozvoj klientů a chod firmy.</div>
+        <div class="tm-tooltip">Založil agenturu — komunikace a ekonomika firmy.</div>
         <div class="tm-photo"><span class="tm-initials">ŠP</span><img src="assets/team/stepan.jpg" alt="Štěpán Plachý" onerror="this.remove()" /></div>
         <div class="tm-name">Štěpán Plachý</div>
         <div class="tm-role">Founder &amp; Owner</div>
       </div>
       <div class="tm reveal">
-        <div class="tm-tooltip">Hlavní kameraman — natáčení všech klientských videí, drone, gimbal, kamera.</div>
+        <div class="tm-tooltip">Natáčení všech videí.</div>
         <div class="tm-photo"><span class="tm-initials">MB</span><img src="assets/team/matej.jpg" alt="Matěj Bláha" onerror="this.remove()" /></div>
         <div class="tm-name">Matěj Bláha</div>
         <div class="tm-role">Lead Filmmaker</div>
       </div>
       <div class="tm reveal">
-        <div class="tm-tooltip">Vedoucí editace — finální střih, color grading a postprodukce všech videí.</div>
+        <div class="tm-tooltip">Zodpovídá za kvalitu výstupů z Kinsoo.</div>
         <div class="tm-photo"><span class="tm-initials">KK</span><img src="assets/team/karolina.jpg" alt="Karolína Kubíčková" onerror="this.remove()" /></div>
         <div class="tm-name">Karolína Kubíčková</div>
-        <div class="tm-role">Lead Video Editor</div>
+        <div class="tm-role">Lead Video Editor + fotograf</div>
       </div>
       <div class="tm reveal">
         <div class="tm-tooltip">Grafický design, copywriting a vizuální identita klientských značek.</div>
@@ -1647,16 +1650,16 @@ body.rv-lock{overflow:hidden}
         <div class="tm-role">Video Editor</div>
       </div>
       <div class="tm reveal">
-        <div class="tm-tooltip">Péče o klienty a editace videí — komunikace, koordinace a postprodukce.</div>
+        <div class="tm-tooltip">Péče o klienty a analytika výsledků.</div>
         <div class="tm-photo"><span class="tm-initials">JS</span><img src="assets/team/jakub.jpg" alt="Jakub Stelzer" onerror="this.remove()" /></div>
         <div class="tm-name">Jakub Stelzer</div>
-        <div class="tm-role">Video Editor + Client Success</div>
+        <div class="tm-role">Client Success + Analytics</div>
       </div>
       <div class="tm reveal">
-        <div class="tm-tooltip">Editace videí — střih v CapCut a Captions pro sociální sítě i portály.</div>
+        <div class="tm-tooltip">Střih TOFU a organického contentu pro sociální sítě.</div>
         <div class="tm-photo"><span class="tm-initials">FM</span><img src="assets/team/filip.jpg" alt="Filip Málek" onerror="this.remove()" /></div>
         <div class="tm-name">Filip Málek</div>
-        <div class="tm-role">Video Editor</div>
+        <div class="tm-role">Video Editor — TOFU + organic content</div>
       </div>
       <div class="tm reveal">
         <div class="tm-tooltip">Tvorba a správa webových stránek — design, kód a optimalizace pro maximální výkon.</div>
@@ -1672,26 +1675,32 @@ body.rv-lock{overflow:hidden}
 <section class="process" id="proces">
   <div class="container">
     <div class="label reveal">Jak to funguje</div>
-    <h2 class="stitle reveal">Tři kroky ke <span class="gw">spolupráci.</span></h2>
-    <p class="process-sub reveal">Od prvního callu po první výsledky. Jednoduše.</p>
+    <h2 class="stitle reveal">Čtyři kroky ke <span class="gw">spolupráci.</span></h2>
+    <p class="process-sub reveal">Od vyplnění dotazníku po první výsledky. Jednoduše.</p>
 
     <div class="process-steps">
       <div class="step reveal">
         <div class="step-num">01</div>
         <div class="step-connector"></div>
-        <h3 class="step-name">Bezplatný call</h3>
-        <p class="step-desc">30 minut. Řeknete nám, co děláte, co potřebujete. Řekneme vám, co dává smysl a co ne.</p>
+        <h3 class="step-name">Vyplníte dotazník</h3>
+        <p class="step-desc">Krátký dotazník na webu — pár otázek o vás a o tom, co potřebujete.</p>
       </div>
       <div class="step reveal">
         <div class="step-num">02</div>
         <div class="step-connector"></div>
-        <h3 class="step-name">Strategie a plán</h3>
-        <p class="step-desc">Připravíme brand strategii, content plán a harmonogram natáčení. Schválíte, jedeme.</p>
+        <h3 class="step-name">Ozveme se do 24 hodin</h3>
+        <p class="step-desc">Náš sales vám do 24 hodin zavolá nebo napíše a probereme detaily.</p>
       </div>
       <div class="step reveal">
         <div class="step-num">03</div>
-        <h3 class="step-name">Natáčení a výsledky</h3>
-        <p class="step-desc">Natočíme, sestříháme, publikujeme. Každý měsíc report — vidíte přesně, co funguje.</p>
+        <div class="step-connector"></div>
+        <h3 class="step-name">Strategie a plán</h3>
+        <p class="step-desc">Společně nastavíme brand strategii, content plán a harmonogram natáčení.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04</div>
+        <h3 class="step-name">Dodáme výsledky</h3>
+        <p class="step-desc">Natočíme, sestříháme, publikujeme — a vy prodáváte víc nemovitostí.</p>
       </div>
     </div>
   </div>

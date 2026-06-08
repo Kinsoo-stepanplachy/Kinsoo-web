@@ -386,10 +386,16 @@ a{color:inherit;text-decoration:none;transition:color .2s}
 .reviews .label{color:var(--brand-deep)}
 .reviews .stitle{color:var(--ink)}
 .reviews-sub{font-size:clamp(15px,1.6vw,18px);color:var(--ink-3);max-width:600px;line-height:1.6;margin:0 0 48px}
-.rv-marquee{position:relative;overflow:hidden;margin:0 -28px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
-.rv-track{display:flex;width:max-content;padding:8px 0 16px;will-change:transform;animation:rv-scroll 90s linear infinite}
-.rv-marquee:hover .rv-track{animation-play-state:paused}
-@keyframes rv-scroll{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.rv-carousel{position:relative}
+.rv-marquee{position:relative;overflow-x:auto;overflow-y:hidden;margin:0 -28px;padding:0 28px;scrollbar-width:none;-ms-overflow-style:none;cursor:grab;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.rv-marquee::-webkit-scrollbar{display:none}
+.rv-marquee.dragging{cursor:grabbing}
+.rv-track{display:flex;width:max-content;padding:8px 0 16px}
+.rv-arrow{position:absolute;top:47%;transform:translateY(-50%);z-index:6;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--ink);font-family:var(--font-d);font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 10px 28px rgba(20,17,13,.14);transition:transform .2s,background .2s,border-color .2s}
+.rv-arrow:hover{background:#fff;transform:translateY(-50%) scale(1.08);border-color:var(--brand-soft)}
+.rv-arrow.prev{left:-4px}
+.rv-arrow.next{right:-4px}
+@media(max-width:640px){.rv-arrow{display:none}}
 .rv-card{
   flex:0 0 248px;margin-right:18px;
   position:relative;aspect-ratio:3/4;border-radius:var(--r-lg);overflow:hidden;cursor:pointer;
@@ -664,10 +670,10 @@ body.rv-lock{overflow:hidden}
   border:3px solid rgba(255,255,255,.15);
   box-shadow:0 0 0 1px rgba(0,0,0,.08),0 12px 32px -12px rgba(0,0,0,.3);
   display:flex;align-items:center;justify-content:center;
-  overflow:hidden;transition:all .3s;
+  overflow:hidden;transition:all .3s;position:relative;
 }
 .tm:hover .tm-photo{border-color:var(--brand-soft);box-shadow:0 0 0 1px var(--brand),0 16px 40px -12px rgba(168,49,62,.25)}
-.tm-photo img{width:100%;height:100%;object-fit:cover}
+.tm-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .tm-initials{
   font-family:var(--font-d);font-size:20px;font-weight:700;color:var(--ink-3);
 }
@@ -1092,7 +1098,9 @@ body.rv-lock{overflow:hidden}
     <h2 class="stitle reveal">Co o nás říkají <span class="gw">klienti</span></h2>
     <p class="reviews-sub reveal">Reálné zkušenosti klientů, se kterými spolupracujeme. Klikni na klienta a&nbsp;přečti si celou jeho recenzi.</p>
 
-    <div class="rv-marquee reveal">
+    <div class="rv-carousel reveal">
+      <button type="button" class="rv-arrow prev" id="rvPrev" aria-label="Předchozí recenze">&lsaquo;</button>
+      <div class="rv-marquee" id="rvMarquee">
       <div class="rv-track" id="rvTrack">
       <button type="button" class="rv-card" data-k="honza">
         <img src="assets/card-honza.jpg" alt="Honza Král" loading="lazy">
@@ -1149,6 +1157,8 @@ body.rv-lock{overflow:hidden}
         </span>
       </button>
       </div>
+      </div>
+      <button type="button" class="rv-arrow next" id="rvNext" aria-label="Další recenze">&rsaquo;</button>
     </div>
   </div>
 
@@ -1181,9 +1191,27 @@ body.rv-lock{overflow:hidden}
       drs:{t:"Spolupráce s kolegy z Kinsoo je pro nás zkušené makléře jako pokropení živou vodou. Snažíme se o moderní, výrazně individuální přístup a v Kinsoo máme partnera, který tyto představy splňuje — přináší špičkovou prezentaci a komunikaci odpovídající nejvyspělejším světovým trhům. Kinsoo pro nás představuje novou energii a svěží vítr ve světě realit. Jsme rádi, že jsme součástí progresu této mladé inovativní skupiny.",n:"František Drs",m:"Kinsoo klient od prosince 2025",i:"assets/card-drs.jpg"}
     };
     var modal=document.getElementById('rvModal');
+    var marq=document.getElementById('rvMarquee');
     var track=document.getElementById('rvTrack');
     if(track){Array.prototype.slice.call(track.children).forEach(function(c){var cl=c.cloneNode(true);cl.setAttribute('aria-hidden','true');cl.tabIndex=-1;track.appendChild(cl);});}
     var cards=document.querySelectorAll('.rv-card');
+    function half(){return track?track.scrollWidth/2:0;}
+    function wrap(){if(!marq)return;var h=half();if(h<=0)return;if(marq.scrollLeft>=h)marq.scrollLeft-=h;else if(marq.scrollLeft<0)marq.scrollLeft+=h;}
+    var hovering=false,dragging=false;
+    setInterval(function(){if(marq&&!hovering&&!dragging){marq.scrollLeft+=0.5;wrap();}},16);
+    if(marq){marq.addEventListener('mouseenter',function(){hovering=true;});marq.addEventListener('mouseleave',function(){hovering=false;});}
+    function step(dir){if(!marq)return;marq.scrollBy({left:dir*266,behavior:'smooth'});setTimeout(wrap,700);}
+    var pv=document.getElementById('rvPrev'),nx=document.getElementById('rvNext');
+    if(pv)pv.addEventListener('click',function(){step(-1);});
+    if(nx)nx.addEventListener('click',function(){step(1);});
+    var down=false,sx=0,sl=0,moved=false;
+    if(marq){
+      marq.addEventListener('pointerdown',function(e){down=true;dragging=true;moved=false;sx=e.clientX;sl=marq.scrollLeft;marq.classList.add('dragging');try{marq.setPointerCapture(e.pointerId);}catch(_){}});
+      marq.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-sx;if(Math.abs(dx)>5)moved=true;marq.scrollLeft=sl-dx;});
+      var endDrag=function(){if(!down)return;down=false;dragging=false;marq.classList.remove('dragging');wrap();};
+      marq.addEventListener('pointerup',endDrag);
+      marq.addEventListener('pointercancel',endDrag);
+    }
     function openM(k){var d=data[k];if(!d)return;
       document.getElementById('rvmText').textContent='„'+d.t+'"';
       document.getElementById('rvmName').textContent=d.n;
@@ -1192,7 +1220,7 @@ body.rv-lock{overflow:hidden}
       modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('rv-lock');
     }
     function closeM(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('rv-lock');}
-    cards.forEach(function(c){c.addEventListener('click',function(){openM(c.getAttribute('data-k'));});});
+    cards.forEach(function(c){c.addEventListener('click',function(e){if(moved){e.preventDefault();return;}openM(c.getAttribute('data-k'));});});
     modal.querySelectorAll('[data-close]').forEach(function(el){el.addEventListener('click',closeM);});
     document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))closeM();});
   })();

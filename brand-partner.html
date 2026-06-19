@@ -3,37 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kinsoo — Video pro realitní makléře a&nbsp;kanceláře</title>
-  <meta name="description" content="Video pro realitní makléře a kanceláře: listing videa nemovitostí, osobní brand a správa sociálních sítí. Více poptávek a prodejů. Natáčíme z Plzně po celé ČR." />
-  <meta name="keywords" content="video pro realitní makléře, videoprezentace nemovitostí, listing video, natáčení nemovitostí, realitní video Plzeň, osobní brand realitní makléř, marketing pro realitní kanceláře" />
-  <meta name="author" content="Kinsoo s.r.o." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="geo.region" content="CZ-32" />
-  <meta name="geo.placename" content="Plzeň" />
-  <meta name="theme-color" content="#A8313E" />
-  <meta name="seznam-wmt" content="0QmPQjJl3OSITsPzpvXZlxcx5giKepl4" />
-  <link rel="canonical" href="https://www.kinsoo.cz/" />
+  <title>Brand Partner — ceník a balíčky | Kinsoo</title>
+  <meta name="description" content="Ceník Brand Partner od Kinsoo — kompletní brand management pro realitní makléře a kanceláře. Měsíční balíčky Micro až Dominate, content plán, natáčení a správa sítí." />
+  <meta name="keywords" content="brand partner ceník, brand management realitní makléř, správa sociálních sítí makléř, content pro realitní kancelář" />
+  <link rel="canonical" href="https://www.kinsoo.cz/brand-partner.html" />
+  <link rel="icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta property="og:title" content="Brand Partner — ceník a balíčky | Kinsoo" />
+  <meta property="og:description" content="Kompletní brand management pro makléře a kanceláře. Jeden tým, jeden retainer, měřitelné výsledky." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.kinsoo.cz/" />
-  <meta property="og:title" content="Kinsoo — Video pro realitní makléře a kanceláře" />
-  <meta property="og:description" content="Listing videa nemovitostí, osobní brand a správa sítí pro realitní makléře. Více poptávek a prodejů. Natáčíme z Plzně po celé ČR." />
-  <meta property="og:image" content="https://www.kinsoo.cz/assets/og-cover.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Kinsoo — video a brand agentura pro realitní makléře" />
-  <meta property="og:locale" content="cs_CZ" />
-  <meta property="og:site_name" content="Kinsoo" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Kinsoo — Video pro realitní makléře a kanceláře" />
-  <meta name="twitter:description" content="Listing videa nemovitostí, osobní brand a správa sítí pro realitní makléře. Více poptávek a prodejů." />
-  <meta name="twitter:image" content="https://www.kinsoo.cz/assets/og-cover.png" />
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32" />
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-  <link rel="preload" as="image" href="assets/hero-poster.jpg" fetchpriority="high" />
+  <meta property="og:url" content="https://www.kinsoo.cz/brand-partner.html" />
+  <meta property="og:image" content="https://www.kinsoo.cz/assets/og-image.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter+Tight:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet">
   <style>
 /* =================================================================
    KINSOO — Real Estate Only
@@ -193,119 +176,43 @@ a{color:inherit;text-decoration:none;transition:color .2s}
   .mobile-menu a{font-family:var(--font-d);font-size:28px;font-weight:700}
 }
 
-/* ================ HERO v2 — Asymmetric editorial + showreel ================ */
+/* ================ HERO ================ */
 .hero{
-  position:relative;min-height:100vh;
-  background:#0A0A0A;color:#fff;overflow:hidden;
-  padding:140px 0 60px;
-  display:flex;align-items:center;
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  background:var(--bg-ink);color:#fff;overflow:hidden;
+  padding:120px 0 80px;
 }
-/* Clean dark hero — no gradient overlay theater */
-.hero .container{position:relative;z-index:1;width:100%}
-.hero-grid{
-  display:grid;
-  grid-template-columns:7fr 5fr;
-  gap:64px;align-items:center;
+.hero-video-bg{
+  position:absolute;inset:0;z-index:0;
 }
-.hero-text{display:flex;flex-direction:column;max-width:620px}
+.hero-video{width:100%;height:100%;object-fit:cover}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.45) 50%,rgba(0,0,0,.7) 100%);
+}
+.hero .container{position:relative;z-index:1}
+.hero-content{max-width:680px}
 .hero-eyebrow{
-  font-family:var(--font-b);
-  font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
-  color:rgba(255,255,255,.5);margin-bottom:28px;
-  display:inline-flex;align-items:center;gap:14px;
+  font-size:11px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;
+  color:rgba(255,255,255,.5);margin-bottom:20px;
+  display:flex;align-items:center;gap:10px;
 }
-.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--gradient)}
+.hero-eyebrow::before{content:'';width:20px;height:1px;background:rgba(255,255,255,.3)}
 .hero h1{
-  font-family:'Bebas Neue','Arial Narrow',sans-serif;
-  font-weight:400;
-  font-size:clamp(54px,7vw,116px);
-  line-height:.94;letter-spacing:-.005em;
-  text-transform:uppercase;
-  margin:0 0 24px;color:#fff;
+  font-family:var(--font-d);font-weight:800;
+  font-size:clamp(36px,5.5vw,64px);
+  line-height:1.05;letter-spacing:-.035em;
+  margin:0 0 24px;
 }
 .hero h1 .gw{
-  font-family:'Bebas Neue','Arial Narrow',sans-serif;
-  font-weight:400;
-  text-transform:uppercase;letter-spacing:-.005em;
-  background:linear-gradient(120deg,#C4BBE0 0%,#E8B5BC 50%,#FF9DA8 100%);
+  background:linear-gradient(120deg,#B8A5FF 0%,#FF8A9B 100%);
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  display:inline;
 }
 .hero-sub{
-  font-family:var(--font-b);
-  font-size:clamp(15px,1.4vw,18px);color:rgba(255,255,255,.62);
-  max-width:46ch;line-height:1.62;margin:0 0 40px;
+  font-size:clamp(16px,1.8vw,19px);color:rgba(255,255,255,.6);
+  max-width:520px;line-height:1.6;margin:0 0 36px;
 }
-.hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-.btn-ghost{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:var(--font-d);font-weight:600;font-size:14px;
-  letter-spacing:.02em;color:rgba(255,255,255,.78);
-  padding:14px 4px;
-  border-bottom:1px solid rgba(255,255,255,.18);
-  transition:color .25s,border-color .25s,gap .25s;
-}
-.btn-ghost:hover{color:#fff;border-color:rgba(255,255,255,.6);gap:12px}
-
-/* Hero showreel media — right side, big & playable */
-.hero-media{
-  position:relative;margin:0;
-  border-radius:8px;overflow:hidden;
-  aspect-ratio:9/11;
-  background:#1a1a1a;
-  box-shadow:0 0 0 1px rgba(255,255,255,.06);
-}
-.hero-media video,.hero-media img{
-  width:100%;height:100%;object-fit:cover;display:block;
-}
-/* Tag removed — no live indicator theatrics */
-.hero-media-caption{
-  position:absolute;left:0;right:0;bottom:0;z-index:2;
-  padding:24px 22px 20px;
-  background:linear-gradient(transparent,rgba(0,0,0,.78));
-  color:#fff;
-  font-family:var(--font-b);
-  font-size:13px;line-height:1.4;
-  display:flex;justify-content:space-between;align-items:end;gap:12px;
-}
-.hero-media-caption strong{
-  font-family:var(--font-d);font-weight:700;font-size:14px;
-  display:block;margin-bottom:2px;
-}
-.hero-media-caption small{font-size:11px;opacity:.6;letter-spacing:.04em}
-
-/* Stat strip across bottom — proof at a glance, council "fix stats credibility" */
-.hero-strip{
-  position:relative;z-index:1;
-  margin-top:64px;padding-top:32px;
-  border-top:1px solid rgba(255,255,255,.08);
-  display:grid;grid-template-columns:repeat(4,1fr);gap:32px;
-}
-.hero-strip-item strong{
-  display:block;
-  font-family:'Bebas Neue',sans-serif;font-weight:400;
-  font-size:clamp(26px,2.6vw,38px);line-height:1;letter-spacing:0;
-  color:#fff;margin-bottom:6px;
-}
-.hero-strip-item span{
-  font-size:12px;color:rgba(255,255,255,.45);line-height:1.4;
-}
-@media(max-width:980px){
-  .hero{padding:120px 0 50px;min-height:auto}
-  .hero-grid{grid-template-columns:1fr;gap:48px}
-  .hero-media{aspect-ratio:16/12;max-width:560px;transform:none}
-  .hero-media:hover{transform:none}
-  .hero-strip{grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px;padding-top:24px}
-}
-@media(max-width:560px){
-  .hero h1{font-size:clamp(42px,11vw,68px)}
-  .hero-strip{grid-template-columns:1fr 1fr}
-  .hero-actions{flex-direction:column;align-items:stretch}
-  .hero-actions .btn,.hero-actions .btn-ghost{justify-content:center;text-align:center}
-}
-@media(prefers-reduced-motion:reduce){
-  .hero-media{transform:none;transition:none}
-}
+.hero-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
 
 /* ================ SOCIAL PROOF BAR ================ */
 .proof-bar{
@@ -376,15 +283,7 @@ a{color:inherit;text-decoration:none;transition:color .2s}
   -webkit-mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
   -webkit-mask-composite:xor;mask-composite:exclude;
 }
-.srv-card--recommended{box-shadow:0 24px 50px -28px rgba(168,49,62,.22),0 12px 24px -16px rgba(58,42,130,.15);border-color:transparent;background:linear-gradient(180deg,rgba(244,223,226,.45) 0%,var(--bg-alt) 70%)}
-/* --- Clickable service cards (link to subpage) --- */
-.srv-card{display:flex;flex-direction:column;text-decoration:none;color:inherit;cursor:pointer}
-.srv-card:hover{border-color:var(--brand);background:linear-gradient(180deg,rgba(244,223,226,.6) 0%,var(--bg-alt) 78%);transform:translateY(-5px);box-shadow:0 26px 54px -26px rgba(168,49,62,.32)}
-.srv-card--recommended:hover{border-color:var(--brand)}
-.srv-cta{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);display:inline-flex;align-items:center;gap:8px;font-family:var(--font-d);font-weight:700;font-size:14px;color:var(--brand-deep);transition:gap var(--t-fast)}
-.srv-card:hover .srv-cta{gap:12px}
-.srv-cta .arrow{transition:transform var(--t-fast)}
-.srv-card:hover .srv-cta .arrow{transform:translateX(3px)}
+.srv-card--recommended{box-shadow:0 24px 50px -28px rgba(168,49,62,.22),0 12px 24px -16px rgba(58,42,130,.15)}
 
 /* ================ VÝSLEDKY ================ */
 .results{padding:96px 0;background:var(--bg-ink);color:#fff}
@@ -438,110 +337,32 @@ a{color:inherit;text-decoration:none;transition:color .2s}
 }
 .res-hl-tag::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px rgba(34,197,94,.5)}
 
-/* ================ CASE STUDY — Full-bleed editorial v2 ================ */
+/* ================ CASE STUDY BANNER ================ */
 .cs-banner{
-  position:relative;padding:0;background:#0A0A0A;color:#fff;overflow:hidden;
+  padding:72px 0;background:var(--bg);
 }
-.cs-banner::before{
-  content:'';position:absolute;inset:0;pointer-events:none;
-  background:
-    radial-gradient(700px 500px at 0% 0%,rgba(58,42,130,.22),transparent 60%),
-    radial-gradient(900px 700px at 100% 100%,rgba(168,49,62,.20),transparent 60%);
+.cs-inner{
+  display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;
+  background:var(--bg-alt);border:1px solid var(--line);
+  border-radius:var(--r-lg);padding:48px;overflow:hidden;
 }
-.cs-grid{
-  position:relative;z-index:1;
-  display:grid;grid-template-columns:5fr 6fr;
-  align-items:stretch;gap:0;
+.cs-photo{
+  border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;
 }
-/* Left: full-bleed photo */
-.cs-photo-v2{
-  position:relative;min-height:600px;overflow:hidden;
-  margin:0;
+.cs-photo img{width:100%;height:100%;object-fit:cover}
+.cs-content .label{color:var(--brand-deep)}
+.cs-title{
+  font-family:var(--font-d);font-size:clamp(24px,3vw,36px);
+  font-weight:800;line-height:1.1;letter-spacing:-.02em;
+  margin:0 0 16px;
 }
-.cs-photo-v2 img{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+.cs-desc{font-size:15px;color:var(--ink-3);line-height:1.6;margin:0 0 24px}
+.cs-metrics{display:flex;gap:32px;margin-bottom:28px}
+.cs-m-val{
+  font-family:var(--font-d);font-size:28px;font-weight:800;
+  letter-spacing:-.02em;line-height:1;margin-bottom:4px;
 }
-.cs-photo-v2::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(90deg,transparent 60%,rgba(10,10,10,.85) 100%),linear-gradient(180deg,transparent 50%,rgba(10,10,10,.55) 100%);
-  pointer-events:none;
-}
-.cs-photo-tag{
-  position:absolute;left:32px;bottom:32px;z-index:2;
-  color:#fff;font-family:var(--font-b);font-size:13px;
-}
-.cs-photo-tag strong{
-  font-family:var(--font-d);font-size:18px;font-weight:700;
-  letter-spacing:-.005em;display:block;margin-bottom:2px;
-}
-.cs-photo-tag span{opacity:.6;font-size:12px;letter-spacing:.04em}
-
-/* Right: editorial content */
-.cs-content-v2{
-  padding:96px 80px 96px 64px;
-  display:flex;flex-direction:column;justify-content:center;
-}
-.cs-content-v2 .label{color:var(--brand-soft)}
-.cs-content-v2 .label::before{background:linear-gradient(120deg,var(--brand-2-soft),var(--brand-soft))}
-.cs-h2{
-  font-family:'Bebas Neue',sans-serif;font-weight:400;
-  font-size:clamp(52px,6vw,96px);
-  line-height:.96;letter-spacing:-.005em;
-  text-transform:uppercase;color:#fff;
-  margin:18px 0 28px;
-}
-.cs-h2 .gw{
-  font-family:'Bebas Neue','Arial Narrow',sans-serif;
-  font-weight:400;text-transform:uppercase;letter-spacing:-.005em;
-  background:linear-gradient(120deg,#C4BBE0 0%,#FF9DA8 100%);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  display:inline;
-}
-.cs-pullquote{
-  position:relative;
-  font-family:var(--font-b);font-weight:400;
-  font-size:clamp(17px,1.6vw,22px);line-height:1.55;color:rgba(255,255,255,.82);
-  margin:0 0 40px;padding-left:22px;
-  border-left:2px solid var(--brand-soft);
-  max-width:54ch;
-}
-.cs-metrics-v2{
-  display:grid;grid-template-columns:repeat(3,auto);gap:48px;
-  margin-bottom:36px;
-}
-.cs-m-v2 strong{
-  display:block;
-  font-family:'Bebas Neue',sans-serif;font-weight:400;
-  font-size:clamp(56px,6vw,88px);line-height:1;letter-spacing:-.005em;
-  color:#fff;margin-bottom:6px;
-}
-.cs-m-v2 span{
-  display:block;
-  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
-  color:rgba(255,255,255,.5);font-weight:600;
-}
-.cs-cta-v2{
-  align-self:flex-start;
-  display:inline-flex;align-items:center;gap:10px;
-  padding:16px 28px;border-radius:60px;
-  background:#fff;color:var(--ink);
-  font-family:var(--font-d);font-weight:700;font-size:14px;
-  letter-spacing:.02em;
-  transition:transform .25s,box-shadow .25s,gap .25s;
-}
-.cs-cta-v2:hover{transform:translateY(-2px);gap:14px;box-shadow:0 16px 36px -10px rgba(255,255,255,.20)}
-
-@media(max-width:980px){
-  .cs-grid{grid-template-columns:1fr}
-  .cs-photo-v2{min-height:340px;aspect-ratio:16/10}
-  .cs-content-v2{padding:64px 28px}
-  .cs-metrics-v2{gap:28px;grid-template-columns:repeat(3,1fr)}
-}
-@media(max-width:560px){
-  .cs-content-v2{padding:48px 22px}
-  .cs-metrics-v2{gap:16px}
-  .cs-m-v2 strong{font-size:clamp(40px,12vw,56px)}
-}
+.cs-m-lbl{font-size:11px;color:var(--ink-4)}
 
 /* ================ RECENZE ================ */
 .reviews{padding:96px 0;background:var(--bg)}
@@ -644,6 +465,44 @@ body.rv-lock{overflow:hidden}
 .setup-price{text-align:right;position:relative}
 .setup-price-value{display:block;font-family:var(--font-display);font-size:clamp(42px,4.8vw,64px);line-height:1;font-weight:700;letter-spacing:-.025em;background:var(--gradient-brand);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
 .setup-price-meta{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-4);display:block;margin-top:8px}
+
+/* --- Setup line (minimal, replaces .setup-card) — same for makléř & kancelář --- */
+.setup-line{
+  display:flex;align-items:center;justify-content:space-between;gap:32px;
+  padding:22px 28px;margin-bottom:48px;
+  background:transparent;
+  border:1px solid var(--line);border-radius:var(--radius);
+  transition:border-color var(--t-fast),background var(--t-fast);
+}
+.setup-line:hover{border-color:var(--line-2);background:var(--bg-card)}
+.setup-line-text{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.setup-line-eyebrow{
+  font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--ink-4);font-weight:600;
+}
+.setup-line-title{
+  font-family:var(--font-display);font-size:18px;font-weight:700;
+  letter-spacing:-.01em;color:var(--ink);
+  margin:4px 0 0;line-height:1.2;
+}
+.setup-line-meta{
+  font-size:14px;color:var(--ink-3);margin:5px 0 0;line-height:1.55;
+  max-width:62ch;
+}
+.setup-line-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-display);font-weight:700;font-size:13px;
+  letter-spacing:.02em;color:var(--brand-deep);
+  white-space:nowrap;
+  transition:gap var(--t-fast),color var(--t-fast);
+}
+.setup-line-cta .arrow{transition:transform var(--t-fast);display:inline-block}
+.setup-line-cta:hover{color:var(--brand);gap:12px}
+.setup-line-cta:hover .arrow{transform:translateX(3px)}
+@media(max-width:720px){
+  .setup-line{flex-direction:column;align-items:flex-start;gap:14px;padding:20px 22px}
+  .setup-line-title{font-size:17px}
+}
 
 /* --- Check list --- */
 .check-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 32px;position:relative}
@@ -950,30 +809,11 @@ body.rv-lock{overflow:hidden}
   accent-color:var(--brand);cursor:pointer;
 }
 
-/* ================ STICKY MOBILE CTA ================ */
-.mobile-cta-bar{
-  position:fixed;left:12px;right:12px;bottom:12px;z-index:280;
-  display:none;
-  background:var(--gradient);color:#fff;
-  padding:14px 22px;border-radius:60px;
-  font-family:var(--font-d);font-weight:700;font-size:14px;
-  letter-spacing:.02em;text-align:center;
-  box-shadow:0 14px 32px -10px rgba(168,49,62,.55),0 6px 18px -8px rgba(58,42,130,.40);
-  transform:translateY(140%);transition:transform .45s cubic-bezier(.2,.7,.2,1);
-  align-items:center;justify-content:center;gap:10px;
-}
-.mobile-cta-bar.is-visible{transform:translateY(0)}
-.mobile-cta-bar .arrow{display:inline-block;transition:transform .25s}
-.mobile-cta-bar:active{transform:translateY(0) scale(.97)}
-@media(max-width:768px){.mobile-cta-bar{display:inline-flex}}
-@media(prefers-reduced-motion:reduce){.mobile-cta-bar{transition:none}}
-
 /* ================ FOOTER ================ */
 .footer{
   padding:32px 0;background:var(--bg-ink);
   border-top:1px solid rgba(255,255,255,.06);
 }
-@media(max-width:768px){.footer{padding-bottom:96px}}
 .footer-inner{
   display:flex;justify-content:space-between;align-items:center;
   flex-wrap:wrap;gap:12px;
@@ -989,7 +829,6 @@ body.rv-lock{overflow:hidden}
 .reveal.is-visible{opacity:1;transform:none}
 
 /* ================ IMPECCABLE POLISH v8.1 — brand-guide aligned typography ================ */
-/* All major section titles → Bebas Neue (brand guide spec, replaces Inter Tight) */
 .stitle{
   font-family:'Bebas Neue','Arial Narrow',sans-serif;
   font-weight:400;
@@ -998,7 +837,6 @@ body.rv-lock{overflow:hidden}
   font-size:clamp(40px,5.6vw,82px);
 }
 .stitle-sm{font-size:clamp(28px,4.2vw,52px)}
-/* All gradient highlight words → Fraunces italic (brand guide spec) */
 .gw{
   font-family:'Bebas Neue','Arial Narrow',sans-serif;
   font-weight:400;
@@ -1007,7 +845,6 @@ body.rv-lock{overflow:hidden}
   background:var(--gradient);
   -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
 }
-/* Motion-safe defaults (council Sam persona) */
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{
     animation-duration:.01ms !important;
@@ -1066,571 +903,253 @@ body.rv-lock{overflow:hidden}
   .team-grid{grid-template-columns:1fr}
 }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://www.kinsoo.cz/#organization",
-        "name": "Kinsoo s.r.o.",
-        "alternateName": "Kinsoo",
-        "url": "https://www.kinsoo.cz/",
-        "logo": "https://www.kinsoo.cz/assets/kinsoo-icon.png",
-        "image": "https://www.kinsoo.cz/assets/og-cover.png",
-        "description": "Video & brand agentura pro realitní makléře a kanceláře. Listing videa nemovitostí, osobní brand a správa sociálních sítí.",
-        "foundingDate": "2023",
-        "founder": { "@type": "Person", "name": "Štěpán Plachý" },
-        "vatID": "CZ24983900",
-        "taxID": "24983900",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Plzeň",
-          "addressRegion": "Plzeňský kraj",
-          "addressCountry": "CZ"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+420725365636",
-          "email": "stepanplachy@kinsoo.cz",
-          "contactType": "customer service",
-          "availableLanguage": ["Czech", "English"]
-        }
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://www.kinsoo.cz/#business",
-        "name": "Kinsoo — video a brand agentura pro reality",
-        "url": "https://www.kinsoo.cz/",
-        "image": "https://www.kinsoo.cz/assets/og-cover.png",
-        "parentOrganization": { "@id": "https://www.kinsoo.cz/#organization" },
-        "priceRange": "$$",
-        "telephone": "+420725365636",
-        "email": "stepanplachy@kinsoo.cz",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Plzeň",
-          "addressRegion": "Plzeňský kraj",
-          "addressCountry": "CZ"
-        },
-        "areaServed": { "@type": "Country", "name": "Česká republika" },
-        "knowsAbout": ["Videoprezentace nemovitostí", "Realitní video", "Osobní brand realitního makléře", "Správa sociálních sítí", "Marketing pro realitní kanceláře"],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Služby Kinsoo",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Listing video nemovitosti", "description": "Profesionální video nemovitosti — natáčení, drone, foto, půdorys, 3D prohlídka. Jednorázově." } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Partner", "description": "Kompletní brand management pro realitní makléře — strategie, content plán, natáčení a správa sociálních sítí." } }
-          ]
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "reviewCount": "6"
-        },
-        "review": [
-          { "@type": "Review", "author": { "@type": "Person", "name": "Honza Král" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Pozitivně mě překvapilo, jak rychle se to rozjelo. Poprvé mi z Instagramu přišla reálná poptávka — a pak další." },
-          { "@type": "Review", "author": { "@type": "Person", "name": "Famil Amirov" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Se Štěpánem a jeho týmem jsem spokojený. Vše stříhají včas, sami přicházejí s nápady a člověk u nich má pořád přehled o tom, na čem se pracuje a v jaké je to fázi. Spolupráci doporučuju." },
-          { "@type": "Review", "author": { "@type": "Person", "name": "Adam Bárta" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Na klucích z Kinsoo se mi líbí, že se na kameře cítím příjemně a vždycky ze mě dostanou to nejlepší. Výstupy jsou kvalitní a promyšlené — je vidět, že vědí, co dělají, a funguje jim to." },
-          { "@type": "Review", "author": { "@type": "Person", "name": "Dominik Polcar" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Spolupráce s Kinsoo mi pomohla v mnoha ohledech. Budujeme brand, který nemá v regionu obdoby, a celé si to extrémně užívám. Měl jsem strach z kamery i mikrofonu, ale kluci mi vytvořili skvělé prostředí — už od prvního natáčení jsem věděl, že to byla dobrá volba." },
-          { "@type": "Review", "author": { "@type": "Person", "name": "Tomáš Vaněk" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "S Kinsoo spolupracuji na tvorbě realitních videí a mohu je jednoznačně doporučit. Oceňuji profesionální přístup, rychlou komunikaci a spolehlivost. Mají cit pro detail a výsledná videa jsou na vysoké úrovni." },
-          { "@type": "Review", "author": { "@type": "Person", "name": "František Drs" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Spolupráce s kolegy z Kinsoo je pro nás zkušené makléře jako svěží vítr ve světě realit. Oceňujeme moderní a individuální přístup — Kinsoo přináší špičkovou prezentaci a komunikaci odpovídající nejvyspělejším světovým trhům. Nová energie, kterou jsme rádi součástí." }
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.kinsoo.cz/#website",
-        "name": "Kinsoo",
-        "url": "https://www.kinsoo.cz/",
-        "description": "Video & brand agentura pro realitní makléře a kanceláře",
-        "publisher": { "@id": "https://www.kinsoo.cz/#organization" },
-        "inLanguage": "cs"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://www.kinsoo.cz/" }
-        ]
-      },
-      {
-        "@type": "VideoObject",
-        "name": "Kinsoo — ukázka realitní video tvorby",
-        "description": "Ukázka video tvorby Kinsoo pro realitní makléře a kanceláře.",
-        "thumbnailUrl": "https://www.kinsoo.cz/assets/hero-poster.jpg",
-        "contentUrl": "https://www.kinsoo.cz/assets/hero-video.mp4",
-        "uploadDate": "2026-06-05",
-        "publisher": { "@id": "https://www.kinsoo.cz/#organization" }
-      }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "Kolik stojí video nemovitosti?", "acceptedAnswer": { "@type": "Answer", "text": "Jednorázové listing video začíná na 11 290 Kč (balíček Listing Start), samostatné video pro sReality od 4 900 Kč. Cena se liší podle typu nemovitosti a rozsahu balíčku." } },
-      { "@type": "Question", "name": "Jak dlouho trvá natáčení a kdy dostanu hotové video?", "acceptedAnswer": { "@type": "Answer", "text": "Natáčení trvá 1,5–6 hodin podle toho, co spolu točíme. Kompletní nemovitost máme většinou do 1,5 hodiny, organické natáčení (6 videí) zabere 2–3 hodiny. Hotové video dodáváme do 5 pracovních dnů." } },
-      { "@type": "Question", "name": "Točíte i mimo Plzeň?", "acceptedAnswer": { "@type": "Answer", "text": "Ano. Sídlíme v Plzni — doprava do 20 km zdarma, nad 20 km účtujeme 5,90 Kč/km. Po domluvě natáčíme po celé ČR." } },
-      { "@type": "Question", "name": "Co je Brand Partner?", "acceptedAnswer": { "@type": "Answer", "text": "Kompletní brand management: strategie a positioning, měsíční content plán, natáčení, střih a správa sociálních sítí. Jeden tým, jeden retainer, měřitelné výsledky. Zjednodušeně: vytvoříme spolu brand a značku, kterou lidi opravdu budou znát." } },
-      { "@type": "Question", "name": "Pro koho jsou vaše služby?", "acceptedAnswer": { "@type": "Answer", "text": "Pro realitní makléře a realitní kanceláře, které chtějí víc poptávek a prodejů díky videu a silnému osobnímu brandu." } },
-      { "@type": "Question", "name": "Co všechno listing video obsahuje?", "acceptedAnswer": { "@type": "Answer", "text": "Podle balíčku: video pro sReality, Platinum reels pro sociální sítě, profesionální fotografie, 2D půdorys, drone záběry, landing page nemovitosti, Meta Ad setup a 3D prohlídku." } },
-      { "@type": "Question", "name": "Musím se umět chovat před kamerou?", "acceptedAnswer": { "@type": "Answer", "text": "Ne. Většina klientů má z kamery zpočátku obavy — vytvoříme uvolněné prostředí a vždy z vás dostaneme to nejlepší." } },
-      { "@type": "Question", "name": "Za jak dlouho uvidím výsledky?", "acceptedAnswer": { "@type": "Answer", "text": "U budování brandu obvykle přicházejí první poptávky ze sociálních sítí kolem 2. měsíce. Naši klienti se dostali až na 10–20 poptávek měsíčně." } }
-    ]
-  }
-  </script>
+<style>
+/* ===== Subpage (service detail) ===== */
+.subpage-hero{padding:150px 0 64px;background:var(--bg);position:relative;overflow:hidden}
+.subpage-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(820px 460px at 88% -5%,rgba(168,49,62,.06),transparent 60%),radial-gradient(640px 460px at -5% 100%,rgba(58,42,130,.05),transparent 65%);pointer-events:none}
+.subpage-hero .container{position:relative;z-index:1}
+.back-link{display:inline-flex;align-items:center;gap:8px;color:var(--ink-3);font-size:14px;font-weight:600;margin-bottom:30px;transition:color var(--t-fast),gap var(--t-fast)}
+.back-link:hover{color:var(--brand);gap:11px}
+.subpage-title{font-family:var(--font-d);font-weight:800;font-size:clamp(40px,6.4vw,78px);letter-spacing:-.03em;line-height:.98;margin:14px 0 22px}
+.subpage-lead{font-size:clamp(16.5px,1.8vw,19.5px);color:var(--ink-2);line-height:1.62;max-width:62ch;margin:0 0 44px}
+.subpage-points{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:920px}
+.subpage-point{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px 28px;transition:border-color var(--t-med),transform var(--t-med),box-shadow var(--t-med)}
+.subpage-point:hover{border-color:rgba(168,49,62,.28);transform:translateY(-3px);box-shadow:0 22px 50px -30px rgba(168,49,62,.28)}
+.subpage-point h3{font-family:var(--font-b);font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--brand-deep);margin:0 0 11px}
+.subpage-point p{font-size:15.5px;color:var(--ink-3);line-height:1.62;margin:0}
+.subpage-pricing{padding:30px 0 120px}
+.cross-link{margin-top:54px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius-lg);padding:26px 30px}
+.cross-link p{margin:0;font-size:15.5px;color:var(--ink-2);line-height:1.5}
+.cross-link strong{color:var(--ink);font-weight:700}
+@media(max-width:760px){.subpage-points{grid-template-columns:1fr}.subpage-hero{padding:124px 0 44px}.subpage-pricing{padding:18px 0 90px}.cross-link{flex-direction:column;align-items:flex-start}}
+</style>
 </head>
 <body>
 
 <!-- ================ NAV ================ -->
 <nav class="nav is-top" id="nav">
-  <div class="nav-logo" style="position:relative;min-width:38px;min-height:28px">
+  <a class="nav-logo" href="index.html" style="position:relative;min-width:38px;min-height:28px;text-decoration:none;color:inherit">
     <img class="logo-white" src="assets/kinsoo-icon-white.png" alt="Kinsoo" />
     <img class="logo-color" src="assets/kinsoo-icon.png" alt="Kinsoo" />
     <span style="margin-left:36px">Kinsoo</span>
-  </div>
+  </a>
   <div class="nav-links">
-    <a href="#sluzby">Služby</a>
-    <a href="#recenze">Recenze</a>
-    <a href="#sluzby">Ceník</a>
-    <a href="#tym">Tým</a>
-    <a href="#faq">FAQ</a>
+    <a href="index.html#sluzby">Služby</a>
+    <a href="index.html#recenze">Recenze</a>
+    <a href="index.html#sluzby">Ceník</a>
+    <a href="index.html#tym">Tým</a>
+    <a href="index.html#faq">FAQ</a>
     <a href="#kontakt" class="nav-cta">Chci spolupracovat <span class="arrow">&rarr;</span></a>
   </div>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
-
-<!-- Mobile menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#sluzby" class="mm-link">Služby</a>
-  <a href="#recenze" class="mm-link">Recenze</a>
-  <a href="#sluzby" class="mm-link">Ceník</a>
-  <a href="#tym" class="mm-link">Tým</a>
-  <a href="#faq" class="mm-link">FAQ</a>
+  <a href="index.html#sluzby" class="mm-link">Služby</a>
+  <a href="index.html#recenze" class="mm-link">Recenze</a>
+  <a href="index.html#sluzby" class="mm-link">Ceník</a>
+  <a href="index.html#tym" class="mm-link">Tým</a>
+  <a href="index.html#faq" class="mm-link">FAQ</a>
   <a href="#kontakt" class="mm-link">Kontakt</a>
 </div>
 
-<!-- ================ HERO v2 — Asymmetric editorial ================ -->
-<section class="hero" id="top">
+<!-- ================ INTRO ================ -->
+<section class="subpage-hero">
   <div class="container">
-    <div class="hero-grid">
-      <div class="hero-text reveal">
-        <span class="hero-eyebrow">Video &amp; brand agentura · Plzeň</span>
-        <h1>Pomáháme makléřům prodávat <span class="gw">víc&nbsp;nemovitostí</span></h1>
-        <p class="hero-sub">Listing videa, osobní brand na sítích a&nbsp;kompletní správa obsahu. Ať vás klienti najdou dřív, než zavolají konkurenci.</p>
-        <div class="hero-actions">
-          <a href="#kontakt" class="btn btn-primary">Chci spolupracovat <span class="arrow">&rarr;</span></a>
-          <a href="#recenze" class="btn-ghost">Recenze klientů <span class="arrow">&rarr;</span></a>
-        </div>
+    <a class="back-link" href="index.html#sluzby">&larr; Zpět na služby</a>
+    <div class="label">Brand Partner</div>
+    <h1 class="subpage-title">Značka, kterou<br><span class="gw">lidé znají.</span></h1>
+    <p class="subpage-lead">Kompletní brand management pro makléře a kanceláře. Měsíční spolupráce: strategie, osobní brand, obsah, natáčení a správa sítí. Jeden tým, jeden retainer, měřitelné výsledky.</p>
+    <div class="subpage-points">
+      <div class="subpage-point">
+        <h3>V čem se liší od Listing videa?</h3>
+        <p>Listing video je jednorázová produkce jedné nemovitosti. Brand Partner buduje vás jako značku — pravidelný obsah, který přitahuje klienty sám.</p>
       </div>
-      <figure class="hero-media reveal" aria-label="Ukázka naší video tvorby">
-        <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
-          <source src="assets/hero-video.mp4" type="video/mp4">
-        </video>
-        <figcaption class="hero-media-caption">
-          <span>
-            <strong>Listing reel</strong>
-            <small>Natáčíme z&nbsp;Plzně po&nbsp;celé ČR</small>
+      <div class="subpage-point">
+        <h3>Co díky tomu dosáhnete</h3>
+        <p>Silnou osobní značku, kterou v regionu znají, stálý přísun poptávek z organického obsahu a pozici jedničky na trhu. Listing videa navíc můžete platit pomocí provize.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================ CENÍK — BRAND PARTNER ================ -->
+<section class="pricing subpage-pricing" id="cenik">
+  <div class="container">
+    <!-- ── BRAND PARTNER ── -->
+    <div class="niche-section">
+      <div class="niche-section-head reveal">
+        <span class="panel-tag">Měsíční retainer · Brand Partner</span>
+        <h3 class="panel-title">Brand pro real estate</h3>
+        <p class="panel-desc">Vyberte profil makléře nebo kanceláře — ceny i obsah jsou nastavené pro vás.</p>
+      </div>
+
+      <!-- Brand Setup — minimal strip · identical for makléř & kancelář -->
+      <div class="setup-line reveal">
+        <div class="setup-line-text">
+          <span class="setup-line-eyebrow">Před každou spoluprací</span>
+          <h3 class="setup-line-title">Brand Setup &amp; strategie</h3>
+          <p class="setup-line-meta">Analýza trhu, vizuální identita, obsahová strategie a brand dokument. Cena individuálně dle rozsahu — domluvíme na callu.</p>
+        </div>
+        <a href="#kontakt" class="setup-line-cta">Domluvit call <span class="arrow">→</span></a>
+      </div>
+
+      <!-- Segment pills: makléř vs kancelář -->
+      <div class="segment-pills reveal" role="tablist" aria-label="Profil real estate">
+        <button class="pill is-active" data-segment="re1" role="tab" aria-selected="true" type="button">
+          <span class="pill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1v-8.5Z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/></svg>
           </span>
-        </figcaption>
-      </figure>
-    </div>
+          <span class="pill-label">Realitní makléř</span>
+          <span class="pill-sub">RE 1.0</span>
+        </button>
+        <button class="pill" data-segment="re2" role="tab" aria-selected="false" type="button">
+          <span class="pill-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 21V5a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v3h6a1 1 0 0 1 1 1v12M4 21h16M9 9h.01M9 13h.01M9 17h.01M15 13h.01M15 17h.01" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <span class="pill-label">Realitní kancelář</span>
+          <span class="pill-sub">RE 2.0</span>
+        </button>
+      </div>
 
-    <!-- Proof strip — council fix "stats credibility, in context" -->
-    <div class="hero-strip reveal">
-      <div class="hero-strip-item">
-        <strong>640&nbsp;mil.&nbsp;Kč</strong>
-        <span>natočených nemovitostí</span>
-      </div>
-      <div class="hero-strip-item">
-        <strong>7,9&nbsp;mil.</strong>
-        <span>organický dosah&nbsp;/&nbsp;měs</span>
-      </div>
-      <div class="hero-strip-item">
-        <strong>3&nbsp;500+</strong>
-        <span>natočených videí</span>
-      </div>
-      <div class="hero-strip-item">
-        <strong>10+</strong>
-        <span>aktivních makléřů</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================ SLUŽBY ================ -->
-<section class="services" id="sluzby">
-  <div class="container">
-    <div class="label reveal">Co pro vás děláme</div>
-    <h2 class="stitle reveal">Dvě služby.<br><span class="gw">Jeden cíl.</span></h2>
-    <p class="services-sub reveal">Jednorázové video, nebo kompletní brand management. Výsledek naší spolupráce je stejný: více poptávek, více zakázek, více peněz.</p>
-
-    <div class="services-grid services-grid--2">
-      <a class="srv-card reveal" href="listing-video.html">
-        <div class="srv-icon ic1">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h2l1.5-2h7L15 7h6a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.2"/></svg>
+      <!-- RE 1.0 — Makléř packages -->
+      <div class="pricing-panel is-active" data-panel="re1">
+        <div class="packages-grid">
+          <article class="pkg">
+            <header>
+              <span class="pkg-name">Micro</span>
+              <div class="pkg-price">12 900 Kč<span class="pkg-period">/měs</span></div>
+            </header>
+            <ul class="check-list">
+              <li>4 videa / měs</li>
+              <li>2 IG Stories</li>
+              <li>Plánování obsahu</li>
+              <li>Research + scénáře</li>
+              <li>Natáčení + edit + upload</li>
+            </ul>
+            <a href="#kontakt" class="btn btn-outline btn-block">Začít <span class="arrow">→</span></a>
+          </article>
+          <article class="pkg">
+            <header>
+              <span class="pkg-name">Start</span>
+              <div class="pkg-price">19 900 Kč<span class="pkg-period">/měs</span></div>
+            </header>
+            <ul class="check-list">
+              <li>8 videí / měs</li>
+              <li>4 IG Stories</li>
+              <li>Plánování obsahu</li>
+              <li>Research + scénáře</li>
+              <li>Natáčení + edit + upload</li>
+              <li>Měsíční analýza + call</li>
+            </ul>
+            <a href="#kontakt" class="btn btn-outline btn-block">Začít <span class="arrow">→</span></a>
+          </article>
+          <article class="pkg pkg-featured">
+            <span class="pkg-badge">★ Doporučujeme</span>
+            <header>
+              <span class="pkg-name">Scale</span>
+              <div class="pkg-price">27 900 Kč<span class="pkg-period">/měs</span></div>
+            </header>
+            <ul class="check-list">
+              <li>12 videí / měs</li>
+              <li>8 IG Stories</li>
+              <li>Plánování obsahu</li>
+              <li>Research + scénáře</li>
+              <li>Natáčení + edit + upload</li>
+              <li>Měsíční analýza + call</li>
+              <li class="hl">Platba nemovitostí pomocí provize</li>
+            </ul>
+            <a href="#kontakt" class="btn btn-brand btn-block">Začít <span class="arrow">→</span></a>
+          </article>
+          <article class="pkg">
+            <header>
+              <span class="pkg-name">Dominate</span>
+              <div class="pkg-price">38 900 Kč<span class="pkg-period">/měs</span></div>
+            </header>
+            <ul class="check-list">
+              <li>16 videí / měs</li>
+              <li>12 IG Stories</li>
+              <li>Plánování obsahu</li>
+              <li>Research + scénáře</li>
+              <li>Natáčení + edit + upload</li>
+              <li>Měsíční analýza + call</li>
+              <li class="hl">Platba nemovitostí pomocí provize</li>
+            </ul>
+            <a href="#kontakt" class="btn btn-outline btn-block">Začít <span class="arrow">→</span></a>
+          </article>
         </div>
-        <h3 class="srv-name">Listing video</h3>
-        <p class="srv-desc">Profesionální video vaší nemovitosti. Natočíme, sestříháme, dodáme. Jednorázově, bez závazku.</p>
-        <ul class="srv-features">
-          <li>Natáčení interiéru i exteriéru</li>
-          <li>Drony, stabilizátory, profi střih</li>
-          <li>Foto, půdorys, 3D prohlídka</li>
-          <li>Dodání do 5 pracovních dnů</li>
-          <li>Formáty pro portály i sítě</li>
-        </ul>
-        <span class="srv-cta">Zobrazit ceník a balíčky <span class="arrow">&rarr;</span></span>
-      </a>
+      </div>
 
-      <a class="srv-card srv-card--recommended reveal" href="brand-partner.html" style="position:relative">
-        <span class="srv-tag">★ Doporučujeme</span>
-        <div class="srv-icon ic3">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 6.5 7 1-5 5 1.5 7-6.5-3.5L5.5 21.5 7 14.5l-5-5 7-1L12 2Z"/></svg>
+      <!-- RE 2.0 — Kancelář packages -->
+      <div class="pricing-panel" data-panel="re2">
+        <div class="packages-grid">
+          <article class="pkg">
+            <header>
+              <span class="pkg-name">Start</span>
+              <div class="pkg-price">31 200 Kč<span class="pkg-period">/měs</span></div>
+            </header>
+            <ul class="check-list">
+              <li>8 videí / měs</li>
+              <li>4 IG Stories</li>
+              <li>Plánování + research + scénáře</li>
+              <li>Natáčení + edit + upload</li>
+              <li>Měsíční analýza + call</li>
+            </ul>
+            <a href="#kontakt" class="btn btn-outline btn-block">Začít <span class="arrow">→</span></a>
+          </article>
+          <article class="pkg pkg-featured">
+            <span class="pkg-badge">★ Doporučujeme</span>
+            <header>
+              <span class="pkg-name">Scale</span>
+              <div class="pkg-price">41 700 Kč<span class="pkg-period">/měs</span></div>
+            </header>
+            <ul class="check-list">
+              <li>12 videí / měs</li>
+              <li>8 IG Stories</li>
+              <li>Plánování + research + scénáře</li>
+              <li>Natáčení + edit + upload</li>
+              <li>Měsíční analýza + call</li>
+              <li class="hl">Platba nemovitostí pomocí provize</li>
+            </ul>
+            <a href="#kontakt" class="btn btn-brand btn-block">Začít <span class="arrow">→</span></a>
+          </article>
+          <article class="pkg">
+            <header>
+              <span class="pkg-name">Dominate</span>
+              <div class="pkg-price">53 000 Kč<span class="pkg-period">/měs</span></div>
+            </header>
+            <ul class="check-list">
+              <li>16 videí / měs</li>
+              <li>12 IG Stories</li>
+              <li>Plánování + research + scénáře</li>
+              <li>Natáčení + edit + upload</li>
+              <li>Měsíční analýza + call</li>
+              <li class="hl">Platba nemovitostí pomocí provize</li>
+            </ul>
+            <a href="#kontakt" class="btn btn-outline btn-block">Začít <span class="arrow">→</span></a>
+          </article>
         </div>
-        <h3 class="srv-name">Brand Partner</h3>
-        <p class="srv-desc">Kompletní brand management. Strategie, osobní brand, obsah, správa sítí. Jeden tým, jeden retainer, měřitelné výsledky.</p>
-        <ul class="srv-features">
-          <li>Brand strategie a positioning</li>
-          <li>Měsíční content plán + natáčení</li>
-          <li>Správa sociálních sítí</li>
-          <li>Platba listing videí pomocí provize</li>
-          <li>Dedikovaný account manager</li>
-          <li>Reporting a optimalizace</li>
-        </ul>
-        <span class="srv-cta">Zobrazit ceník a balíčky <span class="arrow">&rarr;</span></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ================ RECENZE ================ -->
-<section class="reviews" id="recenze">
-  <div class="container">
-    <div class="label reveal">Recenze</div>
-    <h2 class="stitle reveal">Co o nás říkají <span class="gw">klienti</span></h2>
-    <p class="reviews-sub reveal">Reálné zkušenosti klientů, se kterými spolupracujeme. Klikni na klienta a&nbsp;přečti si celou jeho recenzi.</p>
-
-    <div class="rv-carousel reveal">
-      <button type="button" class="rv-arrow prev" id="rvPrev" aria-label="Předchozí recenze">&lsaquo;</button>
-      <div class="rv-marquee" id="rvMarquee">
-      <div class="rv-track" id="rvTrack">
-      <button type="button" class="rv-card" data-k="honza">
-        <img src="assets/card-honza.jpg" alt="Honza Král" loading="lazy">
-        <span class="rv-card-body">
-          <span class="rv-card-stars">★★★★★</span>
-          <span class="rv-card-name">Honza Král</span>
-          <span class="rv-card-meta">Kinsoo klient od&nbsp;listopadu&nbsp;2025</span>
-          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
-        </span>
-      </button>
-      <button type="button" class="rv-card" data-k="famil">
-        <img src="assets/card-famil.jpg" alt="Famil Amirov" loading="lazy">
-        <span class="rv-card-body">
-          <span class="rv-card-stars">★★★★★</span>
-          <span class="rv-card-name">Famil Amirov</span>
-          <span class="rv-card-meta">Kinsoo klient od&nbsp;září&nbsp;2025</span>
-          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
-        </span>
-      </button>
-      <button type="button" class="rv-card" data-k="adam">
-        <img src="assets/card-adam.jpg" alt="Adam Bárta" loading="lazy">
-        <span class="rv-card-body">
-          <span class="rv-card-stars">★★★★★</span>
-          <span class="rv-card-name">Adam Bárta</span>
-          <span class="rv-card-meta">Kinsoo klient od&nbsp;ledna&nbsp;2026</span>
-          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
-        </span>
-      </button>
-      <button type="button" class="rv-card" data-k="dominik">
-        <img src="assets/card-dominik.jpg" alt="Dominik Polcar" loading="lazy">
-        <span class="rv-card-body">
-          <span class="rv-card-stars">★★★★★</span>
-          <span class="rv-card-name">Dominik Polcar</span>
-          <span class="rv-card-meta">Kinsoo klient od&nbsp;března&nbsp;2026</span>
-          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
-        </span>
-      </button>
-      <button type="button" class="rv-card" data-k="tomas">
-        <img src="assets/card-tomas.jpg" alt="Tomáš Vaněk" loading="lazy">
-        <span class="rv-card-body">
-          <span class="rv-card-stars">★★★★★</span>
-          <span class="rv-card-name">Tomáš Vaněk</span>
-          <span class="rv-card-meta">Kinsoo klient od&nbsp;dubna&nbsp;2026</span>
-          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
-        </span>
-      </button>
-      <button type="button" class="rv-card" data-k="drs">
-        <img src="assets/card-drs.jpg" alt="František Drs" loading="lazy">
-        <span class="rv-card-body">
-          <span class="rv-card-stars">★★★★★</span>
-          <span class="rv-card-name">František Drs</span>
-          <span class="rv-card-meta">Kinsoo klient od&nbsp;prosince&nbsp;2025</span>
-          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
-        </span>
-      </button>
       </div>
-      </div>
-      <button type="button" class="rv-arrow next" id="rvNext" aria-label="Další recenze">&rsaquo;</button>
-    </div>
-  </div>
 
-  <!-- Apple-style modal -->
-  <div class="rv-modal" id="rvModal" aria-hidden="true">
-    <div class="rv-modal-bg" data-close></div>
-    <div class="rv-modal-card" role="dialog" aria-modal="true">
-      <button type="button" class="rv-modal-close" data-close aria-label="Zavřít">&times;</button>
-      <div class="rv-modal-photo"><img id="rvmImg" src="" alt=""></div>
-      <div class="rv-modal-content">
-        <div class="rv-modal-qm">„</div>
-        <div class="rv-modal-stars">★★★★★</div>
-        <p class="rv-modal-text" id="rvmText"></p>
+      <!-- Performance Ads note — solidify "domluvíme na callu" stance -->
+      <div class="pricing-flex" style="margin-top:48px">
+        <span class="pricing-flex-mark" aria-hidden="true">+</span>
         <div>
-          <div class="rv-modal-name" id="rvmName"></div>
-          <div class="rv-modal-meta" id="rvmMeta"></div>
+          <strong>Performance — Meta Ads, Google Ads, kampaně.</strong> Jednorázové i&nbsp;dlouhodobé kampaně neděláme jako tabulkový doplněk — nastavujeme je na&nbsp;míru podle vašeho rozpočtu a&nbsp;cílů. <a href="#kontakt">Domluvte si call →</a>
         </div>
       </div>
     </div>
-  </div>
 
-  <script>
-  (function(){
-    var data={
-      honza:{t:"Pozitivně mě překvapilo, jak rychle se to rozjelo. Poprvé mi z Instagramu přišla reálná poptávka — a pak další.",n:"Honza Král",m:"Kinsoo klient od listopadu 2025",i:"assets/card-honza.jpg"},
-      famil:{t:"Se Štěpánem a jeho týmem jsem spokojený. Vše stříhají včas, sami přicházejí s nápady a člověk u nich má pořád přehled o tom, na čem se pracuje a v jaké je to fázi. Spolupráci doporučuju.",n:"Famil Amirov",m:"Kinsoo klient od září 2025",i:"assets/card-famil.jpg"},
-      adam:{t:"Na klucích z Kinsoo se mi líbí, že se na kameře cítím příjemně a vždycky ze mě dostanou to nejlepší. Výstupy jsou kvalitní a promyšlené — je vidět, že vědí, co dělají, a funguje jim to.",n:"Adam Bárta",m:"Kinsoo klient od ledna 2026",i:"assets/card-adam.jpg"},
-      dominik:{t:"Spolupráce s Kinsoo mi pomohla v mnoha ohledech. Budujeme brand, který nemá v regionu obdoby, a celé si to extrémně užívám. Měl jsem strach z kamery i mikrofonu, ale kluci mi vytvořili skvělé prostředí — už od prvního natáčení jsem věděl, že to byla dobrá volba.",n:"Dominik Polcar",m:"Kinsoo klient od března 2026",i:"assets/card-dominik.jpg"},
-      tomas:{t:"S Kinsoo spolupracuji na tvorbě realitních videí a mohu je jednoznačně doporučit. Oceňuji profesionální přístup, rychlou komunikaci a spolehlivost. Mají cit pro detail a výsledná videa jsou na vysoké úrovni.",n:"Tomáš Vaněk",m:"Kinsoo klient od dubna 2026",i:"assets/card-tomas.jpg"},
-      drs:{t:"Spolupráce s kolegy z Kinsoo je pro nás zkušené makléře jako pokropení živou vodou. Snažíme se o moderní, výrazně individuální přístup a v Kinsoo máme partnera, který tyto představy splňuje — přináší špičkovou prezentaci a komunikaci odpovídající nejvyspělejším světovým trhům. Kinsoo pro nás představuje novou energii a svěží vítr ve světě realit. Jsme rádi, že jsme součástí progresu této mladé inovativní skupiny.",n:"František Drs",m:"Kinsoo klient od prosince 2025",i:"assets/card-drs.jpg"}
-    };
-    var modal=document.getElementById('rvModal');
-    var marq=document.getElementById('rvMarquee');
-    var track=document.getElementById('rvTrack');
-    if(track){Array.prototype.slice.call(track.children).forEach(function(c){var cl=c.cloneNode(true);cl.setAttribute('aria-hidden','true');cl.tabIndex=-1;track.appendChild(cl);});}
-    var cards=document.querySelectorAll('.rv-card');
-    function setW(){return track?track.scrollWidth/2:1;}
-    var pos=0,hovering=false,dragging=false,tweening=false,lastTs=0;
-    function render(){var w=setW();pos=((pos%w)+w)%w;track.style.transform='translate3d('+(-pos)+'px,0,0)';}
-    function loop(ts){var dt=ts-(lastTs||ts);lastTs=ts;if(dt>100)dt=16;if(track&&!hovering&&!dragging&&!tweening){pos+=dt*0.04;render();}requestAnimationFrame(loop);}
-    requestAnimationFrame(loop);
-    if(marq){marq.addEventListener('mouseenter',function(){hovering=true;});marq.addEventListener('mouseleave',function(){hovering=false;});}
-    function page(){return marq?Math.max(marq.clientWidth-40,300):300;}
-    function step(dir){if(tweening||!track)return;tweening=true;var start=pos,ch=dir*page(),t0=0;
-      function tk(now){if(!t0)t0=now;var p=Math.min((now-t0)/600,1),e=1-Math.pow(1-p,3);pos=start+ch*e;render();if(p<1)requestAnimationFrame(tk);else tweening=false;}
-      requestAnimationFrame(tk);}
-    var pv=document.getElementById('rvPrev'),nx=document.getElementById('rvNext');
-    if(pv)pv.addEventListener('click',function(){step(-1);});
-    if(nx)nx.addEventListener('click',function(){step(1);});
-    var down=false,sx=0,sp=0,moved=false;
-    if(marq){
-      marq.addEventListener('pointerdown',function(e){down=true;dragging=true;moved=false;sx=e.clientX;sp=pos;marq.classList.add('dragging');});
-      window.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-sx;if(Math.abs(dx)>5)moved=true;pos=sp-dx;render();});
-      var endDrag=function(){if(!down)return;down=false;dragging=false;marq.classList.remove('dragging');setTimeout(function(){moved=false;},0);};
-      window.addEventListener('pointerup',endDrag);
-      window.addEventListener('pointercancel',endDrag);
-    }
-    function openM(k){var d=data[k];if(!d)return;
-      document.getElementById('rvmText').textContent='„'+d.t+'"';
-      document.getElementById('rvmName').textContent=d.n;
-      document.getElementById('rvmMeta').textContent=d.m;
-      var img=document.getElementById('rvmImg');img.src=d.i;img.alt=d.n;
-      modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('rv-lock');
-    }
-    function closeM(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('rv-lock');}
-    cards.forEach(function(c){c.addEventListener('click',function(e){if(moved){e.preventDefault();return;}openM(c.getAttribute('data-k'));});});
-    modal.querySelectorAll('[data-close]').forEach(function(el){el.addEventListener('click',closeM);});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))closeM();});
-  })();
-  </script>
-</section>
-
-<!-- ================ CASE STUDY — Full-bleed editorial ================ -->
-<section class="cs-banner">
-  <div class="cs-grid">
-    <figure class="cs-photo-v2 reveal">
-      <img src="assets/honza fotka.jpg" alt="Honza Král — realitní makléř, klient Kinsoo" loading="lazy" />
-      <figcaption class="cs-photo-tag">
-        <strong>Honza Král</strong>
-        <span>@kralvrealitach · klient od&nbsp;listopadu 2025</span>
-      </figcaption>
-    </figure>
-    <div class="cs-content-v2 reveal">
-      <span class="label">Case study · 6&nbsp;měsíců spolupráce</span>
-      <h2 class="cs-h2">Honza si <span class="gw">skoro&nbsp;ztrojnásobil</span> příjmy.</h2>
-      <p class="cs-pullquote">„Pozitivně mě překvapilo, jak rychle se to rozjelo. Poprvé mi z&nbsp;Instagramu přišla reálná poptávka — a&nbsp;pak další."</p>
-      <div class="cs-metrics-v2">
-        <div class="cs-m-v2"><strong>10+</strong><span>poptávek&nbsp;/&nbsp;měs</span></div>
-        <div class="cs-m-v2"><strong>2,5×</strong><span>vyšší&nbsp;obrat</span></div>
-        <div class="cs-m-v2"><strong>6</strong><span>měsíců</span></div>
-      </div>
-      <a href="case-study-honza-kral.html" class="cs-cta-v2">Číst celou case study <span class="arrow" aria-hidden="true">→</span></a>
+    <!-- ── CROSS-LINK ── -->
+    <div class="cross-link reveal">
+      <p>Potřebujete jen <strong>natočit konkrétní nemovitost</strong> bez měsíčního závazku? Mrkněte na Listing video.</p>
+      <a href="listing-video.html" class="btn btn-outline">Listing video <span class="arrow">&rarr;</span></a>
     </div>
+
+    <p class="packages-note reveal" style="margin-top:26px">Ceny jsou uvedené v Kč.</p>
   </div>
 </section>
-
-
-<!-- ================ TÝM ================ -->
-<section class="team" id="tym">
-  <div class="container">
-    <div class="label reveal">Tým</div>
-    <h2 class="stitle reveal">Lidé za <span class="gw">Kinsoo.</span></h2>
-    <p class="team-sub reveal">Osm lidí. Jeden cíl — video a značky, které pracují za vás.</p>
-
-    <div class="team-grid">
-      <div class="tm reveal">
-        <div class="tm-tooltip">Založil agenturu — komunikace a ekonomika firmy.</div>
-        <div class="tm-photo"><span class="tm-initials">ŠP</span><img src="assets/team/stepan.jpg" alt="Štěpán Plachý" onerror="this.remove()" /></div>
-        <div class="tm-name">Štěpán Plachý</div>
-        <div class="tm-role">Founder &amp; Owner</div>
-      </div>
-      <div class="tm reveal">
-        <div class="tm-tooltip">Natáčení všech videí.</div>
-        <div class="tm-photo"><span class="tm-initials">MB</span><img src="assets/team/matej.jpg" alt="Matěj Bláha" onerror="this.remove()" /></div>
-        <div class="tm-name">Matěj Bláha</div>
-        <div class="tm-role">Lead Filmmaker + Client Communication</div>
-      </div>
-      <div class="tm reveal">
-        <div class="tm-tooltip">Zodpovídá za kvalitu výstupů z Kinsoo.</div>
-        <div class="tm-photo"><span class="tm-initials">KK</span><img src="assets/team/karolina.jpg" alt="Karolina Kubíčková" onerror="this.remove()" /></div>
-        <div class="tm-name">Karolina Kubíčková</div>
-        <div class="tm-role">Lead Video Editor + fotograf</div>
-      </div>
-      <div class="tm reveal">
-        <div class="tm-tooltip">Grafický design, copywriting a vizuální identita klientských značek.</div>
-        <div class="tm-photo"><span class="tm-initials">MŠ</span><img src="assets/team/magdalena.jpg" alt="Magdaléna Šrailová" onerror="this.remove()" /></div>
-        <div class="tm-name">Magdaléna Šrailová</div>
-        <div class="tm-role">Grafika + Copy</div>
-      </div>
-      <div class="tm reveal">
-        <div class="tm-tooltip">Editace videí — střih klientského obsahu pro sociální sítě i portály.</div>
-        <div class="tm-photo"><span class="tm-initials">MB</span><img src="assets/team/michal.jpg" alt="Michal Brant" onerror="this.remove()" /></div>
-        <div class="tm-name">Michal Brant</div>
-        <div class="tm-role">Video Editor</div>
-      </div>
-      <div class="tm reveal">
-        <div class="tm-tooltip">Péče o klienty a analytika výsledků.</div>
-        <div class="tm-photo"><span class="tm-initials">JS</span><img src="assets/team/jakub.jpg" alt="Jakub Stelzer" onerror="this.remove()" /></div>
-        <div class="tm-name">Jakub Stelzer</div>
-        <div class="tm-role">Client Success + Analytics</div>
-      </div>
-      <div class="tm reveal">
-        <div class="tm-tooltip">Střih TOFU a organického contentu pro sociální sítě.</div>
-        <div class="tm-photo"><span class="tm-initials">FM</span><img src="assets/team/filip.jpg" alt="Filip Málek" onerror="this.remove()" /></div>
-        <div class="tm-name">Filip Málek</div>
-        <div class="tm-role">Video Editor</div>
-      </div>
-      <div class="tm reveal">
-        <div class="tm-tooltip">Tvorba a správa webových stránek — design, kód a optimalizace pro maximální výkon.</div>
-        <div class="tm-photo"><span class="tm-initials">MM</span><img src="assets/team/matyas.jpg" alt="Matyáš Mašek" onerror="this.remove()" /></div>
-        <div class="tm-name">Matyáš Mašek</div>
-        <div class="tm-role">Web Developer</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================ JAK TO FUNGUJE ================ -->
-<section class="process" id="proces">
-  <div class="container">
-    <div class="label reveal">Jak to funguje</div>
-    <h2 class="stitle reveal">Čtyři kroky ke <span class="gw">spolupráci.</span></h2>
-    <p class="process-sub reveal">Od vyplnění dotazníku po první výsledky. Jednoduše.</p>
-
-    <div class="process-steps">
-      <div class="step reveal">
-        <div class="step-num">01</div>
-        <div class="step-connector"></div>
-        <h3 class="step-name">Vyplníte dotazník</h3>
-        <p class="step-desc">Krátký dotazník na webu — pár otázek o vás a o tom, co potřebujete.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">02</div>
-        <div class="step-connector"></div>
-        <h3 class="step-name">Ozveme se do 24 hodin</h3>
-        <p class="step-desc">Náš sales vám do 24 hodin zavolá nebo napíše a probereme detaily.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">03</div>
-        <div class="step-connector"></div>
-        <h3 class="step-name">Strategie a plán</h3>
-        <p class="step-desc">Společně nastavíme brand strategii, content plán a harmonogram natáčení.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">04</div>
-        <h3 class="step-name">Dodáme výsledky</h3>
-        <p class="step-desc">Natočíme, sestříháme, publikujeme — a vy prodáváte víc nemovitostí.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================ FAQ ================ -->
-<section class="faq" id="faq">
-  <div class="container">
-    <div class="label reveal">FAQ</div>
-    <h2 class="stitle reveal">Časté <span class="gw">otázky</span></h2>
-    <p class="faq-sub reveal">Na co se makléři a kanceláře ptají nejčastěji.</p>
-    <div class="faq-list reveal">
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Kolik stojí video nemovitosti?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Jednorázové listing video začíná na 11 290 Kč (balíček Listing Start), samostatné video pro sReality od 4 900 Kč. Cena se liší podle typu nemovitosti a rozsahu balíčku.</p></div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Jak dlouho trvá natáčení a kdy dostanu hotové video?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Natáčení trvá 1,5–6 hodin podle toho, co spolu točíme. Kompletní nemovitost máme většinou do 1,5 hodiny, organické natáčení (6 videí) zabere 2–3 hodiny. Hotové video dodáváme do 5 pracovních dnů.</p></div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Točíte i mimo Plzeň?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Ano. Sídlíme v Plzni — doprava do 20 km zdarma, nad 20 km účtujeme 5,90 Kč/km. Po domluvě natáčíme po celé ČR.</p></div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Co je Brand Partner?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Kompletní brand management: strategie a positioning, měsíční content plán, natáčení, střih a správa sociálních sítí. Jeden tým, jeden retainer, měřitelné výsledky. Zjednodušeně: vytvoříme spolu brand a značku, kterou lidi opravdu budou znát.</p></div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Pro koho jsou vaše služby?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Pro realitní makléře a realitní kanceláře, které chtějí víc poptávek a prodejů díky videu a silnému osobnímu brandu.</p></div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Co všechno listing video obsahuje?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Podle balíčku: video pro sReality, Platinum reels pro sociální sítě, profesionální fotografie, 2D půdorys, drone záběry, landing page nemovitosti, Meta Ad setup a 3D prohlídku.</p></div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Musím se umět chovat před kamerou?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Ne. Většina klientů má z kamery zpočátku obavy — vytvoříme uvolněné prostředí a vždy z vás dostaneme to nejlepší.</p></div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Za jak dlouho uvidím výsledky?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>U budování brandu obvykle přicházejí první poptávky ze sociálních sítí kolem 2. měsíce. Naši klienti se dostali až na 10–20 poptávek měsíčně.</p></div></div>
-      </div>
-
-    </div>
-  </div>
-  <script>
-  (function(){
-    document.querySelectorAll('.faq-q').forEach(function(b){
-      b.addEventListener('click',function(){
-        var item=b.parentElement, isOpen=item.classList.contains('open');
-        document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded','false');});
-        if(!isOpen){item.classList.add('open');b.setAttribute('aria-expanded','true');}
-      });
-    });
-  })();
-  </script>
-</section>
-
-<!-- ================ KONTAKT — dotazník ================ -->
 <section class="cta" id="kontakt">
   <div class="container">
     <div class="label reveal" style="justify-content:center;color:var(--brand-soft)">Kontakt</div>
@@ -1684,13 +1203,6 @@ body.rv-lock{overflow:hidden}
     <div class="cta-mail reveal" style="margin-top:24px">Nebo napište přímo na <a href="mailto:stepanplachy@kinsoo.cz">stepanplachy@kinsoo.cz</a></div>
   </div>
 </section>
-
-<!-- ================ STICKY MOBILE CTA (always visible on mobile) ================ -->
-<a href="#kontakt" class="mobile-cta-bar" id="mobileCtaBar" aria-label="Chci spolupracovat — přejít na formulář">
-  Chci spolupracovat <span class="arrow" aria-hidden="true">→</span>
-</a>
-
-<!-- ================ FOOTER ================ -->
 <footer class="footer">
   <div class="container footer-inner">
     <div class="footer-brand">
@@ -1702,8 +1214,6 @@ body.rv-lock{overflow:hidden}
     </div>
   </div>
 </footer>
-
-<!-- ================ JS ================ -->
 <script>
 (()=>{
   'use strict';
@@ -1731,23 +1241,6 @@ body.rv-lock{overflow:hidden}
       mm.classList.remove('is-open');
       ham.setAttribute('aria-expanded','false');
     }));
-  }
-
-  /* Sticky mobile CTA — visible after hero scrolls past, hide near contact form */
-  const mobileCta=document.getElementById('mobileCtaBar');
-  const contactSection=document.getElementById('kontakt');
-  if(mobileCta){
-    const ctaToggle=()=>{
-      const heroPassed=window.scrollY>window.innerHeight*0.6;
-      let nearContact=false;
-      if(contactSection){
-        const r=contactSection.getBoundingClientRect();
-        nearContact=r.top<window.innerHeight*0.9;
-      }
-      mobileCta.classList.toggle('is-visible',heroPassed&&!nearContact);
-    };
-    window.addEventListener('scroll',ctaToggle,{passive:true});
-    ctaToggle();
   }
 
   /* Reveal on scroll */
@@ -1844,60 +1337,9 @@ body.rv-lock{overflow:hidden}
     });
   }
 
-  /* ---- RE setup card — swap content on pill switch ---- */
-  const reSetupData={
-    re1:{
-      title:'Brand Setup & strategie',
-      price:'9 900 Kč',
-      meta:'jednorázově',
-      features:[
-        'Analýza vašeho trhu a konkurenčních makléřů',
-        'Definice cílové skupiny — kupci vs. prodávající',
-        'Vizuální identita — barvy, fonty, styl profilu',
-        'Obsahová strategie pro realitní sociální sítě',
-        'Brand dokument — „kormidlo" pro veškerý obsah',
-        'Strategický call — společné odsouhlasení směru',
-      ],
-      showCta:false,
-    },
-    re2:{
-      title:'Brand Setup & strategie pro kancelář',
-      price:'Dohodou',
-      meta:'30 000 – 60 000 Kč',
-      features:[
-        'Hloubková analýza trhu a konkurence kanceláře',
-        'Definice cílových skupin — kupci, prodávající, investoři',
-        'Vizuální identita kanceláře — barvy, fonty, styl',
-        'Obsahová strategie pro kancelář i jednotlivé makléře',
-        'Brand dokument — „kormidlo" pro veškerý obsah',
-        'Strategické workshopy — onboarding makléřů',
-        'Nastavení procesů a workflow pro pravidelný obsah',
-        'Strategický call — společné odsouhlasení směru',
-      ],
-      showCta:true,
-    },
-  };
-
-  const reSetupTitle=document.getElementById('re-setup-title');
-  const reSetupPrice=document.getElementById('re-setup-price');
-  const reSetupMeta=document.getElementById('re-setup-meta');
-  const reSetupFeats=document.getElementById('re-setup-features');
-  const reSetupCta=document.getElementById('re-setup-cta');
-
-  if(reSetupTitle){
-    document.querySelectorAll('[data-segment="re1"],[data-segment="re2"]').forEach(pill=>{
-      pill.addEventListener('click',()=>{
-        const d=reSetupData[pill.dataset.segment];
-        if(!d)return;
-        reSetupTitle.textContent=d.title;
-        reSetupPrice.textContent=d.price;
-        reSetupMeta.textContent=d.meta;
-        reSetupFeats.innerHTML=d.features.map(f=>'<li>'+f+'</li>').join('');
-        reSetupCta.style.display=d.showCta?'':'none';
-      });
-    });
-  }
+  /* Brand Setup line is identical for both segments — no swap needed (v8.1). */
 })();
 </script>
+
 </body>
 </html>

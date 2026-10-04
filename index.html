@@ -1,1903 +1,340 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kinsoo — Video pro realitní makléře a&nbsp;kanceláře</title>
-  <meta name="description" content="Video pro realitní makléře a kanceláře: listing videa nemovitostí, osobní brand a správa sociálních sítí. Více poptávek a prodejů. Natáčíme z Plzně po celé ČR." />
-  <meta name="keywords" content="video pro realitní makléře, videoprezentace nemovitostí, listing video, natáčení nemovitostí, realitní video Plzeň, osobní brand realitní makléř, marketing pro realitní kanceláře" />
-  <meta name="author" content="Kinsoo s.r.o." />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="geo.region" content="CZ-32" />
-  <meta name="geo.placename" content="Plzeň" />
-  <meta name="theme-color" content="#A8313E" />
-  <meta name="seznam-wmt" content="0QmPQjJl3OSITsPzpvXZlxcx5giKepl4" />
-  <link rel="canonical" href="https://www.kinsoo.cz/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.kinsoo.cz/" />
-  <meta property="og:title" content="Kinsoo — Video pro realitní makléře a kanceláře" />
-  <meta property="og:description" content="Listing videa nemovitostí, osobní brand a správa sítí pro realitní makléře. Více poptávek a prodejů. Natáčíme z Plzně po celé ČR." />
-  <meta property="og:image" content="https://www.kinsoo.cz/assets/og-cover.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="Kinsoo — video a brand agentura pro realitní makléře" />
-  <meta property="og:locale" content="cs_CZ" />
-  <meta property="og:site_name" content="Kinsoo" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Kinsoo — Video pro realitní makléře a kanceláře" />
-  <meta name="twitter:description" content="Listing videa nemovitostí, osobní brand a správa sítí pro realitní makléře. Více poptávek a prodejů." />
-  <meta name="twitter:image" content="https://www.kinsoo.cz/assets/og-cover.png" />
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" href="/assets/favicon-32.png" sizes="32x32" />
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
-  <link rel="preload" as="image" href="assets/hero-poster.jpg" fetchpriority="high" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&family=Inter+Tight:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700&display=swap" rel="stylesheet">
-  <style>
-/* =================================================================
-   KINSOO — Real Estate Only
-   Premium light theme · brand palette · editorial typography
-   ================================================================= */
-:root{
-  --bg:#F7F6F3;
-  --bg-alt:#FFFFFF;
-  --bg-ink:#0D0D0D;
-  --ink:#14110D;
-  --ink-2:#2C2823;
-  --ink-3:#5C5448;
-  --ink-4:#6B6357;
-  --brand:#A8313E;
-  --brand-deep:#7E1F2C;
-  --brand-soft:#C9505F;
-  --brand-tint:#F4DFE2;
-  --brand-2:#3A2A82;
-  --brand-2-deep:#271C5F;
-  --brand-2-soft:#6B5BB8;
-  --brand-2-tint:#E5E0F2;
-  --gradient:linear-gradient(120deg,#3A2A82 0%,#6B2563 50%,#A8313E 100%);
-  --line:#E6DECC;
-  --line-2:#D4CAB2;
-  --green:#22C55E;
-  --font-d:'Inter Tight',system-ui,sans-serif;
-  --font-b:'Inter',system-ui,sans-serif;
-  --r:12px;
-  --r-lg:20px;
-  --container:1140px;
-  /* Aliases for pricing component compatibility */
-  --radius:14px;
-  --radius-lg:20px;
-  --radius-sm:10px;
-  --font-display:'Inter Tight',system-ui,sans-serif;
-  --font-body:'Inter',system-ui,sans-serif;
-  --font-serif:'Inter',system-ui,sans-serif;
-  --gradient-brand:linear-gradient(120deg,#3A2A82 0%,#6B2563 50%,#A8313E 100%);
-  --gradient-brand-soft:linear-gradient(120deg,rgba(58,42,130,.10) 0%,rgba(168,49,62,.10) 100%);
-  --bg-card:#FFFFFF;
-  --bg-card-alt:#F7F6F3;
-  --line-soft:#F0E9D8;
-  --t-fast:180ms cubic-bezier(.2,.7,.2,1);
-  --t-med:380ms cubic-bezier(.2,.7,.2,1);
-}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-html,body{margin:0;padding:0}
-body{
-  background:var(--bg);color:var(--ink);
-  font-family:var(--font-b);font-size:16px;line-height:1.6;
-  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-  overflow-x:hidden;
-}
-img,svg{display:block;max-width:100%}
-button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
-a{color:inherit;text-decoration:none;transition:color .2s}
-::selection{background:var(--brand-tint);color:var(--ink)}
-.container{max-width:var(--container);margin:0 auto;padding:0 28px;width:100%}
-
-/* ---- Label ---- */
-.label{
-  font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
-  display:flex;align-items:center;gap:12px;margin-bottom:14px;
-}
-.label::before{content:'';width:24px;height:1px;background:var(--gradient)}
-
-/* ---- Section title ---- */
-.stitle{
-  font-family:var(--font-d);font-weight:800;
-  font-size:clamp(32px,5vw,56px);
-  line-height:1.05;letter-spacing:-.03em;
-  text-transform:uppercase;margin:0 0 20px;
-}
-.stitle-sm{font-size:clamp(26px,4vw,42px)}
-
-/* ---- Gradient text ---- */
-.gw{background:var(--gradient);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-
-/* ---- Buttons ---- */
-.btn{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:var(--font-d);font-weight:700;font-size:14px;
-  letter-spacing:.01em;padding:14px 32px;border-radius:60px;
-  transition:all .3s;cursor:pointer;border:none;
-}
-.btn-primary{
-  background:var(--gradient);color:#fff;
-}
-.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(168,49,62,.25)}
-.btn-outline{
-  background:transparent;color:var(--ink);
-  border:1.5px solid var(--line-2);
-}
-.btn-outline:hover{border-color:var(--brand);color:var(--brand)}
-.btn-white{background:#fff;color:var(--ink)}
-.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
-.arrow{transition:transform .2s}
-.btn:hover .arrow{transform:translateX(3px)}
-
-/* ================ NAV ================ */
-.nav{
-  position:fixed;top:0;left:0;right:0;z-index:300;
-  padding:16px 28px;
-  display:flex;justify-content:space-between;align-items:center;
-  transition:all .4s;
-}
-.nav.is-top{background:transparent}
-.nav.is-scrolled{
-  background:rgba(247,246,243,.94);
-  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
-  border-bottom:1px solid var(--line);
-}
-.nav-logo{display:flex;align-items:center;gap:10px}
-.nav-logo img{height:28px;transition:opacity .3s}
-.nav-logo .logo-white{position:absolute}
-.nav-logo .logo-color{position:absolute;opacity:0}
-.nav.is-scrolled .nav-logo .logo-white{opacity:0}
-.nav.is-scrolled .nav-logo .logo-color{opacity:1}
-.nav-logo span{font-family:var(--font-d);font-size:17px;font-weight:700;letter-spacing:-.02em}
-.nav-links{display:flex;align-items:center;gap:32px}
-.nav-links a{
-  font-size:13px;font-weight:500;color:var(--ink-3);
-  transition:color .2s;
-}
-.nav-links a:hover{color:var(--ink)}
-.nav-cta{
-  font-size:12px;font-weight:700;font-family:var(--font-d);
-  padding:10px 22px;border-radius:60px;
-  background:var(--gradient);color:#fff;
-  transition:all .3s;
-}
-.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(168,49,62,.2)}
-/* Hero-over nav — white text */
-.nav.is-top .nav-links a{color:rgba(255,255,255,.55)}
-.nav.is-top .nav-links a:hover{color:#fff}
-.nav.is-top .nav-logo span{color:#fff}
-
-/* Mobile nav */
-.hamburger{display:none;width:28px;height:28px;flex-direction:column;justify-content:center;gap:5px}
-.hamburger span{display:block;width:100%;height:1.5px;background:var(--ink);transition:all .3s}
-.nav.is-top .hamburger span{background:#fff}
-
-.mobile-menu{display:none}
-
-@media(max-width:768px){
-  .nav-links{display:none}
-  .hamburger{display:flex}
-  .mobile-menu{
-    display:flex;
-    position:fixed;top:0;left:0;right:0;bottom:0;z-index:299;
-    background:var(--bg);flex-direction:column;
-    justify-content:center;align-items:center;gap:28px;
-    opacity:0;pointer-events:none;transition:opacity .3s;
-  }
-  .mobile-menu.is-open{opacity:1;pointer-events:all}
-  .mobile-menu a{font-family:var(--font-d);font-size:28px;font-weight:700}
-}
-
-/* ================ HERO v2 — Asymmetric editorial + showreel ================ */
-.hero{
-  position:relative;min-height:100vh;
-  background:#0A0A0A;color:#fff;overflow:hidden;
-  padding:140px 0 60px;
-  display:flex;align-items:center;
-}
-/* Clean dark hero — no gradient overlay theater */
-.hero .container{position:relative;z-index:1;width:100%}
-.hero-grid{
-  display:grid;
-  grid-template-columns:7fr 5fr;
-  gap:64px;align-items:center;
-}
-.hero-text{display:flex;flex-direction:column;max-width:620px}
-.hero-eyebrow{
-  font-family:var(--font-b);
-  font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
-  color:rgba(255,255,255,.5);margin-bottom:28px;
-  display:inline-flex;align-items:center;gap:14px;
-}
-.hero-eyebrow::before{content:'';width:28px;height:1px;background:var(--gradient)}
-.hero h1{
-  font-family:'Bebas Neue','Arial Narrow',sans-serif;
-  font-weight:400;
-  font-size:clamp(54px,7vw,116px);
-  line-height:.94;letter-spacing:-.005em;
-  text-transform:uppercase;
-  margin:0 0 24px;color:#fff;
-}
-.hero h1 .gw{
-  font-family:'Bebas Neue','Arial Narrow',sans-serif;
-  font-weight:400;
-  text-transform:uppercase;letter-spacing:-.005em;
-  background:linear-gradient(120deg,#C4BBE0 0%,#E8B5BC 50%,#FF9DA8 100%);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  display:inline;
-}
-.hero-sub{
-  font-family:var(--font-b);
-  font-size:clamp(15px,1.4vw,18px);color:rgba(255,255,255,.62);
-  max-width:46ch;line-height:1.62;margin:0 0 40px;
-}
-.hero-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-.btn-ghost{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:var(--font-d);font-weight:600;font-size:14px;
-  letter-spacing:.02em;color:rgba(255,255,255,.78);
-  padding:14px 4px;
-  border-bottom:1px solid rgba(255,255,255,.18);
-  transition:color .25s,border-color .25s,gap .25s;
-}
-.btn-ghost:hover{color:#fff;border-color:rgba(255,255,255,.6);gap:12px}
-
-/* Hero showreel media — right side, big & playable */
-.hero-media{
-  position:relative;margin:0;
-  border-radius:8px;overflow:hidden;
-  aspect-ratio:9/11;
-  background:#1a1a1a;
-  box-shadow:0 0 0 1px rgba(255,255,255,.06);
-}
-.hero-media video,.hero-media img{
-  width:100%;height:100%;object-fit:cover;display:block;
-}
-/* Tag removed — no live indicator theatrics */
-.hero-media-caption{
-  position:absolute;left:0;right:0;bottom:0;z-index:2;
-  padding:24px 22px 20px;
-  background:linear-gradient(transparent,rgba(0,0,0,.78));
-  color:#fff;
-  font-family:var(--font-b);
-  font-size:13px;line-height:1.4;
-  display:flex;justify-content:space-between;align-items:end;gap:12px;
-}
-.hero-media-caption strong{
-  font-family:var(--font-d);font-weight:700;font-size:14px;
-  display:block;margin-bottom:2px;
-}
-.hero-media-caption small{font-size:11px;opacity:.6;letter-spacing:.04em}
-
-/* Stat strip across bottom — proof at a glance, council "fix stats credibility" */
-.hero-strip{
-  position:relative;z-index:1;
-  margin-top:64px;padding-top:32px;
-  border-top:1px solid rgba(255,255,255,.08);
-  display:grid;grid-template-columns:repeat(4,1fr);gap:32px;
-}
-.hero-strip-item strong{
-  display:block;
-  font-family:'Bebas Neue',sans-serif;font-weight:400;
-  font-size:clamp(26px,2.6vw,38px);line-height:1;letter-spacing:0;
-  color:#fff;margin-bottom:6px;
-}
-.hero-strip-item span{
-  font-size:12px;color:rgba(255,255,255,.45);line-height:1.4;
-}
-@media(max-width:980px){
-  .hero{padding:120px 0 50px;min-height:auto}
-  .hero-grid{grid-template-columns:1fr;gap:48px}
-  .hero-media{aspect-ratio:16/12;max-width:560px;transform:none}
-  .hero-media:hover{transform:none}
-  .hero-strip{grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px;padding-top:24px}
-}
-@media(max-width:560px){
-  .hero h1{font-size:clamp(42px,11vw,68px)}
-  .hero-strip{grid-template-columns:1fr 1fr}
-  .hero-actions{flex-direction:column;align-items:stretch}
-  .hero-actions .btn,.hero-actions .btn-ghost{justify-content:center;text-align:center}
-}
-@media(prefers-reduced-motion:reduce){
-  .hero-media{transform:none;transition:none}
-}
-
-/* ================ SOCIAL PROOF BAR ================ */
-.proof-bar{
-  background:var(--bg-ink);border-top:1px solid rgba(255,255,255,.06);
-  padding:40px 0;
-}
-.proof-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);gap:32px;
-  text-align:center;
-}
-.proof-item{}
-.proof-val{
-  font-family:var(--font-d);font-size:clamp(28px,3.5vw,44px);
-  font-weight:800;line-height:1;letter-spacing:-.03em;
-  color:#fff;margin-bottom:6px;
-}
-.proof-lbl{font-size:13px;color:rgba(255,255,255,.4);line-height:1.4}
-
-/* ================ SLUŽBY ================ */
-.services{padding:96px 0;background:var(--bg)}
-.services .label{color:var(--brand-deep)}
-.services-sub{
-  font-size:clamp(15px,1.6vw,18px);color:var(--ink-3);
-  max-width:520px;line-height:1.6;margin:0 0 56px;
-}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.services-grid--2{grid-template-columns:repeat(2,1fr)}
-.srv-card{
-  background:var(--bg-alt);border:1px solid var(--line);
-  border-radius:var(--r-lg);padding:36px 28px;
-  transition:all .4s;position:relative;overflow:hidden;
-}
-.srv-card:hover{border-color:var(--brand-tint);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.06)}
-.srv-icon{
-  width:44px;height:44px;border-radius:10px;
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:20px;
-}
-.srv-icon svg{width:22px;height:22px}
-.srv-icon.ic1{background:var(--brand-tint);color:var(--brand)}
-.srv-icon.ic2{background:var(--brand-2-tint);color:var(--brand-2)}
-.srv-icon.ic3{background:linear-gradient(135deg,var(--brand-2-tint),var(--brand-tint));color:var(--brand-deep)}
-.srv-name{
-  font-family:var(--font-d);font-size:20px;font-weight:800;
-  letter-spacing:-.02em;margin:0 0 10px;
-}
-.srv-desc{font-size:14px;color:var(--ink-3);line-height:1.6;margin:0 0 20px}
-.srv-features{list-style:none;padding:0;margin:0}
-.srv-features li{
-  font-size:13px;color:var(--ink-2);padding:6px 0;
-  border-top:1px solid var(--line);
-  display:flex;align-items:center;gap:8px;
-}
-.srv-features li::before{
-  content:'';width:5px;height:5px;border-radius:50%;
-  background:var(--gradient);flex-shrink:0;
-}
-.srv-tag{
-  position:absolute;top:16px;right:16px;
-  font-size:9px;font-weight:700;font-family:var(--font-d);
-  letter-spacing:.08em;text-transform:uppercase;
-  padding:5px 12px;border-radius:40px;
-  background:var(--gradient);color:#fff;
-}
-.srv-card--recommended::before{
-  content:'';position:absolute;inset:-1px;border-radius:inherit;
-  background:var(--gradient);z-index:-1;padding:1px;
-  -webkit-mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);
-  -webkit-mask-composite:xor;mask-composite:exclude;
-}
-.srv-card--recommended{box-shadow:0 24px 50px -28px rgba(168,49,62,.22),0 12px 24px -16px rgba(58,42,130,.15);border-color:transparent;background:linear-gradient(180deg,rgba(244,223,226,.45) 0%,var(--bg-alt) 70%)}
-/* --- Clickable service cards (link to subpage) --- */
-.srv-card{display:flex;flex-direction:column;text-decoration:none;color:inherit;cursor:pointer}
-.srv-card:hover{border-color:var(--brand);background:linear-gradient(180deg,rgba(244,223,226,.6) 0%,var(--bg-alt) 78%);transform:translateY(-5px);box-shadow:0 26px 54px -26px rgba(168,49,62,.32)}
-.srv-card--recommended:hover{border-color:var(--brand)}
-.srv-cta{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);display:inline-flex;align-items:center;gap:8px;font-family:var(--font-d);font-weight:700;font-size:14px;color:var(--brand-deep);transition:gap var(--t-fast)}
-.srv-card:hover .srv-cta{gap:12px}
-.srv-cta .arrow{transition:transform var(--t-fast)}
-.srv-card:hover .srv-cta .arrow{transform:translateX(3px)}
-
-/* ================ VÝSLEDKY ================ */
-.results{padding:96px 0;background:var(--bg-ink);color:#fff}
-.results .label{color:var(--brand-soft)}
-.results .stitle{color:#fff}
-.results-sub{
-  font-size:clamp(15px,1.6vw,18px);color:rgba(255,255,255,.45);
-  max-width:520px;line-height:1.6;margin:0 0 56px;
-}
-.results-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-
-/* Highlight result card */
-.res-hl{
-  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);
-  border-radius:var(--r-lg);padding:48px 40px;
-  position:relative;overflow:hidden;transition:all .4s;
-}
-.res-hl:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
-.res-hl::before{
-  content:'';position:absolute;top:-80px;right:-80px;width:280px;height:280px;
-  background:radial-gradient(closest-side,rgba(168,49,62,.12),transparent);pointer-events:none;
-}
-.res-hl-top{display:flex;align-items:center;gap:16px;margin-bottom:24px}
-.res-hl-avatar{
-  width:56px;height:56px;border-radius:50%;
-  background:var(--gradient);color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--font-d);font-size:16px;font-weight:700;
-  overflow:hidden;flex-shrink:0;
-}
-.res-hl-avatar img{width:100%;height:100%;object-fit:cover}
-.res-hl-name{font-family:var(--font-d);font-size:18px;font-weight:700}
-.res-hl-role{font-size:12px;color:rgba(255,255,255,.4)}
-.res-hl-metric{
-  font-family:var(--font-d);font-size:clamp(48px,6vw,72px);
-  font-weight:800;letter-spacing:-.04em;line-height:1;
-  margin-bottom:12px;
-}
-.res-hl-metric .gw{
-  background:linear-gradient(120deg,#B8A5FF 0%,#FF8A9B 100%);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-}
-.res-hl-desc{
-  font-size:16px;color:rgba(255,255,255,.55);line-height:1.6;
-  margin:0;max-width:380px;
-}
-.res-hl-tag{
-  display:inline-flex;align-items:center;gap:6px;
-  font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--brand-soft);margin-bottom:16px;
-}
-.res-hl-tag::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px rgba(34,197,94,.5)}
-
-/* ================ CASE STUDY — Full-bleed editorial v2 ================ */
-.cs-banner{
-  position:relative;padding:0;background:#0A0A0A;color:#fff;overflow:hidden;
-}
-.cs-banner::before{
-  content:'';position:absolute;inset:0;pointer-events:none;
-  background:
-    radial-gradient(700px 500px at 0% 0%,rgba(58,42,130,.22),transparent 60%),
-    radial-gradient(900px 700px at 100% 100%,rgba(168,49,62,.20),transparent 60%);
-}
-.cs-grid{
-  position:relative;z-index:1;
-  display:grid;grid-template-columns:5fr 6fr;
-  align-items:stretch;gap:0;
-}
-/* Left: full-bleed photo */
-.cs-photo-v2{
-  position:relative;min-height:600px;overflow:hidden;
-  margin:0;
-}
-.cs-photo-v2 img{
-  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-}
-.cs-photo-v2::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(90deg,transparent 60%,rgba(10,10,10,.85) 100%),linear-gradient(180deg,transparent 50%,rgba(10,10,10,.55) 100%);
-  pointer-events:none;
-}
-.cs-photo-tag{
-  position:absolute;left:32px;bottom:32px;z-index:2;
-  color:#fff;font-family:var(--font-b);font-size:13px;
-}
-.cs-photo-tag strong{
-  font-family:var(--font-d);font-size:18px;font-weight:700;
-  letter-spacing:-.005em;display:block;margin-bottom:2px;
-}
-.cs-photo-tag span{opacity:.6;font-size:12px;letter-spacing:.04em}
-
-/* Right: editorial content */
-.cs-content-v2{
-  padding:96px 80px 96px 64px;
-  display:flex;flex-direction:column;justify-content:center;
-}
-.cs-content-v2 .label{color:var(--brand-soft)}
-.cs-content-v2 .label::before{background:linear-gradient(120deg,var(--brand-2-soft),var(--brand-soft))}
-.cs-h2{
-  font-family:'Bebas Neue',sans-serif;font-weight:400;
-  font-size:clamp(52px,6vw,96px);
-  line-height:.96;letter-spacing:-.005em;
-  text-transform:uppercase;color:#fff;
-  margin:18px 0 28px;
-}
-.cs-h2 .gw{
-  font-family:'Bebas Neue','Arial Narrow',sans-serif;
-  font-weight:400;text-transform:uppercase;letter-spacing:-.005em;
-  background:linear-gradient(120deg,#C4BBE0 0%,#FF9DA8 100%);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  display:inline;
-}
-.cs-pullquote{
-  position:relative;
-  font-family:var(--font-b);font-weight:400;
-  font-size:clamp(17px,1.6vw,22px);line-height:1.55;color:rgba(255,255,255,.82);
-  margin:0 0 40px;padding-left:22px;
-  border-left:2px solid var(--brand-soft);
-  max-width:54ch;
-}
-.cs-metrics-v2{
-  display:grid;grid-template-columns:repeat(3,auto);gap:48px;
-  margin-bottom:36px;
-}
-.cs-m-v2 strong{
-  display:block;
-  font-family:'Bebas Neue',sans-serif;font-weight:400;
-  font-size:clamp(56px,6vw,88px);line-height:1;letter-spacing:-.005em;
-  color:#fff;margin-bottom:6px;
-}
-.cs-m-v2 span{
-  display:block;
-  font-size:11px;letter-spacing:.18em;text-transform:uppercase;
-  color:rgba(255,255,255,.5);font-weight:600;
-}
-.cs-cta-v2{
-  align-self:flex-start;
-  display:inline-flex;align-items:center;gap:10px;
-  padding:16px 28px;border-radius:60px;
-  background:#fff;color:var(--ink);
-  font-family:var(--font-d);font-weight:700;font-size:14px;
-  letter-spacing:.02em;
-  transition:transform .25s,box-shadow .25s,gap .25s;
-}
-.cs-cta-v2:hover{transform:translateY(-2px);gap:14px;box-shadow:0 16px 36px -10px rgba(255,255,255,.20)}
-
-@media(max-width:980px){
-  .cs-grid{grid-template-columns:1fr}
-  .cs-photo-v2{min-height:340px;aspect-ratio:16/10}
-  .cs-content-v2{padding:64px 28px}
-  .cs-metrics-v2{gap:28px;grid-template-columns:repeat(3,1fr)}
-}
-@media(max-width:560px){
-  .cs-content-v2{padding:48px 22px}
-  .cs-metrics-v2{gap:16px}
-  .cs-m-v2 strong{font-size:clamp(40px,12vw,56px)}
-}
-
-/* ================ RECENZE ================ */
-.reviews{padding:96px 0;background:var(--bg)}
-.reviews .label{color:var(--brand-deep)}
-.reviews .stitle{color:var(--ink)}
-.reviews-sub{font-size:clamp(15px,1.6vw,18px);color:var(--ink-3);max-width:600px;line-height:1.6;margin:0 0 48px}
-.rv-carousel{position:relative}
-.rv-marquee{position:relative;overflow:hidden;margin:0 -28px;padding:0 28px;cursor:grab;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
-.rv-marquee.dragging{cursor:grabbing}
-.rv-track{display:flex;width:max-content;padding:8px 0 16px;will-change:transform}
-.rv-arrow{position:absolute;top:47%;transform:translateY(-50%);z-index:6;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:var(--ink);font-family:var(--font-d);font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 10px 28px rgba(20,17,13,.14);transition:transform .2s,background .2s,border-color .2s}
-.rv-arrow:hover{background:#fff;transform:translateY(-50%) scale(1.08);border-color:var(--brand-soft)}
-.rv-arrow.prev{left:-4px}
-.rv-arrow.next{right:-4px}
-@media(max-width:640px){.rv-arrow{display:none}}
-.rv-card{
-  flex:0 0 248px;margin-right:18px;
-  position:relative;aspect-ratio:3/4;border-radius:var(--r-lg);overflow:hidden;cursor:pointer;
-  border:0;padding:0;background:#0D0D0D;font-family:inherit;text-align:left;display:block;
-  transition:transform .5s cubic-bezier(.2,.7,.2,1),box-shadow .5s;
-}
-.rv-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
-.rv-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,13,13,.88) 0%,rgba(13,13,13,.34) 40%,rgba(13,13,13,0) 64%)}
-.rv-card:hover{transform:translateY(-6px);box-shadow:0 26px 52px rgba(20,17,13,.22)}
-.rv-card:hover>img{transform:scale(1.06)}
-.rv-card-body{position:absolute;left:0;right:0;bottom:0;padding:20px 18px;color:#fff;z-index:2}
-.rv-card-stars{display:block;color:#fff;font-size:11px;letter-spacing:2px;margin-bottom:8px;opacity:.95}
-.rv-card-name{display:block;font-family:var(--font-d);font-size:17px;font-weight:700;line-height:1.12}
-.rv-card-meta{display:block;font-size:11.5px;opacity:.72;margin-top:3px}
-.rv-card-cta{margin-top:13px;display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#fff;opacity:0;transform:translateY(7px);transition:opacity .4s,transform .4s}
-.rv-card-cta span{transition:transform .35s}
-.rv-card:hover .rv-card-cta,.rv-card:focus-visible .rv-card-cta{opacity:1;transform:none}
-.rv-card:hover .rv-card-cta span{transform:translateX(4px)}
-/* Apple-style modal */
-.rv-modal{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
-.rv-modal.open{opacity:1;visibility:visible}
-.rv-modal-bg{position:absolute;inset:0;background:rgba(13,13,13,.5);backdrop-filter:blur(16px) saturate(120%);-webkit-backdrop-filter:blur(16px) saturate(120%)}
-.rv-modal-card{position:relative;z-index:2;width:min(860px,100%);max-height:88vh;background:var(--bg-alt);border-radius:24px;overflow:hidden;display:grid;grid-template-columns:300px 1fr;box-shadow:0 40px 110px rgba(0,0,0,.45);transform:scale(.92) translateY(8px);opacity:0;transition:transform .55s cubic-bezier(.2,.8,.2,1),opacity .4s}
-.rv-modal.open .rv-modal-card{transform:none;opacity:1}
-.rv-modal-photo{position:relative;background:#0D0D0D;min-height:100%}
-.rv-modal-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.rv-modal-content{padding:52px 48px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow-y:auto}
-.rv-modal-qm{position:absolute;top:30px;right:40px;font-family:var(--font-d);font-size:120px;line-height:.7;color:var(--brand-tint);pointer-events:none;user-select:none}
-.rv-modal-stars{color:var(--brand);font-size:18px;letter-spacing:3px;margin-bottom:20px;position:relative}
-.rv-modal-text{font-family:var(--font-d);font-size:clamp(20px,2.3vw,27px);font-weight:600;line-height:1.42;letter-spacing:-.01em;color:var(--ink);margin:0 0 26px;position:relative}
-.rv-modal-name{font-family:var(--font-d);font-size:17px;font-weight:700;color:var(--ink)}
-.rv-modal-meta{font-size:13px;color:var(--ink-4);margin-top:3px}
-.rv-modal-close{position:absolute;top:16px;right:16px;z-index:3;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);cursor:pointer;font-size:22px;line-height:1;color:var(--ink);display:flex;align-items:center;justify-content:center;transition:background .2s,transform .2s}
-.rv-modal-close:hover{background:#fff;transform:rotate(90deg)}
-body.rv-lock{overflow:hidden}
-@media(max-width:980px){
-  .rv-card{flex-basis:220px}
-  .rv-modal-card{grid-template-columns:1fr;max-height:90vh;overflow-y:auto}
-  .rv-modal-photo{height:230px;min-height:230px}
-  .rv-modal-content{padding:34px 28px}
-  .rv-modal-qm{font-size:84px;top:18px;right:24px}
-}
-@media(max-width:560px){.rv-card{flex-basis:196px}}
-@media(prefers-reduced-motion:reduce){.rv-track{animation:none}.rv-marquee{overflow-x:auto}}
-
-/* ================ FAQ ================ */
-.faq{padding:96px 0;background:var(--bg-alt)}
-.faq .label{color:var(--brand-deep)}
-.faq .stitle{color:var(--ink)}
-.faq-sub{font-size:clamp(15px,1.6vw,18px);color:var(--ink-3);max-width:560px;line-height:1.6;margin:0 0 8px}
-.faq-list{max-width:840px;margin:44px auto 0;display:flex;flex-direction:column;gap:12px}
-.faq-item{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:border-color var(--t-fast),box-shadow var(--t-fast)}
-.faq-item.open{border-color:var(--brand-soft);box-shadow:0 10px 30px rgba(20,17,13,.06)}
-.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 26px;background:none;border:0;cursor:pointer;font-family:var(--font-d);font-size:clamp(16px,1.9vw,19px);font-weight:700;color:var(--ink);text-align:left;line-height:1.3}
-.faq-ic{flex-shrink:0;width:24px;height:24px;position:relative}
-.faq-ic::before,.faq-ic::after{content:'';position:absolute;background:var(--brand);border-radius:2px;transition:transform var(--t-med),opacity var(--t-med)}
-.faq-ic::before{top:11px;left:3px;right:3px;height:2px}
-.faq-ic::after{left:11px;top:3px;bottom:3px;width:2px}
-.faq-item.open .faq-ic::after{transform:scaleY(0);opacity:0}
-.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows var(--t-med)}
-.faq-item.open .faq-a{grid-template-rows:1fr}
-.faq-a-wrap{overflow:hidden}
-.faq-a p{margin:0;padding:0 26px 24px;color:var(--ink-3);font-size:15.5px;line-height:1.62;max-width:720px}
-
-/* ================ CENÍK — full interactive pricing ================ */
-/* --- muted-label --- */
-.label.muted-label{color:var(--ink-4)}
-.label.muted-label::before{background:var(--ink-4)}
-
-/* --- btn-brand, btn-block --- */
-.btn-brand{background:var(--brand);color:#fff;border-color:var(--brand);box-shadow:0 12px 30px -14px rgba(168,49,62,.55)}
-.btn-brand:hover{background:var(--brand-deep);border-color:var(--brand-deep);color:#fff}
-.btn-block{width:100%;justify-content:center}
-
-/* --- Setup card --- */
-.setup-card{
-  background:linear-gradient(180deg,rgba(244,223,226,.7) 0%,var(--bg-card) 60%);
-  border:1px solid var(--line);border-radius:var(--radius-lg);
-  padding:50px 50px 44px;position:relative;overflow:hidden;
-}
-.setup-card::after{content:'';position:absolute;top:-120px;right:-120px;width:360px;height:360px;background:radial-gradient(closest-side,rgba(168,49,62,.18),transparent);pointer-events:none}
-.setup-card::before{content:'';position:absolute;top:-120px;left:-120px;width:320px;height:320px;background:radial-gradient(closest-side,rgba(58,42,130,.14),transparent);pointer-events:none}
-.setup-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid var(--line);position:relative}
-.setup-title{font-family:var(--font-display);font-size:clamp(38px,4.4vw,56px);margin:10px 0 0;line-height:1;font-weight:700;letter-spacing:-.025em}
-.setup-price{text-align:right;position:relative}
-.setup-price-value{display:block;font-family:var(--font-display);font-size:clamp(42px,4.8vw,64px);line-height:1;font-weight:700;letter-spacing:-.025em;background:var(--gradient-brand);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-.setup-price-meta{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-4);display:block;margin-top:8px}
-
-/* --- Check list --- */
-.check-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:14px 32px;position:relative}
-.check-list li{position:relative;padding-left:32px;color:var(--ink-2);line-height:1.55;font-size:15px}
-.check-list li::before{content:'';position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;background:var(--gradient-brand);opacity:.18}
-.check-list li::after{content:'';position:absolute;left:5px;top:9.5px;width:8px;height:4px;border-left:1.5px solid var(--brand-deep);border-bottom:1.5px solid var(--brand-deep);transform:rotate(-45deg)}
-.check-list li.hl{color:var(--brand-deep);font-weight:500}
-.check-list li.hl::before{opacity:.32}
-
-/* --- Packages grid --- */
-.packages-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
-.packages-grid--5{grid-template-columns:repeat(5,1fr)}
-.pkg{background:var(--bg-card-alt);border:1px solid var(--line);border-radius:var(--radius);padding:34px 28px 30px;display:flex;flex-direction:column;transition:transform var(--t-med),border-color var(--t-med),background var(--t-med),box-shadow var(--t-med);position:relative}
-.pkg:hover{transform:translateY(-4px);border-color:var(--brand);background:var(--bg-card);box-shadow:0 32px 60px -36px rgba(168,49,62,.22)}
-.pkg header{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--line)}
-.pkg-name{display:block;font-family:var(--font-display);font-size:26px;font-weight:700;letter-spacing:-.02em;margin-bottom:14px;color:var(--ink)}
-.pkg-price{font-family:var(--font-display);font-size:36px;font-weight:700;letter-spacing:-.025em;color:var(--ink);line-height:1}
-.pkg-period{font-family:var(--font-body);font-size:14px;color:var(--ink-4);font-weight:400;margin-left:4px}
-.pkg-perunit{margin-top:10px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-4)}
-.pkg .check-list{grid-template-columns:1fr;flex:1;gap:12px;margin-bottom:26px}
-.pkg .check-list li{font-size:14px}
-.pkg-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gradient-brand);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:7px 14px;border-radius:999px;white-space:nowrap;box-shadow:0 12px 24px -8px rgba(168,49,62,.55)}
-.pkg-featured{border-color:transparent;background:linear-gradient(180deg,rgba(244,223,226,.55) 0%,var(--bg-card) 70%);position:relative}
-.pkg-featured::before{content:'';position:absolute;inset:-1px;border-radius:inherit;background:var(--gradient-brand);z-index:-1;padding:1px;-webkit-mask:linear-gradient(#000,#000) content-box,linear-gradient(#000,#000);-webkit-mask-composite:xor;mask-composite:exclude}
-.pkg-featured{box-shadow:0 32px 60px -36px rgba(168,49,62,.32),0 16px 30px -20px rgba(58,42,130,.20)}
-.pkg-featured .pkg-price{background:var(--gradient-brand);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-.packages-note{margin-top:28px;text-align:center;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-4)}
-
-/* --- Add-ons --- */
-.addons{margin-top:90px}
-.addons .label{display:inline-flex;margin-bottom:22px}
-.addons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.addon{background:var(--bg-card-alt);border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;transition:border-color var(--t-fast),transform var(--t-fast),background var(--t-fast),box-shadow var(--t-fast)}
-.addon:hover{border-color:var(--brand);transform:translateY(-3px);background:var(--bg-card);box-shadow:0 24px 50px -32px rgba(168,49,62,.20)}
-.addon h4{font-family:var(--font-display);font-size:24px;font-weight:700;letter-spacing:-.02em;margin:0 0 14px;color:var(--ink)}
-.addon-price{font-family:var(--font-display);font-size:34px;font-weight:700;letter-spacing:-.025em;line-height:1;margin-bottom:14px;background:var(--gradient-brand);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
-.addon-price span{font-family:var(--font-body);font-size:13px;color:var(--ink-4);font-weight:400;margin-left:4px;-webkit-text-fill-color:var(--ink-4)}
-.addon-meta{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--brand-deep);margin:0 0 8px}
-.addon-extra{margin:0;font-size:13px;color:var(--ink-4)}
-
-/* --- Pricing section --- */
-.pricing{padding:120px 0 130px;background:var(--bg-alt);position:relative}
-.pricing::before{content:'';position:absolute;inset:0;background:radial-gradient(900px 540px at 90% 0%,rgba(168,49,62,.05),transparent 60%),radial-gradient(700px 500px at 0% 100%,rgba(58,42,130,.04),transparent 65%);pointer-events:none;z-index:0}
-.pricing>.container{position:relative;z-index:1}
-.pricing .label{color:var(--brand-deep)}
-.pricing .stitle{margin-bottom:18px}
-.pricing-sub{color:var(--ink-3);font-size:16.5px;margin:0 0 56px;max-width:56ch;line-height:1.65;font-weight:400}
-.pricing-quiz{font-family:var(--font-display);font-size:clamp(26px,2.8vw,38px);font-weight:600;letter-spacing:-.025em;line-height:1;color:var(--ink-3);margin:0 0 14px;max-width:22ch;display:flex;align-items:center;gap:14px}
-.pricing-quiz::before{content:'';width:28px;height:1.5px;background:var(--gradient-brand);display:inline-block}
-
-/* --- Segment pills --- */
-.segment-pills{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:36px;max-width:540px}
-.pill{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding:22px 24px 20px;border-radius:var(--radius);border:1.5px solid var(--line);background:var(--bg-card);cursor:pointer;transition:transform var(--t-med),border-color var(--t-med),background var(--t-med),box-shadow var(--t-med),color var(--t-fast);text-align:left;font-family:var(--font-body);position:relative;overflow:hidden}
-.pill::before{content:'';position:absolute;inset:0;background:var(--gradient-brand-soft);opacity:0;transition:opacity var(--t-med);pointer-events:none}
-.pill>*{position:relative;z-index:1}
-.pill-icon{width:38px;height:38px;border-radius:10px;background:var(--bg-card-alt);border:1px solid var(--line);color:var(--ink-3);display:inline-flex;align-items:center;justify-content:center;margin-bottom:14px;transition:all var(--t-med)}
-.pill-label{font-family:var(--font-body);font-weight:600;font-size:15px;color:var(--ink);letter-spacing:-.005em;line-height:1.2}
-.pill-sub{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-4);font-weight:600;margin-top:2px}
-.pill:hover{border-color:rgba(168,49,62,.4);transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(168,49,62,.25)}
-.pill:hover .pill-icon{border-color:rgba(168,49,62,.30);color:var(--brand)}
-.pill:hover::before{opacity:.4}
-.pill.is-active{border-color:transparent;background:var(--bg-card);box-shadow:0 0 0 1.5px var(--brand),0 18px 40px -22px rgba(168,49,62,.30);transform:translateY(-2px)}
-.pill.is-active::before{opacity:1}
-.pill.is-active .pill-icon{background:var(--gradient-brand);color:#fff;border-color:transparent;box-shadow:0 8px 18px -8px rgba(168,49,62,.50)}
-.pill.is-active .pill-label{color:var(--brand-deep)}
-.pill.is-active .pill-sub{color:var(--brand)}
-
-/* --- Pricing panels --- */
-.pricing-panel{display:none;margin-bottom:72px}
-.pricing-panel.is-active{display:block;animation:panelIn 520ms cubic-bezier(.2,.7,.2,1)}
-@keyframes panelIn{from{opacity:0;transform:translateY(20px);filter:blur(2px)}to{opacity:1;transform:translateY(0);filter:blur(0)}}
-.panel-intro{margin-bottom:44px;display:flex;flex-direction:column;gap:10px;max-width:64ch}
-.panel-tag{display:inline-flex;align-self:flex-start;align-items:center;font-family:var(--font-body);font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--brand-deep);background:var(--brand-tint);padding:6px 12px;border-radius:999px;border:1px solid rgba(168,49,62,.18)}
-.panel-title{font-family:var(--font-display);font-size:clamp(36px,4.6vw,60px);font-weight:700;letter-spacing:-.025em;color:var(--ink);margin:6px 0 0;line-height:.94}
-.panel-desc{color:var(--ink-3);font-size:16.5px;max-width:60ch;line-height:1.7;margin:6px 0 0}
-
-/* --- Niche section heads --- */
-.niche-section{margin-bottom:32px}
-.niche-section+.niche-section{margin-top:0}
-.niche-section-head{margin-bottom:22px}
-.niche-section-head .panel-tag{margin-bottom:6px}
-.niche-section-head .panel-title{margin-bottom:8px;font-size:clamp(28px,3vw,40px)}
-.niche-section-head .panel-desc{font-size:15.5px}
-
-/* --- Pricing table --- */
-.pricing-table-services{background:var(--bg-card);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:22px}
-.pricing-table-row{display:grid;grid-template-columns:1.4fr 2fr .9fr;gap:22px;padding:18px 28px;align-items:center;border-bottom:1px solid var(--line-soft);font-family:var(--font-body)}
-.pricing-table-row:last-child{border-bottom:0}
-.pricing-table-row.pricing-table-head{background:var(--bg-card-alt);font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-4);padding:14px 28px}
-.pricing-table-row .col-service{font-weight:600;color:var(--ink);font-size:15.5px;letter-spacing:-.005em}
-.pricing-table-row .col-spec{font-size:14px;color:var(--ink-3);line-height:1.5}
-.pricing-table-row .col-price{font-family:var(--font-display);font-weight:700;font-size:19px;letter-spacing:-.02em;color:var(--brand-deep);text-align:right;white-space:nowrap}
-.pricing-table-note{font-size:13px;color:var(--ink-4);margin:14px 0 24px;line-height:1.55}
-
-/* --- Upsell banner --- */
-.upsell-banner{display:flex;align-items:center;gap:18px;padding:22px 28px;background:var(--bg-card-alt);border:1px solid rgba(168,49,62,.18);border-radius:var(--radius);margin:22px 0 40px;position:relative;overflow:hidden}
-.upsell-banner::before{content:'';position:absolute;inset:0;background:var(--gradient-brand-soft);opacity:.5;pointer-events:none}
-.upsell-banner>*{position:relative;z-index:1}
-.upsell-banner-icon{width:38px;height:38px;border-radius:10px;background:var(--gradient-brand);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;flex-shrink:0;box-shadow:0 8px 18px -8px rgba(168,49,62,.50)}
-.upsell-banner-text{display:flex;flex-direction:column;gap:2px;flex:1}
-.upsell-banner-text strong{font-family:var(--font-display);font-size:16.5px;font-weight:700;letter-spacing:-.015em;color:var(--ink);line-height:1.25}
-.upsell-banner-text span{font-size:14px;color:var(--ink-3);line-height:1.5}
-
-/* --- Production dark wrapper --- */
-.production-dark{
-  background:var(--bg-ink);color:#fff;border-radius:var(--radius-lg);
-  padding:56px 48px 48px;margin-bottom:64px;position:relative;overflow:hidden;
-}
-.production-dark::before{content:'';position:absolute;top:-120px;right:-120px;width:400px;height:400px;background:radial-gradient(closest-side,rgba(168,49,62,.12),transparent);pointer-events:none}
-.production-dark .panel-tag{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
-.production-dark .panel-title{color:#fff}
-.production-dark .panel-desc{color:rgba(255,255,255,.5)}
-.production-dark .pricing-table-services{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08)}
-.production-dark .pricing-table-row{border-bottom-color:rgba(255,255,255,.06)}
-.production-dark .pricing-table-row.pricing-table-head{background:rgba(255,255,255,.04);color:rgba(255,255,255,.4)}
-.production-dark .pricing-table-row .col-service{color:#fff}
-.production-dark .pricing-table-row .col-spec{color:rgba(255,255,255,.45)}
-.production-dark .pricing-table-row .col-price{color:var(--brand-soft)}
-.production-dark .pricing-table-note{color:rgba(255,255,255,.35)}
-.production-dark .btn-outline{border-color:rgba(255,255,255,.2);color:#fff}
-.production-dark .btn-outline:hover{border-color:var(--brand-soft);color:var(--brand-soft)}
-
-/* --- Listing packages inside dark wrapper --- */
-.production-dark .packages-grid{gap:14px}
-.production-dark .pkg{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.08)}
-.production-dark .pkg:hover{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16);box-shadow:0 32px 60px -36px rgba(168,49,62,.28)}
-.production-dark .pkg-name{color:#fff;font-size:22px}
-.production-dark .pkg-price{color:#fff;font-size:28px}
-.production-dark .pkg-period{color:rgba(255,255,255,.4)}
-.production-dark .pkg header{border-bottom-color:rgba(255,255,255,.08)}
-.production-dark .check-list li{color:rgba(255,255,255,.65)}
-.production-dark .check-list li::before{background:rgba(255,255,255,.06)}
-.production-dark .check-list li::after{border-color:var(--brand-soft)}
-.production-dark .check-list li.off{color:rgba(255,255,255,.2)}
-.production-dark .check-list li.off::before{background:transparent}
-.production-dark .check-list li.off::after{content:'×';border:none;transform:none;width:auto;height:auto;left:6px;top:2px;font-size:12px;color:rgba(255,255,255,.2);font-weight:700}
-.production-dark .check-list li.hl{color:var(--brand-soft)}
-.production-dark .pkg-featured{background:rgba(255,255,255,.06)}
-.production-dark .pkg-featured::before{background:var(--gradient-brand)}
-.production-dark .pkg-save{font-size:12px;color:#4caf50;font-weight:600;margin-top:6px;display:flex;align-items:center;gap:4px}
-.production-dark .pkg-save svg{width:12px;height:12px}
-.production-dark .pkg-discount{font-size:10px;color:rgba(255,255,255,.3);margin-top:auto;padding-top:12px}
-.production-dark .pkg-tag{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:4px;display:block}
-.production-dark .custom-list{list-style:none;padding:0;margin:0 0 26px;flex:1}
-.production-dark .custom-list li{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:13px;color:rgba(255,255,255,.55)}
-.production-dark .custom-list li:last-child{border-bottom:none}
-.production-dark .custom-list li span{color:var(--brand-soft);font-weight:600;font-size:13px;white-space:nowrap}
-
-/* Property type selector */
-.prop-selector{display:flex;align-items:center;gap:10px;margin-bottom:28px}
-.prop-selector span{font-size:13px;color:rgba(255,255,255,.4)}
-.prop-btn{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:7px 16px;font-size:13px;color:rgba(255,255,255,.5);cursor:pointer;transition:all .2s;font-family:var(--font-body)}
-.prop-btn:hover{background:rgba(255,255,255,.1);color:rgba(255,255,255,.8)}
-.prop-btn.is-active{background:rgba(168,49,62,.2);border-color:var(--brand-soft);color:var(--brand-soft)}
-
-/* --- Pricing divider between listing and brand --- */
-.pricing-divider{
-  height:1px;margin:64px 0;position:relative;
-  background:linear-gradient(90deg,transparent,var(--line),var(--brand-tint),var(--line),transparent);
-}
-
-/* --- Pricing setup overrides --- */
-.pricing .setup-card{margin-bottom:72px}
-
-/* --- Pricing flex note --- */
-.pricing-flex{margin:36px 0 18px;padding:22px 26px;background:var(--bg-card-alt);border:1px dashed rgba(168,49,62,.30);border-radius:var(--radius);font-size:14.5px;color:var(--ink-2);line-height:1.6;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
-.pricing-flex strong{color:var(--brand-deep);font-weight:600}
-.pricing-flex a{color:var(--brand-deep);font-weight:600;border-bottom:1px solid currentColor;padding-bottom:1px;margin-left:6px;transition:color var(--t-fast),border-color var(--t-fast)}
-.pricing-flex a:hover{color:var(--brand);border-bottom-color:var(--brand)}
-.pricing-flex-mark{display:inline-flex;width:26px;height:26px;border-radius:50%;background:var(--gradient-brand);color:white;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;font-weight:700;box-shadow:0 6px 16px -6px rgba(168,49,62,.45)}
-
-/* ================ TÝM ================ */
-.team{padding:96px 0;background:var(--bg-ink);color:#fff}
-.team .label{color:var(--brand-soft)}
-.team .stitle{color:#fff}
-.team-sub{
-  font-size:clamp(15px,1.6vw,18px);color:rgba(255,255,255,.45);
-  max-width:520px;line-height:1.6;margin:0 0 56px;
-}
-.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-.tm{text-align:center}
-.tm-photo{
-  width:96px;height:96px;border-radius:50%;margin:0 auto 16px;
-  background:#fff;
-  border:3px solid rgba(255,255,255,.15);
-  box-shadow:0 0 0 1px rgba(0,0,0,.08),0 12px 32px -12px rgba(0,0,0,.3);
-  display:flex;align-items:center;justify-content:center;
-  overflow:hidden;transition:all .3s;position:relative;
-}
-.tm:hover .tm-photo{border-color:var(--brand-soft);box-shadow:0 0 0 1px var(--brand),0 16px 40px -12px rgba(168,49,62,.25)}
-.tm-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.tm-initials{
-  font-family:var(--font-d);font-size:20px;font-weight:700;color:var(--ink-3);
-}
-.tm-name{font-family:var(--font-d);font-size:15px;font-weight:700;margin-bottom:3px;color:#fff}
-.tm-role{font-size:12px;color:rgba(255,255,255,.4)}
-.tm{position:relative}
-.tm-tooltip{
-  position:absolute;left:50%;transform:translateX(-50%) translateY(10px) scale(.96);
-  bottom:100%;margin-bottom:20px;
-  background:linear-gradient(145deg,#1a1a2e 0%,#16132b 100%);
-  color:rgba(255,255,255,.88);
-  padding:20px 22px 18px;border-radius:14px;
-  font-size:13.5px;line-height:1.65;text-align:center;
-  font-weight:400;letter-spacing:.01em;
-  white-space:normal;max-width:280px;min-width:200px;
-  box-shadow:0 20px 50px -12px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.06),inset 0 1px 0 rgba(255,255,255,.08);
-  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
-  opacity:0;pointer-events:none;
-  transition:opacity .3s cubic-bezier(.2,.7,.2,1),transform .3s cubic-bezier(.2,.7,.2,1);
-  z-index:10;
-}
-.tm-tooltip::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:3px;
-  background:var(--gradient);border-radius:14px 14px 0 0;
-}
-.tm-tooltip::after{
-  content:'';position:absolute;top:100%;left:50%;transform:translateX(-50%);
-  border:7px solid transparent;border-top-color:#16132b;
-  filter:drop-shadow(0 2px 4px rgba(0,0,0,.2));
-}
-.tm:hover .tm-tooltip{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}
-
-/* ================ PROCES ================ */
-.process{padding:96px 0;background:var(--bg)}
-.process .label{color:var(--brand-deep)}
-.process-sub{
-  font-size:clamp(15px,1.6vw,18px);color:var(--ink-3);
-  max-width:520px;line-height:1.6;margin:0 0 56px;
-}
-.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-@media(max-width:900px){.process-steps{grid-template-columns:repeat(2,1fr)}}
-.step{position:relative;padding:32px 24px;background:var(--bg-alt);border:1px solid var(--line);border-radius:var(--r-lg)}
-.step-num{
-  font-family:var(--font-d);font-size:48px;font-weight:800;
-  color:var(--line);line-height:1;margin-bottom:16px;letter-spacing:-.03em;
-}
-.step-name{
-  font-family:var(--font-d);font-size:18px;font-weight:800;
-  letter-spacing:-.01em;margin-bottom:8px;
-}
-.step-desc{font-size:14px;color:var(--ink-3);line-height:1.6;margin:0}
-.step-connector{
-  position:absolute;top:50%;right:-14px;
-  width:28px;height:1px;background:var(--line-2);
-}
-.step:last-child .step-connector{display:none}
-
-/* ================ CTA ================ */
-.cta{
-  padding:96px 0;background:var(--bg-ink);color:#fff;
-  text-align:center;
-}
-.cta .stitle{color:#fff}
-.cta-sub{
-  font-size:clamp(15px,1.6vw,18px);color:rgba(255,255,255,.4);
-  max-width:480px;margin:0 auto 36px;line-height:1.6;
-}
-.cta-mail{
-  font-size:14px;color:rgba(255,255,255,.35);margin-top:16px;
-}
-.cta-mail a{color:rgba(255,255,255,.5);border-bottom:1px solid rgba(255,255,255,.15)}
-.cta-mail a:hover{color:#fff}
-
-/* ================ CONTACT FORM ================ */
-.contact-form{
-  max-width:640px;margin:0 auto;text-align:left;
-}
-.form-grid{
-  display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;
-}
-.form-group{display:flex;flex-direction:column;gap:6px}
-.form-group--full{margin-bottom:20px}
-.form-group label,.form-gdpr label{
-  font-size:12px;font-weight:600;letter-spacing:.04em;
-  color:rgba(255,255,255,.5);text-transform:uppercase;
-}
-.form-group input,.form-group select,.form-group textarea{
-  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
-  border-radius:var(--r);padding:14px 16px;
-  font-family:var(--font-b);font-size:15px;color:#fff;
-  transition:border-color .2s,background .2s;
-  width:100%;
-}
-.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.25)}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{
-  outline:none;border-color:var(--brand-soft);background:rgba(255,255,255,.08);
-}
-.form-group select{appearance:none;-webkit-appearance:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='rgba(255,255,255,.4)' stroke-width='1.5'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 14px center;
-  padding-right:36px;cursor:pointer;
-}
-.form-group select option{background:var(--bg-ink);color:#fff}
-.form-group textarea{resize:vertical;min-height:80px}
-.form-gdpr{margin-bottom:24px}
-.gdpr-label{
-  display:flex;align-items:flex-start;gap:10px;cursor:pointer;
-  font-size:12px;font-weight:400;color:rgba(255,255,255,.4);
-  text-transform:none;letter-spacing:0;line-height:1.5;
-}
-.gdpr-label input[type="checkbox"]{
-  width:18px;height:18px;flex-shrink:0;margin-top:2px;
-  accent-color:var(--brand);cursor:pointer;
-}
-
-/* ================ STICKY MOBILE CTA ================ */
-.mobile-cta-bar{
-  position:fixed;left:12px;right:12px;bottom:12px;z-index:280;
-  display:none;
-  background:var(--gradient);color:#fff;
-  padding:14px 22px;border-radius:60px;
-  font-family:var(--font-d);font-weight:700;font-size:14px;
-  letter-spacing:.02em;text-align:center;
-  box-shadow:0 14px 32px -10px rgba(168,49,62,.55),0 6px 18px -8px rgba(58,42,130,.40);
-  transform:translateY(140%);transition:transform .45s cubic-bezier(.2,.7,.2,1);
-  align-items:center;justify-content:center;gap:10px;
-}
-.mobile-cta-bar.is-visible{transform:translateY(0)}
-.mobile-cta-bar .arrow{display:inline-block;transition:transform .25s}
-.mobile-cta-bar:active{transform:translateY(0) scale(.97)}
-@media(max-width:768px){.mobile-cta-bar{display:inline-flex}}
-@media(prefers-reduced-motion:reduce){.mobile-cta-bar{transition:none}}
-
-/* ================ FOOTER ================ */
-.footer{
-  padding:32px 0;background:var(--bg-ink);
-  border-top:1px solid rgba(255,255,255,.06);
-}
-@media(max-width:768px){.footer{padding-bottom:96px}}
-.footer-inner{
-  display:flex;justify-content:space-between;align-items:center;
-  flex-wrap:wrap;gap:12px;
-}
-.footer-brand{display:flex;align-items:center;gap:8px}
-.footer-brand img{height:18px;opacity:.4}
-.footer-meta{font-size:11px;color:rgba(255,255,255,.25)}
-.footer-links a{font-size:11px;color:rgba(255,255,255,.25);margin-left:16px}
-.footer-links a:hover{color:rgba(255,255,255,.5)}
-
-/* ================ REVEAL ================ */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
-.reveal.is-visible{opacity:1;transform:none}
-
-/* ================ IMPECCABLE POLISH v8.1 — brand-guide aligned typography ================ */
-/* All major section titles → Bebas Neue (brand guide spec, replaces Inter Tight) */
-.stitle{
-  font-family:'Bebas Neue','Arial Narrow',sans-serif;
-  font-weight:400;
-  letter-spacing:-.005em;
-  line-height:.94;
-  font-size:clamp(40px,5.6vw,82px);
-}
-.stitle-sm{font-size:clamp(28px,4.2vw,52px)}
-/* All gradient highlight words → Fraunces italic (brand guide spec) */
-.gw{
-  font-family:'Bebas Neue','Arial Narrow',sans-serif;
-  font-weight:400;
-  text-transform:uppercase;
-  letter-spacing:-.005em;
-  background:var(--gradient);
-  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-}
-/* Motion-safe defaults (council Sam persona) */
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{
-    animation-duration:.01ms !important;
-    transition-duration:.01ms !important;
-    animation-iteration-count:1 !important;
-  }
-  .reveal{opacity:1 !important;transform:none !important}
-  html{scroll-behavior:auto}
-}
-
-/* ================ RESPONSIVE ================ */
-@media(max-width:1200px){
-  .packages-grid,.packages-grid--5{grid-template-columns:repeat(3,1fr)}
-}
-@media(max-width:1080px){
-  .segment-pills{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:900px){
-  .services-grid,.services-grid--2,.process-steps{grid-template-columns:1fr}
-  .results-grid{grid-template-columns:1fr}
-  .cs-inner{grid-template-columns:1fr;padding:28px}
-  .team-grid{grid-template-columns:repeat(3,1fr)}
-  .proof-grid{grid-template-columns:repeat(2,1fr);gap:20px}
-  .packages-grid,.packages-grid--5{grid-template-columns:repeat(2,1fr)}
-  .addons-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:720px){
-  .segment-pills{grid-template-columns:1fr 1fr;gap:10px}
-  .pill{padding:18px 18px 16px}
-  .pill-icon{width:34px;height:34px;margin-bottom:10px}
-  .pill-label{font-size:13.5px}
-  .pricing{padding:90px 0 100px}
-  .pricing-sub{font-size:15.5px}
-  .pricing-flex{padding:18px 20px;font-size:13.5px}
-  .pricing-table-row{grid-template-columns:1fr;gap:6px;padding:18px 22px}
-  .pricing-table-row.pricing-table-head{display:none}
-  .pricing-table-row .col-service{font-size:16px}
-  .pricing-table-row .col-spec{font-size:13.5px}
-  .pricing-table-row .col-price{font-size:18px;text-align:left;margin-top:4px}
-  .upsell-banner{flex-direction:column;align-items:flex-start;gap:12px;padding:18px 20px}
-  .packages-grid,.packages-grid--5{grid-template-columns:1fr}
-  .addons-grid{grid-template-columns:1fr}
-  .setup-card{padding:28px 24px 24px}
-}
-@media(max-width:560px){
-  .form-grid{grid-template-columns:1fr}
-  .team-grid{grid-template-columns:repeat(2,1fr)}
-  .proof-grid{grid-template-columns:1fr;text-align:left}
-  .hero h1{font-size:clamp(30px,8vw,44px)}
-  .hero-actions{flex-direction:column;align-items:stretch}
-  .hero-actions .btn{justify-content:center}
-  .cs-metrics{flex-direction:column;gap:16px}
-  .segment-pills{grid-template-columns:1fr}
-}
-@media(max-width:400px){
-  .team-grid{grid-template-columns:1fr}
-}
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://www.kinsoo.cz/#organization",
-        "name": "Kinsoo s.r.o.",
-        "alternateName": "Kinsoo",
-        "url": "https://www.kinsoo.cz/",
-        "logo": "https://www.kinsoo.cz/assets/kinsoo-icon.png",
-        "image": "https://www.kinsoo.cz/assets/og-cover.png",
-        "description": "Video & brand agentura pro realitní makléře a kanceláře. Listing videa nemovitostí, osobní brand a správa sociálních sítí.",
-        "foundingDate": "2023",
-        "founder": { "@type": "Person", "name": "Štěpán Plachý" },
-        "vatID": "CZ24983900",
-        "taxID": "24983900",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Plzeň",
-          "addressRegion": "Plzeňský kraj",
-          "addressCountry": "CZ"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+420725365636",
-          "email": "stepanplachy@kinsoo.cz",
-          "contactType": "customer service",
-          "availableLanguage": ["Czech", "English"]
-        }
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://www.kinsoo.cz/#business",
-        "name": "Kinsoo — video a brand agentura pro reality",
-        "url": "https://www.kinsoo.cz/",
-        "image": "https://www.kinsoo.cz/assets/og-cover.png",
-        "parentOrganization": { "@id": "https://www.kinsoo.cz/#organization" },
-        "priceRange": "$$",
-        "telephone": "+420725365636",
-        "email": "stepanplachy@kinsoo.cz",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Plzeň",
-          "addressRegion": "Plzeňský kraj",
-          "addressCountry": "CZ"
-        },
-        "areaServed": { "@type": "Country", "name": "Česká republika" },
-        "knowsAbout": ["Videoprezentace nemovitostí", "Realitní video", "Osobní brand realitního makléře", "Správa sociálních sítí", "Marketing pro realitní kanceláře"],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Služby Kinsoo",
-          "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Listing video nemovitosti", "description": "Profesionální video nemovitosti — natáčení, drone, foto, půdorys, 3D prohlídka. Jednorázově." } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brand Partner", "description": "Kompletní brand management pro realitní makléře — strategie, content plán, natáčení a správa sociálních sítí." } }
-          ]
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "5",
-          "bestRating": "5",
-          "reviewCount": "6"
-        },
-        "review": [
-          { "@type": "Review", "author": { "@type": "Person", "name": "Honza Král" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Pozitivně mě překvapilo, jak rychle se to rozjelo. Poprvé mi z Instagramu přišla reálná poptávka — a pak další." },
-          { "@type": "Review", "author": { "@type": "Person", "name": "Famil Amirov" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Se Štěpánem a jeho týmem jsem spokojený. Vše stříhají včas, sami přicházejí s nápady a člověk u nich má pořád přehled o tom, na čem se pracuje a v jaké je to fázi. Spolupráci doporučuju." },
-          { "@type": "Review", "author": { "@type": "Person", "name": "Adam Bárta" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Na klucích z Kinsoo se mi líbí, že se na kameře cítím příjemně a vždycky ze mě dostanou to nejlepší. Výstupy jsou kvalitní a promyšlené — je vidět, že vědí, co dělají, a funguje jim to." },
-          { "@type": "Review", "author": { "@type": "Person", "name": "Dominik Polcar" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Spolupráce s Kinsoo mi pomohla v mnoha ohledech. Budujeme brand, který nemá v regionu obdoby, a celé si to extrémně užívám. Měl jsem strach z kamery i mikrofonu, ale kluci mi vytvořili skvělé prostředí — už od prvního natáčení jsem věděl, že to byla dobrá volba." },
-          { "@type": "Review", "author": { "@type": "Person", "name": "Tomáš Vaněk" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "S Kinsoo spolupracuji na tvorbě realitních videí a mohu je jednoznačně doporučit. Oceňuji profesionální přístup, rychlou komunikaci a spolehlivost. Mají cit pro detail a výsledná videa jsou na vysoké úrovni." },
-          { "@type": "Review", "author": { "@type": "Person", "name": "František Drs" }, "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }, "reviewBody": "Spolupráce s kolegy z Kinsoo je pro nás zkušené makléře jako svěží vítr ve světě realit. Oceňujeme moderní a individuální přístup — Kinsoo přináší špičkovou prezentaci a komunikaci odpovídající nejvyspělejším světovým trhům. Nová energie, kterou jsme rádi součástí." }
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.kinsoo.cz/#website",
-        "name": "Kinsoo",
-        "url": "https://www.kinsoo.cz/",
-        "description": "Video & brand agentura pro realitní makléře a kanceláře",
-        "publisher": { "@id": "https://www.kinsoo.cz/#organization" },
-        "inLanguage": "cs"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Domů", "item": "https://www.kinsoo.cz/" }
-        ]
-      },
-      {
-        "@type": "VideoObject",
-        "name": "Kinsoo — ukázka realitní video tvorby",
-        "description": "Ukázka video tvorby Kinsoo pro realitní makléře a kanceláře.",
-        "thumbnailUrl": "https://www.kinsoo.cz/assets/hero-poster.jpg",
-        "contentUrl": "https://www.kinsoo.cz/assets/hero-video.mp4",
-        "uploadDate": "2026-06-05",
-        "publisher": { "@id": "https://www.kinsoo.cz/#organization" }
-      }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "Kolik stojí video nemovitosti?", "acceptedAnswer": { "@type": "Answer", "text": "Jednorázové listing video začíná na 11 290 Kč (balíček Listing Start), samostatné video pro sReality od 4 900 Kč. Cena se liší podle typu nemovitosti a rozsahu balíčku." } },
-      { "@type": "Question", "name": "Jak dlouho trvá natáčení a kdy dostanu hotové video?", "acceptedAnswer": { "@type": "Answer", "text": "Natáčení trvá 1,5–6 hodin podle toho, co spolu točíme. Kompletní nemovitost máme většinou do 1,5 hodiny, organické natáčení (6 videí) zabere 2–3 hodiny. Hotové video dodáváme do 5 pracovních dnů." } },
-      { "@type": "Question", "name": "Točíte i mimo Plzeň?", "acceptedAnswer": { "@type": "Answer", "text": "Ano. Sídlíme v Plzni — doprava do 20 km zdarma, nad 20 km účtujeme 5,90 Kč/km. Po domluvě natáčíme po celé ČR." } },
-      { "@type": "Question", "name": "Co je Brand Partner?", "acceptedAnswer": { "@type": "Answer", "text": "Kompletní brand management: strategie a positioning, měsíční content plán, natáčení, střih a správa sociálních sítí. Jeden tým, jeden retainer, měřitelné výsledky. Zjednodušeně: vytvoříme spolu brand a značku, kterou lidi opravdu budou znát." } },
-      { "@type": "Question", "name": "Pro koho jsou vaše služby?", "acceptedAnswer": { "@type": "Answer", "text": "Pro realitní makléře a realitní kanceláře, které chtějí víc poptávek a prodejů díky videu a silnému osobnímu brandu." } },
-      { "@type": "Question", "name": "Co všechno listing video obsahuje?", "acceptedAnswer": { "@type": "Answer", "text": "Podle balíčku: video pro sReality, Platinum reels pro sociální sítě, profesionální fotografie, 2D půdorys, drone záběry, landing page nemovitosti, Meta Ad setup a 3D prohlídku." } },
-      { "@type": "Question", "name": "Musím se umět chovat před kamerou?", "acceptedAnswer": { "@type": "Answer", "text": "Ne. Většina klientů má z kamery zpočátku obavy — vytvoříme uvolněné prostředí a vždy z vás dostaneme to nejlepší." } },
-      { "@type": "Question", "name": "Za jak dlouho uvidím výsledky?", "acceptedAnswer": { "@type": "Answer", "text": "U budování brandu obvykle přicházejí první poptávky ze sociálních sítí kolem 2. měsíce. Naši klienti se dostali až na 10–20 poptávek měsíčně." } }
-    ]
-  }
-  </script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Kinsoo | Agentura pro obsah a prodej</title>
+<meta name="description" content="Natočíme obsah, který lidé sledují, a postavíme k němu cestu, na jejímž konci vám napíše člověk, který chce koupit. Osm lidí, vlastní produkce, Plzeň a celá ČR." />
+<meta name="author" content="Kinsoo s.r.o." />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="geo.region" content="CZ-32" />
+<meta name="geo.placename" content="Plzeň" />
+<meta name="theme-color" content="#ffffff" />
+<link rel="canonical" href="https://www.kinsoo.cz/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.kinsoo.cz/" />
+<meta property="og:title" content="Kinsoo: obsah, který nekončí u zhlédnutí" />
+<meta property="og:description" content="Natočíme obsah, který lidé sledují, a postavíme k němu cestu, na jejímž konci vám napíše člověk, který chce koupit. Osm lidí, vlastní produkce, Plzeň a celá ČR." />
+<meta property="og:image" content="https://www.kinsoo.cz/assets/og-cover.png" />
+<meta property="og:locale" content="cs_CZ" />
+<meta property="og:site_name" content="Kinsoo" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="favicon.ico" sizes="any" />
+<link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="stylesheet" href="kinsoo.css" />
 </head>
 <body>
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/kinsoo-icon-black.png" alt="" width="26" height="16" />
+      Kinsoo
+    </a>
+    <nav aria-label="Hlavní navigace">
+      <ul class="nav-links"><li><a href="obsah-a-prodej.html">Obsah a prodejní funnel</a></li><li><a href="produkce.html">Produkce</a></li><li><a href="index.html#klienti">Klienti a recenze</a></li><li><a href="index.html#tym">Tým</a></li></ul>
+    </nav>
+    <a class="btn nav-cta" href="#dotaznik">Nezávazná konzultace</a>
+    <button class="nav-burger" id="burger" aria-label="Otevřít menu" aria-expanded="false" aria-controls="sheet">
+      <span></span>
+    </button>
+  </div>
+</header>
 
-<!-- ================ NAV ================ -->
-<nav class="nav is-top" id="nav">
-  <div class="nav-logo" style="position:relative;min-width:38px;min-height:28px">
-    <img class="logo-white" src="assets/kinsoo-icon-white.png" alt="Kinsoo" />
-    <img class="logo-color" src="assets/kinsoo-icon.png" alt="Kinsoo" />
-    <span style="margin-left:36px">Kinsoo</span>
-  </div>
-  <div class="nav-links">
-    <a href="#sluzby">Služby</a>
-    <a href="#recenze">Recenze</a>
-    <a href="#sluzby">Ceník</a>
-    <a href="#tym">Tým</a>
-    <a href="#faq">FAQ</a>
-    <a href="#kontakt" class="nav-cta">Chci spolupracovat <span class="arrow">&rarr;</span></a>
-  </div>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+<div class="sheet-scrim" id="scrim" hidden></div>
+<nav class="sheet" id="sheet" aria-label="Mobilní navigace" aria-hidden="true">
+  <span class="sheet-label">Služby</span>
+  <a href="obsah-a-prodej.html">Obsah a prodejní funnel</a>
+  <a href="produkce.html">Produkce</a>
+  <span class="sheet-label">Kinsoo</span>
+  <a href="index.html#klienti">Klienti a recenze</a>
+  <a href="index.html#tym">Tým</a>
+  <a class="btn" href="#dotaznik">Nezávazná konzultace</a>
 </nav>
 
-<!-- Mobile menu -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#sluzby" class="mm-link">Služby</a>
-  <a href="#recenze" class="mm-link">Recenze</a>
-  <a href="#sluzby" class="mm-link">Ceník</a>
-  <a href="#tym" class="mm-link">Tým</a>
-  <a href="#faq" class="mm-link">FAQ</a>
-  <a href="#kontakt" class="mm-link">Kontakt</a>
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <a class="btn" href="#dotaznik">Chci nezávaznou konzultaci</a>
 </div>
-
-<!-- ================ HERO v2 — Asymmetric editorial ================ -->
-<section class="hero" id="top">
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-text reveal">
-        <span class="hero-eyebrow">Video &amp; brand agentura · Plzeň</span>
-        <h1>Pomáháme makléřům prodávat <span class="gw">víc&nbsp;nemovitostí</span></h1>
-        <p class="hero-sub">Listing videa, osobní brand na sítích a&nbsp;kompletní správa obsahu. Ať vás klienti najdou dřív, než zavolají konkurenci.</p>
-        <div class="hero-actions">
-          <a href="#kontakt" class="btn btn-primary">Chci spolupracovat <span class="arrow">&rarr;</span></a>
-          <a href="#recenze" class="btn-ghost">Recenze klientů <span class="arrow">&rarr;</span></a>
-        </div>
-      </div>
-      <figure class="hero-media reveal" aria-label="Ukázka naší video tvorby">
-        <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
-          <source src="assets/hero-video.mp4" type="video/mp4">
-        </video>
-        <figcaption class="hero-media-caption">
-          <span>
-            <strong>Listing reel</strong>
-            <small>Natáčíme z&nbsp;Plzně po&nbsp;celé ČR</small>
-          </span>
-        </figcaption>
-      </figure>
+<main id="top">
+<section class="hero">
+  <div class="container hero-inner">
+    
+    <p class="eyebrow reveal" data-delay="1">Kinsoo, Plzeň</p>
+    <h1 class="display reveal" data-delay="1">Obsah, který nekončí u&nbsp;zhlédnutí.</h1>
+    <p class="lead reveal" data-delay="2">Jsme agentura pro obsah a prodej z Plzně. Natočíme s vámi videa, která lidé sledují, a postavíme k nim cestu, na jejímž konci vám napíše člověk, který chce koupit.</p>
+    <div class="btn-row reveal" data-delay="3" id="heroCta">
+      <a class="btn btn-lg" href="#dotaznik">Chci nezávaznou konzultaci</a>
+      <a class="btn btn-lg btn-ghost" href="#sluzby">Co děláme</a>
     </div>
-
-    <!-- Proof strip — council fix "stats credibility, in context" -->
-    <div class="hero-strip reveal">
-      <div class="hero-strip-item">
-        <strong>640&nbsp;mil.&nbsp;Kč</strong>
-        <span>natočených nemovitostí</span>
-      </div>
-      <div class="hero-strip-item">
-        <strong>7,9&nbsp;mil.</strong>
-        <span>organický dosah&nbsp;/&nbsp;měs</span>
-      </div>
-      <div class="hero-strip-item">
-        <strong>3&nbsp;500+</strong>
-        <span>natočených videí</span>
-      </div>
-      <div class="hero-strip-item">
-        <strong>10+</strong>
-        <span>aktivních makléřů</span>
-      </div>
+    <p class="hero-note reveal" data-delay="4">Osm lidí, vlastní produkce, natáčení třikrát do měsíce. Plzeň a celá ČR.</p>
+    <div class="proof-strip reveal" data-delay="4"><div class="avatars"><img src="assets/card-honza.jpg" alt="" loading="lazy" /><img src="assets/card-dominik.jpg" alt="" loading="lazy" /><img src="assets/card-adam.jpg" alt="" loading="lazy" /><img src="assets/card-famil.jpg" alt="" loading="lazy" /><img src="assets/card-tomas.jpg" alt="" loading="lazy" /><img src="assets/card-drs.jpg" alt="" loading="lazy" /></div><span class="text"><span class="stars" aria-label="5 z 5">★★★★★</span> <b>5 z 5</b> ve všech recenzích. Reality, investice, sport, služby.</span></div>
+  </div>
+</section>
+<section id="sluzby">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">Služby</p>
+      <h2 class="h1 reveal" data-delay="1">Dvě věci, které děláme.</h2>
+      <p class="lead reveal" data-delay="2">Dlouhodobou spolupráci, ve které stavíme obsah i cestu k poptávce. A jednorázovou produkci pro ty, kdo potřebují natočit jednu věc pořádně.</p>
+    </div>
+    <div class="services two">
+      <a class="service is-primary reveal" data-delay="1" href="obsah-a-prodej.html">
+          <span class="badge">Hlavní služba</span>
+          <span class="service-n">Služba 01</span>
+          <h3 class="h3">Obsah a prodejní funnel</h3>
+          <p class="service-tag">Natočíme obsah, který lidé sledují, a postavíme k němu cestu, na jejímž konci vám napíše člověk, který chce koupit. Dlouhodobá spolupráce.</p>
+          <ul><li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Strategie, scénáře a natáčení třikrát do měsíce</span></li><li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Střih, grafika a publikace</span></li><li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Klíčová slova a automatizace zpráv</span></li><li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Lead generátory, Meta Ads a web</span></li><li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Měsíční report od dosahu po poptávku</span></li></ul>
+          <div class="service-for"><b>Pro koho</b>Experti a firmy s tváří, které už mají co prodávat. Poradci, makléři, developeři, salony, trenéři.</div>
+          <span class="link">Víc o této službě <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      <a class="service reveal" data-delay="2" href="produkce.html">
+          
+          <span class="service-n">Služba 02</span>
+          <h3 class="h3">Produkce</h3>
+          <p class="service-tag">Jednorázové natáčení a focení. Reality, svatby a eventy. Vlastní štáb, vlastní technika, dodání v dohodnutém termínu.</p>
+          <ul><li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Foto a video nemovitostí</span></li><li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Svatební video a fotografie</span></li><li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Aftermovie a záznam eventů</span></li><li><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 10.5l3.2 3.2L15 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Formáty pro web i sítě</span></li></ul>
+          <div class="service-for"><b>Pro koho</b>Makléři, developeři, snoubenci a pořadatelé akcí, kteří to chtějí jednou, ale pořádně.</div>
+          <span class="link">Víc o této službě <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
     </div>
   </div>
 </section>
-
-<!-- ================ SLUŽBY ================ -->
-<section class="services" id="sluzby">
+<section id="klienti" class="section-alt">
   <div class="container">
-    <div class="label reveal">Co pro vás děláme</div>
-    <h2 class="stitle reveal">Dvě služby.<br><span class="gw">Jeden cíl.</span></h2>
-    <p class="services-sub reveal">Jednorázové video, nebo kompletní brand management. Výsledek naší spolupráce je stejný: více poptávek, více zakázek, více peněz.</p>
-
-    <div class="services-grid services-grid--2">
-      <a class="srv-card reveal" href="listing-video.html">
-        <div class="srv-icon ic1">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h2l1.5-2h7L15 7h6a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.2"/></svg>
+    <div class="section-head wide">
+      <p class="eyebrow reveal">Klienti a recenze</p>
+      <h2 class="h1 reveal" data-delay="1">Lidé, se kterými pracujeme, a co o tom říkají.</h2>
+      <p class="lead reveal" data-delay="2">Reality, investice, sport, služby. Obor se mění, přístup zůstává stejný.</p>
+    </div>
+    <div class="stats reveal" data-delay="2">
+      <div class="stat"><b>5/5</b><span>ve všech recenzích klientů</span></div>
+      <div class="stat"><b>3×</b><span>měsíčně natáčíme s každým klientem</span></div>
+      <div class="stat"><b>8</b><span>lidí v týmu, nic nepřeprodáváme</span></div>
+      <div class="stat"><b>Plzeň</b><span>a celá ČR</span></div>
+    </div>
+    <div class="proof-grid"><article class="pcard reveal" data-delay="1">
+        <div class="pcard-media"><img src="assets/card-honza.jpg" alt="Honza Král" loading="lazy" /><span class="pcard-tag">Reality</span></div>
+        <div class="pcard-body">
+          <span class="stars" aria-label="5 z 5">★★★★★</span>
+          <blockquote>Pozitivně mě překvapilo, jak rychle se to rozjelo. Poprvé mi z Instagramu přišla reálná poptávka a pak další.</blockquote>
+          <footer><b>Honza Král</b><span>Realitní makléř, klient od listopadu 2025</span></footer>
         </div>
-        <h3 class="srv-name">Listing video</h3>
-        <p class="srv-desc">Profesionální video vaší nemovitosti. Natočíme, sestříháme, dodáme. Jednorázově, bez závazku.</p>
-        <ul class="srv-features">
-          <li>Natáčení interiéru i exteriéru</li>
-          <li>Drony, stabilizátory, profi střih</li>
-          <li>Foto, půdorys, 3D prohlídka</li>
-          <li>Dodání do 5 pracovních dnů</li>
-          <li>Formáty pro portály i sítě</li>
-        </ul>
-        <span class="srv-cta">Zobrazit ceník a balíčky <span class="arrow">&rarr;</span></span>
-      </a>
-
-      <a class="srv-card srv-card--recommended reveal" href="brand-partner.html" style="position:relative">
-        <span class="srv-tag">★ Doporučujeme</span>
-        <div class="srv-icon ic3">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 6.5 7 1-5 5 1.5 7-6.5-3.5L5.5 21.5 7 14.5l-5-5 7-1L12 2Z"/></svg>
+      </article><article class="pcard reveal" data-delay="2">
+        <div class="pcard-media"><img src="assets/card-dominik.jpg" alt="Dominik Polcar" loading="lazy" /><span class="pcard-tag">Investice</span></div>
+        <div class="pcard-body">
+          <span class="stars" aria-label="5 z 5">★★★★★</span>
+          <blockquote>Spolupráce s Kinsoo mi pomohla v mnoha ohledech. Budujeme brand, který nemá v regionu obdoby, a celé si to extrémně užívám. Měl jsem strach z kamery i mikrofonu, ale kluci mi vytvořili skvělé prostředí. Už od prvního natáčení jsem věděl, že to byla dobrá volba.</blockquote>
+          <footer><b>Dominik Polcar</b><span>Investice a reality, klient od března 2026</span></footer>
         </div>
-        <h3 class="srv-name">Brand Partner</h3>
-        <p class="srv-desc">Kompletní brand management. Strategie, osobní brand, obsah, správa sítí. Jeden tým, jeden retainer, měřitelné výsledky.</p>
-        <ul class="srv-features">
-          <li>Brand strategie a positioning</li>
-          <li>Měsíční content plán + natáčení</li>
-          <li>Správa sociálních sítí</li>
-          <li>Platba listing videí pomocí provize</li>
-          <li>Dedikovaný account manager</li>
-          <li>Reporting a optimalizace</li>
-        </ul>
-        <span class="srv-cta">Zobrazit ceník a balíčky <span class="arrow">&rarr;</span></span>
-      </a>
+      </article><article class="pcard reveal" data-delay="3">
+        <div class="pcard-media"><img src="assets/card-adam.jpg" alt="Adam Bárta" loading="lazy" /><span class="pcard-tag">Produktivita</span></div>
+        <div class="pcard-body">
+          <span class="stars" aria-label="5 z 5">★★★★★</span>
+          <blockquote>Na klucích z Kinsoo se mi líbí, že se na kameře cítím příjemně a vždycky ze mě dostanou to nejlepší. Výstupy jsou kvalitní a promyšlené, je vidět, že vědí, co dělají, a funguje jim to.</blockquote>
+          <footer><b>Adam Bárta</b><span>Produktivita a automatizace, klient od ledna 2026</span></footer>
+        </div>
+      </article><article class="pcard reveal" data-delay="1">
+        <div class="pcard-media"><img src="assets/card-famil.jpg" alt="Famil Amirov" loading="lazy" /><span class="pcard-tag">Sport</span></div>
+        <div class="pcard-body">
+          <span class="stars" aria-label="5 z 5">★★★★★</span>
+          <blockquote>Se Štěpánem a jeho týmem jsem spokojený. Vše stříhají včas, sami přicházejí s nápady a člověk u nich má pořád přehled o tom, na čem se pracuje a v jaké je to fázi. Spolupráci doporučuju.</blockquote>
+          <footer><b>Famil Amirov</b><span>Kariéra sportovců, klient od září 2025</span></footer>
+        </div>
+      </article><article class="pcard reveal" data-delay="2">
+        <div class="pcard-media"><img src="assets/card-tomas.jpg" alt="Tomáš Vaněk" loading="lazy" /><span class="pcard-tag">Reality</span></div>
+        <div class="pcard-body">
+          <span class="stars" aria-label="5 z 5">★★★★★</span>
+          <blockquote>S Kinsoo spolupracuji na tvorbě realitních videí a mohu je jednoznačně doporučit. Oceňuji profesionální přístup, rychlou komunikaci a spolehlivost. Mají cit pro detail a výsledná videa jsou na vysoké úrovni.</blockquote>
+          <footer><b>Tomáš Vaněk</b><span>Reality a development, klient od dubna 2026</span></footer>
+        </div>
+      </article><article class="pcard reveal" data-delay="3">
+        <div class="pcard-media"><img src="assets/card-drs.jpg" alt="František Drs" loading="lazy" /><span class="pcard-tag">Reality</span></div>
+        <div class="pcard-body">
+          <span class="stars" aria-label="5 z 5">★★★★★</span>
+          <blockquote>Spolupráce s kolegy z Kinsoo je pro nás zkušené makléře jako svěží vítr ve světě realit. Oceňujeme moderní a individuální přístup. Kinsoo přináší špičkovou prezentaci a komunikaci odpovídající nejvyspělejším světovým trhům.</blockquote>
+          <footer><b>František Drs</b><span>Realitní strategie, klient od prosince 2025</span></footer>
+        </div>
+      </article></div>
+    <div class="btn-row reveal" data-delay="3"><a class="link" href="case-study-honza-kral.html">Přečíst případovou studii Honzy Krále <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </div>
+</section>
+<section id="jak" class="">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow reveal">Jak funguje cesta k poptávce</p>
+      <h2 class="h1 reveal" data-delay="1">Čtyři fáze. Tři děláme my.</h2>
+      <p class="lead reveal" data-delay="2">Poslední je vaše, a to je správně. Váš obchod nikdo neuzavře lépe než vy.</p>
+    </div>
+    <div class="steps reveal" data-delay="3">
+      <article class="step">
+        <span class="step-n">01</span>
+        <h3 class="h3">Natočíme<small>obsah, který lidé sledují</small></h3>
+        <p>Strategie, pozicování, scénáře a produkce. Točíme třikrát do měsíce, ne jednou. Váš projev se brousí rychleji a obsah stíhá reagovat na to, co právě funguje.</p>
+      </article>
+      <article class="step">
+        <span class="step-n">02</span>
+        <h3 class="h3">Rozšíříme<small>dosah tam, kde jsou vaši zákazníci</small></h3>
+        <p>Organika staví důvěru, placená distribuce ji doručí. Meta Ads na lidi, kteří vás už znají, i na ty, kteří vás mají teprve potkat. Každé publikum dostane jiné sdělení.</p>
+      </article>
+      <article class="step">
+        <span class="step-n">03</span>
+        <h3 class="h3">Zachytíme<small>zájem dřív, než vyhasne</small></h3>
+        <p>Komentář s klíčovým slovem spustí zprávu. Lead generátor předá hodnotu, kvalifikační otázky oddělí zvědavé od kupujících. Web a landing page dotáhnou zbytek.</p>
+      </article>
+      <article class="step is-yours">
+        <span class="step-n">04</span>
+        <h3 class="h3">Prodáte<small>vy, člověku, který ví, co chce</small></h3>
+        <p>Do zpráv vám přijde člověk, který ví, co chce. Vy si domluvíte schůzku a uzavřete ji. My vám každý měsíc ukážeme, kde se cesta drhla.</p>
+      </article>
     </div>
   </div>
 </section>
-
-<!-- ================ RECENZE ================ -->
-<section class="reviews" id="recenze">
+<section id="tym" class="section-tight">
   <div class="container">
-    <div class="label reveal">Recenze</div>
-    <h2 class="stitle reveal">Co o nás říkají <span class="gw">klienti</span></h2>
-    <p class="reviews-sub reveal">Reálné zkušenosti klientů, se kterými spolupracujeme. Klikni na klienta a&nbsp;přečti si celou jeho recenzi.</p>
-
-    <div class="rv-carousel reveal">
-      <button type="button" class="rv-arrow prev" id="rvPrev" aria-label="Předchozí recenze">&lsaquo;</button>
-      <div class="rv-marquee" id="rvMarquee">
-      <div class="rv-track" id="rvTrack">
-      <button type="button" class="rv-card" data-k="honza">
-        <img src="assets/card-honza.jpg" alt="Honza Král" loading="lazy">
-        <span class="rv-card-body">
-          <span class="rv-card-stars">★★★★★</span>
-          <span class="rv-card-name">Honza Král</span>
-          <span class="rv-card-meta">Kinsoo klient od&nbsp;listopadu&nbsp;2025</span>
-          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
-        </span>
-      </button>
-      <button type="button" class="rv-card" data-k="famil">
-        <img src="assets/card-famil.jpg" alt="Famil Amirov" loading="lazy">
-        <span class="rv-card-body">
-          <span class="rv-card-stars">★★★★★</span>
-          <span class="rv-card-name">Famil Amirov</span>
-          <span class="rv-card-meta">Kinsoo klient od&nbsp;září&nbsp;2025</span>
-          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
-        </span>
-      </button>
-      <button type="button" class="rv-card" data-k="adam">
-        <img src="assets/card-adam.jpg" alt="Adam Bárta" loading="lazy">
-        <span class="rv-card-body">
-          <span class="rv-card-stars">★★★★★</span>
-          <span class="rv-card-name">Adam Bárta</span>
-          <span class="rv-card-meta">Kinsoo klient od&nbsp;ledna&nbsp;2026</span>
-          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
-        </span>
-      </button>
-      <button type="button" class="rv-card" data-k="dominik">
-        <img src="assets/card-dominik.jpg" alt="Dominik Polcar" loading="lazy">
-        <span class="rv-card-body">
-          <span class="rv-card-stars">★★★★★</span>
-          <span class="rv-card-name">Dominik Polcar</span>
-          <span class="rv-card-meta">Kinsoo klient od&nbsp;března&nbsp;2026</span>
-          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
-        </span>
-      </button>
-      <button type="button" class="rv-card" data-k="tomas">
-        <img src="assets/card-tomas.jpg" alt="Tomáš Vaněk" loading="lazy">
-        <span class="rv-card-body">
-          <span class="rv-card-stars">★★★★★</span>
-          <span class="rv-card-name">Tomáš Vaněk</span>
-          <span class="rv-card-meta">Kinsoo klient od&nbsp;dubna&nbsp;2026</span>
-          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
-        </span>
-      </button>
-      <button type="button" class="rv-card" data-k="drs">
-        <img src="assets/card-drs.jpg" alt="František Drs" loading="lazy">
-        <span class="rv-card-body">
-          <span class="rv-card-stars">★★★★★</span>
-          <span class="rv-card-name">František Drs</span>
-          <span class="rv-card-meta">Kinsoo klient od&nbsp;prosince&nbsp;2025</span>
-          <span class="rv-card-cta">Přečíst recenzi <span>&rarr;</span></span>
-        </span>
-      </button>
-      </div>
-      </div>
-      <button type="button" class="rv-arrow next" id="rvNext" aria-label="Další recenze">&rsaquo;</button>
+    <div class="section-head">
+      <p class="eyebrow reveal">Tým</p>
+      <h2 class="h2 reveal" data-delay="1">Osm lidí. Produkce, střih, grafika, weby a analytika pod jednou střechou.</h2>
+      
     </div>
+    <div class="team-strip"><div class="member reveal" data-delay="1"><img src="assets/team/stepan.jpg" alt="Štěpán Plachý" loading="lazy" /><b>Štěpán Plachý</b><span>Founder &amp; Owner</span></div><div class="member reveal" data-delay="2"><img src="assets/team/matej.jpg" alt="Matěj Bláha" loading="lazy" /><b>Matěj Bláha</b><span>Lead Filmmaker</span></div><div class="member reveal" data-delay="3"><img src="assets/team/karolina.jpg" alt="Karolina Kubíčková" loading="lazy" /><b>Karolina Kubíčková</b><span>Lead Video Editor</span></div><div class="member reveal" data-delay="4"><img src="assets/team/magdalena.jpg" alt="Magdaléna Šrailová" loading="lazy" /><b>Magdaléna Šrailová</b><span>Grafika &amp; Copy</span></div><div class="member reveal" data-delay="1"><img src="assets/team/michal.jpg" alt="Michal Brant" loading="lazy" /><b>Michal Brant</b><span>Video Editor</span></div><div class="member reveal" data-delay="2"><img src="assets/team/jakub.jpg" alt="Jakub Stelzer" loading="lazy" /><b>Jakub Stelzer</b><span>Client Success &amp; Analytics</span></div><div class="member reveal" data-delay="3"><img src="assets/team/filip.jpg" alt="Filip Málek" loading="lazy" /><b>Filip Málek</b><span>Video Editor</span></div><div class="member reveal" data-delay="4"><img src="assets/team/matyas.jpg" alt="Matyáš Mašek" loading="lazy" /><b>Matyáš Mašek</b><span>Web Developer</span></div></div>
   </div>
+</section>
+<section id="faq">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow reveal">FAQ</p>
+      <h2 class="h1 reveal" data-delay="1">Časté otázky.</h2>
+      
+    </div>
+    <div class="faq-list reveal" data-delay="2"><div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Která ze dvou služeb je pro mě?<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Pokud chcete dlouhodobě budovat jméno a získávat poptávky, je to obsah a prodejní funnel. Pokud potřebujete natočit nebo nafotit jednu konkrétní věc, nemovitost, svatbu nebo akci, je to produkce. Když si nejste jistí, vyberte v dotazníku „Nevím“ a poradíme.</div></div>
+        </div><div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Za jak dlouho uvidím první poptávky?<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">První tři měsíce jsou stavba a měření. Poptávky ze sítí obvykle přicházejí kolem druhého měsíce, ale systém dává smysl hodnotit až na datech za celé čtvrtletí. Kdo slibuje výsledky do třiceti dnů, buď nemá funnel, nebo vám neříká pravdu.</div></div>
+        </div><div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Proč točíte třikrát do měsíce a ne jednou?<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Protože se učíte mluvit ke kameře a my se učíme váš hlas. Při jednom natáčení měsíčně zafixujete chyby na třicet dní. Při třech je opravíte za deset a obsah stíhá reagovat na to, co zrovna funguje.</div></div>
+        </div><div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Musím se umět chovat před kamerou?<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Ne. Většina klientů má z kamery zpočátku obavy. Vytvoříme uvolněné prostředí a vždycky z vás dostaneme to nejlepší. Proto taky točíme častěji, ne jednou za měsíc.</div></div>
+        </div><div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Kolik to stojí?<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Ceny nikde neuvádíme, protože rozsah se u každého liší. Někdo potřebuje natočit jednu nemovitost, někdo celou cestu včetně reklamy a webu. Cenu řekneme na konzultaci, až bude jasné, co dává smysl stavět.</div></div>
+        </div><div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Točíte i mimo Plzeň?<span class="faq-icon" aria-hidden="true"></span></button>
+          <div class="faq-a"><div class="faq-a-inner">Ano. Sídlíme v Plzni a po domluvě natáčíme po celé ČR.</div></div>
+        </div></div>
+  </div>
+</section>
+<!-- ============ DOTAZNÍK ============ -->
+<section id="dotaznik" class="section-alt">
+  <div class="container form-wrap">
+    <div class="form-side">
+      <p class="eyebrow reveal">Dotazník</p>
+      <h2 class="h1 reveal" data-delay="1">Pojďme se podívat, co pro vás dává smysl.</h2>
+      <p class="reveal" data-delay="2">Pět otázek o vás a o tom, kde dnes stojíte. Podle nich poznáme, která ze dvou cest vám sedí, a připravíme se na konzultaci tak, aby stála za váš čas.</p>
+      <p class="reveal" data-delay="2">Odpovědi si přečteme, připravíme si podklady k vašemu oboru a ozveme se s termínem nezávazné konzultace. Na ní projdeme, co dává smysl stavět, a teprve potom řekneme cenu.</p>
+      <div class="form-contact reveal" data-delay="3">
+        Radši rovnou mluvit? Zavolejte na <a href="tel:+420725365636">+420 725 365 636</a><br />
+        nebo napište na <a href="mailto:stepanplachy@kinsoo.cz">stepanplachy@kinsoo.cz</a>.
+      </div>
+    </div>
+    <form class="form reveal" data-delay="2" id="dotaznikForm" action="https://formsubmit.co/stepanplachy@kinsoo.cz" method="POST" novalidate="">
+      <input type="hidden" name="_subject" value="Nový dotazník z kinsoo.cz" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_next" value="https://www.kinsoo.cz/dekujeme.html" />
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
-  <!-- Apple-style modal -->
-  <div class="rv-modal" id="rvModal" aria-hidden="true">
-    <div class="rv-modal-bg" data-close></div>
-    <div class="rv-modal-card" role="dialog" aria-modal="true">
-      <button type="button" class="rv-modal-close" data-close aria-label="Zavřít">&times;</button>
-      <div class="rv-modal-photo"><img id="rvmImg" src="" alt=""></div>
-      <div class="rv-modal-content">
-        <div class="rv-modal-qm">„</div>
-        <div class="rv-modal-stars">★★★★★</div>
-        <p class="rv-modal-text" id="rvmText"></p>
-        <div>
-          <div class="rv-modal-name" id="rvmName"></div>
-          <div class="rv-modal-meta" id="rvmMeta"></div>
+      <div class="field">
+        <label for="f-sluzba">O co máte zájem</label>
+        <select id="f-sluzba" name="sluzba" required><option value="" disabled selected>Vyberte</option><option value="Obsah a prodejní funnel">Obsah a prodejní funnel (dlouhodobá spolupráce)</option><option value="Produkce: reality">Produkce: reality (foto a video)</option><option value="Produkce: svatba">Produkce: svatba</option><option value="Produkce: event">Produkce: event</option><option value="Nevím">Nevím, poraďte mi</option></select>
+      </div>
+      <div class="field">
+        <label for="f-byznys">Čím se živíte a kdo je váš zákazník</label>
+        <textarea id="f-byznys" name="byznys" required placeholder="Například: Jsem hypoteční poradce v Plzni, pracuji hlavně s mladými rodinami, které kupují první bydlení."></textarea>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="f-stav">Kde dnes stojíte s obsahem</label>
+          <select id="f-stav" name="stav_obsahu" required>
+            <option value="" disabled selected>Vyberte</option>
+            <option>Nepublikuji nic</option>
+            <option>Publikuji nepravidelně</option>
+            <option>Publikuji pravidelně, ale nevede to k poptávkám</option>
+            <option>Obsah mám, chci k němu prodejní vrstvu</option>
+            <option>Potřebuji jednorázové natáčení nebo focení</option>
+          </select>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-  (function(){
-    var data={
-      honza:{t:"Pozitivně mě překvapilo, jak rychle se to rozjelo. Poprvé mi z Instagramu přišla reálná poptávka — a pak další.",n:"Honza Král",m:"Kinsoo klient od listopadu 2025",i:"assets/card-honza.jpg"},
-      famil:{t:"Se Štěpánem a jeho týmem jsem spokojený. Vše stříhají včas, sami přicházejí s nápady a člověk u nich má pořád přehled o tom, na čem se pracuje a v jaké je to fázi. Spolupráci doporučuju.",n:"Famil Amirov",m:"Kinsoo klient od září 2025",i:"assets/card-famil.jpg"},
-      adam:{t:"Na klucích z Kinsoo se mi líbí, že se na kameře cítím příjemně a vždycky ze mě dostanou to nejlepší. Výstupy jsou kvalitní a promyšlené — je vidět, že vědí, co dělají, a funguje jim to.",n:"Adam Bárta",m:"Kinsoo klient od ledna 2026",i:"assets/card-adam.jpg"},
-      dominik:{t:"Spolupráce s Kinsoo mi pomohla v mnoha ohledech. Budujeme brand, který nemá v regionu obdoby, a celé si to extrémně užívám. Měl jsem strach z kamery i mikrofonu, ale kluci mi vytvořili skvělé prostředí — už od prvního natáčení jsem věděl, že to byla dobrá volba.",n:"Dominik Polcar",m:"Kinsoo klient od března 2026",i:"assets/card-dominik.jpg"},
-      tomas:{t:"S Kinsoo spolupracuji na tvorbě realitních videí a mohu je jednoznačně doporučit. Oceňuji profesionální přístup, rychlou komunikaci a spolehlivost. Mají cit pro detail a výsledná videa jsou na vysoké úrovni.",n:"Tomáš Vaněk",m:"Kinsoo klient od dubna 2026",i:"assets/card-tomas.jpg"},
-      drs:{t:"Spolupráce s kolegy z Kinsoo je pro nás zkušené makléře jako pokropení živou vodou. Snažíme se o moderní, výrazně individuální přístup a v Kinsoo máme partnera, který tyto představy splňuje — přináší špičkovou prezentaci a komunikaci odpovídající nejvyspělejším světovým trhům. Kinsoo pro nás představuje novou energii a svěží vítr ve světě realit. Jsme rádi, že jsme součástí progresu této mladé inovativní skupiny.",n:"František Drs",m:"Kinsoo klient od prosince 2025",i:"assets/card-drs.jpg"}
-    };
-    var modal=document.getElementById('rvModal');
-    var marq=document.getElementById('rvMarquee');
-    var track=document.getElementById('rvTrack');
-    if(track){Array.prototype.slice.call(track.children).forEach(function(c){var cl=c.cloneNode(true);cl.setAttribute('aria-hidden','true');cl.tabIndex=-1;track.appendChild(cl);});}
-    var cards=document.querySelectorAll('.rv-card');
-    function setW(){return track?track.scrollWidth/2:1;}
-    var pos=0,hovering=false,dragging=false,tweening=false,lastTs=0;
-    function render(){var w=setW();pos=((pos%w)+w)%w;track.style.transform='translate3d('+(-pos)+'px,0,0)';}
-    function loop(ts){var dt=ts-(lastTs||ts);lastTs=ts;if(dt>100)dt=16;if(track&&!hovering&&!dragging&&!tweening){pos+=dt*0.04;render();}requestAnimationFrame(loop);}
-    requestAnimationFrame(loop);
-    if(marq){marq.addEventListener('mouseenter',function(){hovering=true;});marq.addEventListener('mouseleave',function(){hovering=false;});}
-    function page(){return marq?Math.max(marq.clientWidth-40,300):300;}
-    function step(dir){if(tweening||!track)return;tweening=true;var start=pos,ch=dir*page(),t0=0;
-      function tk(now){if(!t0)t0=now;var p=Math.min((now-t0)/600,1),e=1-Math.pow(1-p,3);pos=start+ch*e;render();if(p<1)requestAnimationFrame(tk);else tweening=false;}
-      requestAnimationFrame(tk);}
-    var pv=document.getElementById('rvPrev'),nx=document.getElementById('rvNext');
-    if(pv)pv.addEventListener('click',function(){step(-1);});
-    if(nx)nx.addEventListener('click',function(){step(1);});
-    var down=false,sx=0,sp=0,moved=false;
-    if(marq){
-      marq.addEventListener('pointerdown',function(e){down=true;dragging=true;moved=false;sx=e.clientX;sp=pos;marq.classList.add('dragging');});
-      window.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-sx;if(Math.abs(dx)>5)moved=true;pos=sp-dx;render();});
-      var endDrag=function(){if(!down)return;down=false;dragging=false;marq.classList.remove('dragging');setTimeout(function(){moved=false;},0);};
-      window.addEventListener('pointerup',endDrag);
-      window.addEventListener('pointercancel',endDrag);
-    }
-    function openM(k){var d=data[k];if(!d)return;
-      document.getElementById('rvmText').textContent='„'+d.t+'"';
-      document.getElementById('rvmName').textContent=d.n;
-      document.getElementById('rvmMeta').textContent=d.m;
-      var img=document.getElementById('rvmImg');img.src=d.i;img.alt=d.n;
-      modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('rv-lock');
-    }
-    function closeM(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('rv-lock');}
-    cards.forEach(function(c){c.addEventListener('click',function(e){if(moved){e.preventDefault();return;}openM(c.getAttribute('data-k'));});});
-    modal.querySelectorAll('[data-close]').forEach(function(el){el.addEventListener('click',closeM);});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('open'))closeM();});
-  })();
-  </script>
-</section>
-
-<!-- ================ CASE STUDY — Full-bleed editorial ================ -->
-<section class="cs-banner">
-  <div class="cs-grid">
-    <figure class="cs-photo-v2 reveal">
-      <img src="assets/honza fotka.jpg" alt="Honza Král — realitní makléř, klient Kinsoo" loading="lazy" />
-      <figcaption class="cs-photo-tag">
-        <strong>Honza Král</strong>
-        <span>@kralvrealitach · klient od&nbsp;listopadu 2025</span>
-      </figcaption>
-    </figure>
-    <div class="cs-content-v2 reveal">
-      <span class="label">Case study · 6&nbsp;měsíců spolupráce</span>
-      <h2 class="cs-h2">Honza si <span class="gw">skoro&nbsp;ztrojnásobil</span> příjmy.</h2>
-      <p class="cs-pullquote">„Pozitivně mě překvapilo, jak rychle se to rozjelo. Poprvé mi z&nbsp;Instagramu přišla reálná poptávka — a&nbsp;pak další."</p>
-      <div class="cs-metrics-v2">
-        <div class="cs-m-v2"><strong>10+</strong><span>poptávek&nbsp;/&nbsp;měs</span></div>
-        <div class="cs-m-v2"><strong>2,5×</strong><span>vyšší&nbsp;obrat</span></div>
-        <div class="cs-m-v2"><strong>6</strong><span>měsíců</span></div>
-      </div>
-      <a href="case-study-honza-kral.html" class="cs-cta-v2">Číst celou case study <span class="arrow" aria-hidden="true">→</span></a>
-    </div>
-  </div>
-</section>
-
-
-<!-- ================ TÝM ================ -->
-<section class="team" id="tym">
-  <div class="container">
-    <div class="label reveal">Tým</div>
-    <h2 class="stitle reveal">Lidé za <span class="gw">Kinsoo.</span></h2>
-    <p class="team-sub reveal">Osm lidí. Jeden cíl — video a značky, které pracují za vás.</p>
-
-    <div class="team-grid">
-      <div class="tm reveal">
-        <div class="tm-tooltip">Založil agenturu — komunikace a ekonomika firmy.</div>
-        <div class="tm-photo"><span class="tm-initials">ŠP</span><img src="assets/team/stepan.jpg" alt="Štěpán Plachý" onerror="this.remove()" /></div>
-        <div class="tm-name">Štěpán Plachý</div>
-        <div class="tm-role">Founder &amp; Owner</div>
-      </div>
-      <div class="tm reveal">
-        <div class="tm-tooltip">Natáčení všech videí.</div>
-        <div class="tm-photo"><span class="tm-initials">MB</span><img src="assets/team/matej.jpg" alt="Matěj Bláha" onerror="this.remove()" /></div>
-        <div class="tm-name">Matěj Bláha</div>
-        <div class="tm-role">Lead Filmmaker + Client Communication</div>
-      </div>
-      <div class="tm reveal">
-        <div class="tm-tooltip">Zodpovídá za kvalitu výstupů z Kinsoo.</div>
-        <div class="tm-photo"><span class="tm-initials">KK</span><img src="assets/team/karolina.jpg" alt="Karolina Kubíčková" onerror="this.remove()" /></div>
-        <div class="tm-name">Karolina Kubíčková</div>
-        <div class="tm-role">Lead Video Editor + fotograf</div>
-      </div>
-      <div class="tm reveal">
-        <div class="tm-tooltip">Grafický design, copywriting a vizuální identita klientských značek.</div>
-        <div class="tm-photo"><span class="tm-initials">MŠ</span><img src="assets/team/magdalena.jpg" alt="Magdaléna Šrailová" onerror="this.remove()" /></div>
-        <div class="tm-name">Magdaléna Šrailová</div>
-        <div class="tm-role">Grafika + Copy</div>
-      </div>
-      <div class="tm reveal">
-        <div class="tm-tooltip">Editace videí — střih klientského obsahu pro sociální sítě i portály.</div>
-        <div class="tm-photo"><span class="tm-initials">MB</span><img src="assets/team/michal.jpg" alt="Michal Brant" onerror="this.remove()" /></div>
-        <div class="tm-name">Michal Brant</div>
-        <div class="tm-role">Video Editor</div>
-      </div>
-      <div class="tm reveal">
-        <div class="tm-tooltip">Péče o klienty a analytika výsledků.</div>
-        <div class="tm-photo"><span class="tm-initials">JS</span><img src="assets/team/jakub.jpg" alt="Jakub Stelzer" onerror="this.remove()" /></div>
-        <div class="tm-name">Jakub Stelzer</div>
-        <div class="tm-role">Client Success + Analytics</div>
-      </div>
-      <div class="tm reveal">
-        <div class="tm-tooltip">Střih TOFU a organického contentu pro sociální sítě.</div>
-        <div class="tm-photo"><span class="tm-initials">FM</span><img src="assets/team/filip.jpg" alt="Filip Málek" onerror="this.remove()" /></div>
-        <div class="tm-name">Filip Málek</div>
-        <div class="tm-role">Video Editor</div>
-      </div>
-      <div class="tm reveal">
-        <div class="tm-tooltip">Tvorba a správa webových stránek — design, kód a optimalizace pro maximální výkon.</div>
-        <div class="tm-photo"><span class="tm-initials">MM</span><img src="assets/team/matyas.jpg" alt="Matyáš Mašek" onerror="this.remove()" /></div>
-        <div class="tm-name">Matyáš Mašek</div>
-        <div class="tm-role">Web Developer</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================ JAK TO FUNGUJE ================ -->
-<section class="process" id="proces">
-  <div class="container">
-    <div class="label reveal">Jak to funguje</div>
-    <h2 class="stitle reveal">Čtyři kroky ke <span class="gw">spolupráci.</span></h2>
-    <p class="process-sub reveal">Od vyplnění dotazníku po první výsledky. Jednoduše.</p>
-
-    <div class="process-steps">
-      <div class="step reveal">
-        <div class="step-num">01</div>
-        <div class="step-connector"></div>
-        <h3 class="step-name">Vyplníte dotazník</h3>
-        <p class="step-desc">Krátký dotazník na webu — pár otázek o vás a o tom, co potřebujete.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">02</div>
-        <div class="step-connector"></div>
-        <h3 class="step-name">Ozveme se do 24 hodin</h3>
-        <p class="step-desc">Náš sales vám do 24 hodin zavolá nebo napíše a probereme detaily.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">03</div>
-        <div class="step-connector"></div>
-        <h3 class="step-name">Strategie a plán</h3>
-        <p class="step-desc">Společně nastavíme brand strategii, content plán a harmonogram natáčení.</p>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">04</div>
-        <h3 class="step-name">Dodáme výsledky</h3>
-        <p class="step-desc">Natočíme, sestříháme, publikujeme — a vy prodáváte víc nemovitostí.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================ FAQ ================ -->
-<section class="faq" id="faq">
-  <div class="container">
-    <div class="label reveal">FAQ</div>
-    <h2 class="stitle reveal">Časté <span class="gw">otázky</span></h2>
-    <p class="faq-sub reveal">Na co se makléři a kanceláře ptají nejčastěji.</p>
-    <div class="faq-list reveal">
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Kolik stojí video nemovitosti?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Jednorázové listing video začíná na 11 290 Kč (balíček Listing Start), samostatné video pro sReality od 4 900 Kč. Cena se liší podle typu nemovitosti a rozsahu balíčku.</p></div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Jak dlouho trvá natáčení a kdy dostanu hotové video?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Natáčení trvá 1,5–6 hodin podle toho, co spolu točíme. Kompletní nemovitost máme většinou do 1,5 hodiny, organické natáčení (6 videí) zabere 2–3 hodiny. Hotové video dodáváme do 5 pracovních dnů.</p></div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Točíte i mimo Plzeň?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Ano. Sídlíme v Plzni — doprava do 20 km zdarma, nad 20 km účtujeme 5,90 Kč/km. Po domluvě natáčíme po celé ČR.</p></div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Co je Brand Partner?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Kompletní brand management: strategie a positioning, měsíční content plán, natáčení, střih a správa sociálních sítí. Jeden tým, jeden retainer, měřitelné výsledky. Zjednodušeně: vytvoříme spolu brand a značku, kterou lidi opravdu budou znát.</p></div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Pro koho jsou vaše služby?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Pro realitní makléře a realitní kanceláře, které chtějí víc poptávek a prodejů díky videu a silnému osobnímu brandu.</p></div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Co všechno listing video obsahuje?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Podle balíčku: video pro sReality, Platinum reels pro sociální sítě, profesionální fotografie, 2D půdorys, drone záběry, landing page nemovitosti, Meta Ad setup a 3D prohlídku.</p></div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Musím se umět chovat před kamerou?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>Ne. Většina klientů má z kamery zpočátku obavy — vytvoříme uvolněné prostředí a vždy z vás dostaneme to nejlepší.</p></div></div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-q" type="button" aria-expanded="false"><span>Za jak dlouho uvidím výsledky?</span><span class="faq-ic" aria-hidden="true"></span></button>
-        <div class="faq-a"><div class="faq-a-wrap"><p>U budování brandu obvykle přicházejí první poptávky ze sociálních sítí kolem 2. měsíce. Naši klienti se dostali až na 10–20 poptávek měsíčně.</p></div></div>
-      </div>
-
-    </div>
-  </div>
-  <script>
-  (function(){
-    document.querySelectorAll('.faq-q').forEach(function(b){
-      b.addEventListener('click',function(){
-        var item=b.parentElement, isOpen=item.classList.contains('open');
-        document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');i.querySelector('.faq-q').setAttribute('aria-expanded','false');});
-        if(!isOpen){item.classList.add('open');b.setAttribute('aria-expanded','true');}
-      });
-    });
-  })();
-  </script>
-</section>
-
-<!-- ================ KONTAKT — dotazník ================ -->
-<section class="cta" id="kontakt">
-  <div class="container">
-    <div class="label reveal" style="justify-content:center;color:var(--brand-soft)">Kontakt</div>
-    <h2 class="stitle reveal" style="text-align:center">Chcete prodávat<br><span class="gw">více nemovitostí?</span></h2>
-    <p class="cta-sub reveal">Vyplňte krátký dotazník. Ozveme se vám do 24 hodin s&nbsp;konkrétním návrhem spolupráce.</p>
-
-    <form class="contact-form reveal" action="https://formsubmit.co/stepanplachy@kinsoo.cz" method="POST">
-      <!-- FormSubmit config -->
-      <input type="hidden" name="_subject" value="Nová poptávka z webu Kinsoo.cz">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://www.kinsoo.cz/dekujeme.html">
-      <input type="text" name="_honey" style="display:none">
-
-      <div class="form-grid">
-        <div class="form-group">
-          <label for="cf-name">Jméno a příjmení *</label>
-          <input type="text" id="cf-name" name="jmeno" required placeholder="Jan Novák">
-        </div>
-        <div class="form-group">
-          <label for="cf-email">E-mail *</label>
-          <input type="email" id="cf-email" name="email" required placeholder="jan@email.cz">
-        </div>
-        <div class="form-group">
-          <label for="cf-phone">Telefonní číslo *</label>
-          <input type="tel" id="cf-phone" name="telefon" required placeholder="+420 777 123 456">
-        </div>
-        <div class="form-group">
-          <label for="cf-interest">O co máte zájem? *</label>
-          <select id="cf-interest" name="zajem" required>
-            <option value="" disabled selected>Vyberte…</option>
-            <option value="Listing video">Listing video</option>
-            <option value="Brand Partner">Brand Partner</option>
-            <option value="Nevím, poraďte mi">Nevím, poraďte mi</option>
+        <div class="field">
+          <label for="f-start">Kdy chcete začít</label>
+          <select id="f-start" name="start" required>
+            <option value="" disabled selected>Vyberte</option>
+            <option>Co nejdřív</option>
+            <option>Do měsíce</option>
+            <option>Do tří měsíců</option>
+            <option>Zatím se jen rozhlížím</option>
           </select>
         </div>
       </div>
-      <div class="form-group form-group--full">
-        <label for="cf-problem">Jaký je váš největší problém? *</label>
-        <textarea id="cf-problem" name="problem" required rows="3" placeholder="Popište, s čím se potýkáte — pomůže nám to připravit relevantnější návrh."></textarea>
+      <div class="field">
+        <label for="f-odkaz">Web nebo Instagram <small>(nepovinné)</small></label>
+        <input type="text" id="f-odkaz" name="odkaz" placeholder="www.vasefirma.cz nebo @profil" autocomplete="url" />
       </div>
-      <div class="form-gdpr">
-        <label class="gdpr-label">
-          <input type="checkbox" name="gdpr" required>
-          <span>Souhlasím se <a href="/ochrana-osobnich-udaju.html" target="_blank" style="color:var(--brand-soft);text-decoration:underline">zpracováním osobních údajů</a> za účelem vyřízení poptávky. Údaje budou zpracovány společností Kinsoo s.r.o. (IČO: 249 83 900) v&nbsp;souladu s&nbsp;GDPR. Souhlas lze kdykoli odvolat.</span>
-        </label>
+      <div class="field-row">
+        <div class="field">
+          <label for="f-jmeno">Jméno a příjmení</label>
+          <input type="text" id="f-jmeno" name="jmeno" required placeholder="Jan Novák" autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="f-telefon">Telefon</label>
+          <input type="tel" id="f-telefon" name="telefon" required placeholder="+420 777 123 456" autocomplete="tel" />
+        </div>
       </div>
-      <button type="submit" class="btn btn-white" style="margin:0 auto;display:flex">Odeslat poptávku <span class="arrow">&rarr;</span></button>
+      <div class="field">
+        <label for="f-email">E-mail</label>
+        <input type="email" id="f-email" name="email" required placeholder="jan@firma.cz" autocomplete="email" />
+      </div>
+      <label class="check">
+        <input type="checkbox" name="gdpr" value="souhlas" required />
+        <span>Souhlasím se zpracováním údajů pro účely odpovědi na tento dotazník. <a href="ochrana-osobnich-udaju.html">Jak s údaji nakládáme</a>.</span>
+      </label>
+      <button class="btn btn-lg" type="submit">Odeslat dotazník</button>
+      <p class="form-note">Zabere dvě minuty. Odpovíme do dvou pracovních dnů.</p>
     </form>
-
-    <div class="cta-mail reveal" style="margin-top:24px">Nebo napište přímo na <a href="mailto:stepanplachy@kinsoo.cz">stepanplachy@kinsoo.cz</a></div>
   </div>
 </section>
-
-<!-- ================ STICKY MOBILE CTA (always visible on mobile) ================ -->
-<a href="#kontakt" class="mobile-cta-bar" id="mobileCtaBar" aria-label="Chci spolupracovat — přejít na formulář">
-  Chci spolupracovat <span class="arrow" aria-hidden="true">→</span>
-</a>
-
-<!-- ================ FOOTER ================ -->
+</main>
 <footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <img src="assets/kinsoo-icon-white.png" alt="Kinsoo" style="height:24px" />
-      <span class="footer-meta">Kinsoo s.r.o. &middot; IČO: 249 83 900 &middot; Plzeň</span>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <b>Kinsoo s.r.o.</b>
+        <span>IČO 24983900<br />Střední cesta 1289/13, Plzeň</span>
+        <a href="mailto:stepanplachy@kinsoo.cz" style="margin-top:.75rem">stepanplachy@kinsoo.cz</a>
+        <a href="tel:+420725365636">+420 725 365 636</a>
+      </div>
+      <div class="footer-col">
+        <b>Služby</b>
+        <a href="obsah-a-prodej.html">Obsah a prodejní funnel</a>
+        <a href="produkce.html">Produkce: reality, svatby, eventy</a>
+      </div>
+      <div class="footer-col">
+        <b>Kinsoo</b>
+        <a href="index.html#klienti">Klienti a recenze</a>
+        <a href="index.html#tym">Tým</a>
+        <a href="case-study-honza-kral.html">Případová studie: Honza Král</a>
+        <a href="ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
+      </div>
     </div>
-    <div class="footer-links">
-      <a href="/ochrana-osobnich-udaju.html">Ochrana osobních údajů</a>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Kinsoo s.r.o. Plzeň a celá ČR.</span>
+      <span>Agentura pro obsah a prodej.</span>
     </div>
   </div>
 </footer>
 
-<!-- ================ JS ================ -->
-<script>
-(()=>{
-  'use strict';
-
-  /* Navbar scroll */
-  const nav=document.getElementById('nav');
-  const onScroll=()=>{
-    if(!nav)return;
-    const s=window.scrollY>80;
-    nav.classList.toggle('is-top',!s);
-    nav.classList.toggle('is-scrolled',s);
-  };
-  window.addEventListener('scroll',onScroll,{passive:true});
-  onScroll();
-
-  /* Mobile menu */
-  const ham=document.getElementById('hamburger');
-  const mm=document.getElementById('mobileMenu');
-  if(ham&&mm){
-    ham.addEventListener('click',()=>{
-      const open=mm.classList.toggle('is-open');
-      ham.setAttribute('aria-expanded',open);
-    });
-    mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-      mm.classList.remove('is-open');
-      ham.setAttribute('aria-expanded','false');
-    }));
-  }
-
-  /* Sticky mobile CTA — visible after hero scrolls past, hide near contact form */
-  const mobileCta=document.getElementById('mobileCtaBar');
-  const contactSection=document.getElementById('kontakt');
-  if(mobileCta){
-    const ctaToggle=()=>{
-      const heroPassed=window.scrollY>window.innerHeight*0.6;
-      let nearContact=false;
-      if(contactSection){
-        const r=contactSection.getBoundingClientRect();
-        nearContact=r.top<window.innerHeight*0.9;
-      }
-      mobileCta.classList.toggle('is-visible',heroPassed&&!nearContact);
-    };
-    window.addEventListener('scroll',ctaToggle,{passive:true});
-    ctaToggle();
-  }
-
-  /* Reveal on scroll */
-  const reveals=document.querySelectorAll('.reveal');
-  if('IntersectionObserver' in window){
-    const io=new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.classList.add('is-visible');
-          io.unobserve(e.target);
-        }
-      });
-    },{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
-    reveals.forEach(el=>io.observe(el));
-  }else{
-    reveals.forEach(el=>el.classList.add('is-visible'));
-  }
-
-  /* Smooth scroll for anchor links */
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click',e=>{
-      const target=document.querySelector(a.getAttribute('href'));
-      if(target){
-        e.preventDefault();
-        target.scrollIntoView({behavior:'smooth',block:'start'});
-      }
-    });
-  });
-
-  /* ---- Pricing — segment pill switching (makléř / kancelář) ---- */
-  const segPills=document.querySelectorAll('.pill[data-segment]');
-  const segPanels=document.querySelectorAll('.pricing-panel[data-panel]');
-
-  if(segPills.length&&segPanels.length){
-    const switchSeg=(target)=>{
-      segPills.forEach(p=>{
-        const active=p.dataset.segment===target;
-        p.classList.toggle('is-active',active);
-        p.setAttribute('aria-selected',active?'true':'false');
-      });
-      segPanels.forEach(panel=>{
-        const active=panel.dataset.panel===target;
-        panel.classList.toggle('is-active',active);
-        if(active){
-          panel.querySelectorAll('.reveal').forEach(el=>el.classList.add('is-visible'));
-        }
-      });
-    };
-
-    segPills.forEach(pill=>{
-      pill.addEventListener('click',()=>switchSeg(pill.dataset.segment));
-      pill.addEventListener('keydown',(e)=>{
-        if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
-          e.preventDefault();
-          const arr=Array.from(segPills);
-          const i=arr.indexOf(pill);
-          const next=e.key==='ArrowRight'?arr[(i+1)%arr.length]:arr[(i-1+arr.length)%arr.length];
-          next.focus();
-          switchSeg(next.dataset.segment);
-        }
-      });
-    });
-  }
-
-  /* ---- Listing packages — property type price switching ---- */
-  const propBtns=document.querySelectorAll('.prop-btn[data-prop]');
-  if(propBtns.length){
-    const propData={
-      small:{disc:[11290,16990,23690],save:[2000,4200,5900],foto:'2 500 Kč'},
-      medium:{disc:[12190,17790,24490],save:[2100,4400,6100],foto:'3 500 Kč'},
-      house:{disc:[12990,18590,25290],save:[2300,4600,6300],foto:'4 500 Kč'},
-    };
-    const fmt=n=>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g,' ');
-    const updatePrices=(key)=>{
-      const d=propData[key];
-      if(!d)return;
-      d.disc.forEach((v,i)=>{
-        const el=document.querySelector('[data-price="'+(i+1)+'"]');
-        if(el)el.textContent=fmt(v);
-      });
-      d.save.forEach((v,i)=>{
-        const el=document.querySelector('[data-save="'+(i+1)+'"]');
-        if(el)el.textContent=fmt(v)+' Kč';
-      });
-      const fotoEl=document.querySelector('[data-foto-price]');
-      if(fotoEl)fotoEl.textContent=d.foto;
-    };
-    propBtns.forEach(btn=>{
-      btn.addEventListener('click',()=>{
-        propBtns.forEach(b=>b.classList.remove('is-active'));
-        btn.classList.add('is-active');
-        updatePrices(btn.dataset.prop);
-      });
-    });
-  }
-
-  /* ---- RE setup card — swap content on pill switch ---- */
-  const reSetupData={
-    re1:{
-      title:'Brand Setup & strategie',
-      price:'9 900 Kč',
-      meta:'jednorázově',
-      features:[
-        'Analýza vašeho trhu a konkurenčních makléřů',
-        'Definice cílové skupiny — kupci vs. prodávající',
-        'Vizuální identita — barvy, fonty, styl profilu',
-        'Obsahová strategie pro realitní sociální sítě',
-        'Brand dokument — „kormidlo" pro veškerý obsah',
-        'Strategický call — společné odsouhlasení směru',
-      ],
-      showCta:false,
-    },
-    re2:{
-      title:'Brand Setup & strategie pro kancelář',
-      price:'Dohodou',
-      meta:'30 000 – 60 000 Kč',
-      features:[
-        'Hloubková analýza trhu a konkurence kanceláře',
-        'Definice cílových skupin — kupci, prodávající, investoři',
-        'Vizuální identita kanceláře — barvy, fonty, styl',
-        'Obsahová strategie pro kancelář i jednotlivé makléře',
-        'Brand dokument — „kormidlo" pro veškerý obsah',
-        'Strategické workshopy — onboarding makléřů',
-        'Nastavení procesů a workflow pro pravidelný obsah',
-        'Strategický call — společné odsouhlasení směru',
-      ],
-      showCta:true,
-    },
-  };
-
-  const reSetupTitle=document.getElementById('re-setup-title');
-  const reSetupPrice=document.getElementById('re-setup-price');
-  const reSetupMeta=document.getElementById('re-setup-meta');
-  const reSetupFeats=document.getElementById('re-setup-features');
-  const reSetupCta=document.getElementById('re-setup-cta');
-
-  if(reSetupTitle){
-    document.querySelectorAll('[data-segment="re1"],[data-segment="re2"]').forEach(pill=>{
-      pill.addEventListener('click',()=>{
-        const d=reSetupData[pill.dataset.segment];
-        if(!d)return;
-        reSetupTitle.textContent=d.title;
-        reSetupPrice.textContent=d.price;
-        reSetupMeta.textContent=d.meta;
-        reSetupFeats.innerHTML=d.features.map(f=>'<li>'+f+'</li>').join('');
-        reSetupCta.style.display=d.showCta?'':'none';
-      });
-    });
-  }
-})();
-</script>
+<script src="kinsoo.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/brand-partner.html", "destination": "/obsah-a-prodej.html", "permanent": true },
+    { "source": "/listing-video.html", "destination": "/produkce.html", "permanent": true }
+  ]
+}

@@ -1,6 +1,10 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
-    { "source": "/brand-partner.html", "destination": "/obsah-a-prodej.html", "permanent": true },
-    { "source": "/listing-video.html", "destination": "/produkce.html", "permanent": true }
+    { "source": "/brand-partner.html", "destination": "/obsah-a-prodej", "permanent": true },
+    { "source": "/brand-partner", "destination": "/obsah-a-prodej", "permanent": true },
+    { "source": "/listing-video.html", "destination": "/produkce/reality", "permanent": true },
+    { "source": "/listing-video", "destination": "/produkce/reality", "permanent": true }
   ]
 }

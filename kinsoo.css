@@ -179,6 +179,10 @@ p:last-child{margin-bottom:0}
   .nav-burger{display:grid}
 }
 
+/* Minimal nav for ad landing pages: logo + one button, on every width */
+.nav-minimal .nav-cta{display:inline-flex}
+@media (max-width:900px){.nav-minimal .nav-cta{display:inline-flex}}
+
 /* ---------- Mobile sheet: enters and exits along the same path ---------- */
 .sheet-scrim{
   position:fixed;inset:0;z-index:110;background:rgba(0,0,0,.28);
@@ -246,6 +250,13 @@ p:last-child{margin-bottom:0}
 .hero-kicker a{display:inline-flex;align-items:center;gap:.375rem;color:var(--ink-2)}
 .hero-kicker a:hover{color:var(--ink)}
 .hero-kicker svg{width:12px;height:12px}
+
+/* Landing hero: text, then one big photo */
+.hero-lp{min-height:0;padding-bottom:clamp(40px,6vw,64px)}
+.hero-lp .hero-inner{margin-bottom:clamp(2rem,5vw,3.5rem)}
+.lp-media{aspect-ratio:21/9;border-radius:var(--r-xl)}
+.lp-media img{width:100%;height:100%;object-fit:cover}
+@media (max-width:720px){.lp-media{aspect-ratio:4/3}}
 
 /* ---------- Problem: big statement ---------- */
 .statement{max-width:24ch}
@@ -440,6 +451,19 @@ p:last-child{margin-bottom:0}
 .reel-ph-text{font-family:var(--font-display);font-weight:600;font-size:.9375rem;letter-spacing:-.01em;color:var(--ink);line-height:1.35}
 .reel-ph-text small{display:block;margin-top:.25rem;font-family:var(--font-text);font-weight:400;font-size:.75rem;color:var(--ink-3);letter-spacing:0}
 
+/* Photo cards that link to landing pages */
+.reel-link{display:block;color:inherit}
+.reel-link .reel{transition:transform var(--t-med) var(--ease-out),box-shadow var(--t-med) var(--ease-out);will-change:transform}
+.reel-link:hover .reel{transform:translate3d(0,-4px,0);box-shadow:var(--shadow)}
+.reel-link:active .reel{transform:scale(.99)}
+.pcard-photo{box-shadow:var(--shadow-sm)}
+.pcard-photo img{width:100%;height:100%;object-fit:cover}
+.reel-cap{margin-top:.875rem;display:flex;flex-direction:column;gap:.125rem}
+.reel-cap b{display:inline-flex;align-items:center;gap:.375rem;font-family:var(--font-display);font-weight:600;font-size:1rem;letter-spacing:-.01em}
+.reel-cap b svg{width:14px;height:14px;transition:transform var(--t-fast) var(--ease-out)}
+.reel-link:hover .reel-cap b svg{transform:translateX(3px)}
+.reel-cap span{font-size:.8125rem;color:var(--ink-3)}
+
 /* ---------- Compact team strip ---------- */
 .team-strip{display:grid;grid-template-columns:repeat(8,1fr);gap:1rem}
 @media (max-width:1000px){.team-strip{grid-template-columns:repeat(4,1fr)}}
@@ -447,11 +471,24 @@ p:last-child{margin-bottom:0}
 .team-strip .member img{border-radius:50%}
 .team-strip .member b{font-size:.875rem}
 .team-strip .member span{font-size:.75rem}
+.team-strip.crew{grid-template-columns:repeat(3,minmax(0,200px));justify-content:start;gap:1.5rem}
+@media (max-width:520px){.team-strip.crew{grid-template-columns:repeat(3,1fr);gap:.75rem}}
 
 /* ---------- Segment cards (produkce) ---------- */
 .segments{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
 @media (max-width:960px){.segments{grid-template-columns:1fr}}
-.segment{background:#fff;border-radius:var(--r-lg);padding:clamp(1.75rem,3vw,2.25rem);box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
+.segment{
+  background:#fff;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-sm);
+  display:flex;flex-direction:column;color:inherit;
+  transition:transform var(--t-med) var(--ease-out),box-shadow var(--t-med) var(--ease-out);will-change:transform;
+}
+.segment:hover{transform:translate3d(0,-4px,0);box-shadow:var(--shadow)}
+.segment:active{transform:scale(.99)}
+.segment-media{display:block;aspect-ratio:16/10;background:var(--bg-alt)}
+.segment-media img{width:100%;height:100%;object-fit:cover}
+.segment-ph{display:grid;place-items:center;text-align:center;padding:1.5rem;border-bottom:1px dashed var(--line-strong)}
+.segment-body{display:flex;flex-direction:column;flex:1;padding:clamp(1.5rem,2.6vw,2rem)}
+.segment .btn svg{width:14px;height:14px}
 .segment h3{font-size:clamp(1.25rem,2vw,1.5rem);letter-spacing:-.02em;margin-bottom:.625rem}
 .segment p{font-size:.9375rem;line-height:1.55;color:var(--ink-2);margin-bottom:1.25rem}
 .segment ul{list-style:none;margin:0 0 1.75rem;padding:0;display:grid;gap:.5rem}
@@ -655,7 +692,8 @@ body.modal-open{overflow:hidden}
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important}
   .reveal{transition:opacity 200ms ease;transform:none !important}
   .reveal.is-in{transform:none !important}
-  .client:hover,.service:hover,.xlink:hover,.pcard:hover{transform:none}
+  .client:hover,.service:hover,.xlink:hover,.pcard:hover,.segment:hover,.reel-link:hover .reel{transform:none}
+  .reel-link:hover .reel-cap b svg{transform:none}
   .btn:active,.rail-btn:active,.rcard:active,.nav-burger:active,.modal-close:active,.service:active,.reel-toggle:active{transform:none}
   .modal-card{transform:none !important}
   .link:hover svg{transform:none}
